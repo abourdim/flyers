@@ -1,0 +1,42 @@
+Create a Facebook flyer (1080px wide) as PNG + HTML for a kids workshop.
+
+DESIGN:
+- Light warm cream background (#fdf6e3)
+- Fonts: Fredoka One (titles) + Nunito (body) via Google Fonts
+- All text dark (#1a1a2e) on light bg — fully readable
+- Subtle Islamic girih geometric SVG pattern in background (opacity ~0.09)
+- Discrete Bismillah centered at top (opacity 0.4, serif Arabic font)
+- Microbit image as watermark top-right (opacity 0.12, slightly rotated)
+- Accent color: golden #d4820a
+
+LAYOUT (top → bottom):
+1. Logo top-left + event badge top-right
+2. Sub-tag label (small caps)
+3. "ATELIER" in accent color + big Fredoka title with emoji
+4. Description paragraph (dark, readable)
+5. 4 feature rows: white card + left colored border + emoji + bold text
+6. 3 audience pills (rounded, white, shadowed)
+7. Price banner: Adhérents → Gratuit ✅ | Non-adhérents → 7€ | Info adhésion
+8. Launch banner: URL + QR code (colored, accent) + CTA text
+9. 3 info cards: Date · Horaire · Lieu
+10. Contact bar: website · email · phone
+11. Footer: tagline + hashtags
+
+TECHNICAL:
+- Convert black-on-white logo to dark-navy-on-transparent with PIL/numpy
+  (pixels where luminance > 220 → alpha=0, dark pixels → navy #1a1a2e)
+- Generate QR code with `qrcode` library in accent color on transparent bg
+- Embed all images as base64 data URIs (self-contained HTML)
+- Islamic pattern: inline SVG girih tile → base64 → CSS background-image
+- Use Playwright headless Chromium to screenshot HTML → PNG at full scroll height
+- Also output a .txt file with the ready-to-paste Facebook post text
+
+CONTENT TO FILL IN:
+[Logo file], [Badge image], [Microbit image]
+Title: [Workshop name]
+Description: [1-2 sentences]
+Features: [4 bullet points with emojis]
+App URL: [link for QR code]
+Date / Time / Location
+Contact: website, email, phone
+Hashtags

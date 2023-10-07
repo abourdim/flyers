@@ -1,0 +1,25 @@
+😎 Atelier Face-Tracking — Workshop DIY | Dim. 22 fév. – Chelles
+
+Souris, cligne des yeux, bouge la tête — et regarde le BBC micro:bit réagir en direct via Bluetooth ! L'appli détecte ton visage, tes yeux, ta bouche et envoie des messages au micro:bit en temps réel.
+
+Lors de cet atelier tu vas :
+📷 Activer ta caméra et détecter ton visage à l'écran
+👀 Détecter les yeux, la bouche et les mouvements de tête
+🔊 Parler ou envoyer des messages selon tes expressions
+🤖 Dialoguer avec le micro:bit via Bluetooth en temps réel
+
+👦 À partir de 10 ans | 💻 PC portable recommandé | 🎓 Aucun prérequis
+
+💰 Tarifs :
+🪙 Adhérents Workshop-DIY → Gratuit ✅
+🎟️ Non-adhérents → 7 € / personne
+ℹ️ Devenir adhérent : workshop-diy.org
+
+🔗 Lancer l'atelier : https://raw.githack.com/abourdim/face-tracking/main/index.html
+
+📅 Dimanche 22 février 2026 | 🕘 9h – 11h30
+📍 Salle du Parc du Souvenir – Chelles
+
+🌐 workshop-diy.org | ✉️ contact@workshop-diy.org | 📞 06 19 51 51 73
+
+#AtelierFaceTracking #microbit #WorkshopDIY #Chelles #Coding #FaceTracking

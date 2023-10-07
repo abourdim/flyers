@@ -1,0 +1,25 @@
+🕵️ Atelier Face-Quest — Workshop DIY | Dim. 22 fév. – Chelles
+
+Active ta caméra, enregistre ton visage, et laisse le BBC micro:bit reconnaître qui tu es via Bluetooth ! Découvre comment une IA peut détecter, mémoriser et vérifier un visage en temps réel.
+
+Lors de cet atelier tu vas :
+📷 Activer ta caméra et détecter ton visage à l'écran
+📝 Enregistrer ton visage dans l'application (Enroll)
+✅ Vérifier si c'est bien toi qui reviens (Verify)
+📡 Envoyer le résultat au micro:bit via Bluetooth
+
+👦 À partir de 10 ans | 💻 PC portable recommandé | 🎓 Aucun prérequis
+
+💰 Tarifs :
+🪙 Adhérents Workshop-DIY → Gratuit ✅
+🎟️ Non-adhérents → 7 € / personne
+ℹ️ Devenir adhérent : workshop-diy.org
+
+🔗 Lancer l'atelier : https://raw.githack.com/abourdim/face-quest/main/index.html
+
+📅 Dimanche 22 février 2026 | 🕘 9h – 11h30
+📍 Salle du Parc du Souvenir – Chelles
+
+🌐 workshop-diy.org | ✉️ contact@workshop-diy.org | 📞 06 19 51 51 73
+
+#AtelierFaceQuest #microbit #WorkshopDIY #Chelles #Coding #FaceDetection

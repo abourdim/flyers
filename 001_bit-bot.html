@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<title>Atelier bit-bot — Workshop DIY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font-family:'Nunito',sans-serif}
+.flyer{width:1080px;position:relative;overflow:hidden;padding-bottom:48px;background:#fdf6e3}
+.bg-pattern{position:absolute;inset:0;pointer-events:none;z-index:1;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAnIGhlaWdodD0nMTAwJz4KICA8ZGVmcz48cGF0dGVybiBpZD0nZycgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnPgogICAgPGcgZmlsbD0nbm9uZScgc3Ryb2tlPSdyZ2JhKDIwMCwxNjAsNjAsMC4wOSknIHN0cm9rZS13aWR0aD0nMC43Jz4KICAgICAgPHBvbHlnb24gcG9pbnRzPSc1MCw2IDU4LDMwIDgyLDIyIDcwLDQ0IDg0LDYyIDYwLDU2IDU4LDgwIDUwLDYyIDQyLDgwIDQwLDU2IDE2LDYyIDMwLDQ0IDE4LDIyIDQyLDMwJy8+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0nNTAsMjQgNTUsMzYgNjgsMzIgNjIsNDIgNzAsNTIgNTcsNTAgNTYsNjIgNTAsNTQgNDQsNjIgNDMsNTAgMzAsNTIgMzgsNDIgMzIsMzIgNDUsMzYnLz4KICAgICAgPGNpcmNsZSBjeD0nNTAnIGN5PSc1MCcgcj0nMTEnIHN0cm9rZS13aWR0aD0nMC41Jy8+CiAgICA8L2c+CiAgPC9wYXR0ZXJuPjwvZGVmcz4KICA8cmVjdCB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgZmlsbD0ndXJsKCNnKScvPgo8L3N2Zz4=");background-size:100px 100px}
+.bg-wash{position:absolute;inset:0;pointer-events:none;z-index:2;background:linear-gradient(160deg,rgba(212,130,10,0.08) 0%,rgba(255,248,220,0.5) 50%,rgba(212,130,10,0.02) 100%)}
+.bismillah{position:absolute;top:10px;left:50%;transform:translateX(-50%);font-size:15px;letter-spacing:3px;z-index:20;white-space:nowrap;font-family:'Scheherazade New','Arial Unicode MS',serif;color:rgba(212,130,10,0.38)}
+.topbar{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:48px 56px 24px}
+.logo-box{background:rgba(255,255,255,0.9);border:2px solid rgba(0,0,0,0.12);border-radius:18px;padding:10px 18px}
+.logo-text{font-family:'Fredoka One',cursive;font-size:20px;color:#1a1a2e}
+.hero{position:relative;z-index:20;padding:0 56px 18px}
+.sub-tag{font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:8px;color:#d4820a;opacity:0.7}
+.atelier-label{font-family:'Fredoka One',cursive;font-size:24px;letter-spacing:3px;text-transform:uppercase;margin-bottom:0;opacity:0.65;color:#d4820a}
+.title{font-family:'Fredoka One',cursive;font-size:82px;line-height:1;margin-bottom:16px;display:flex;align-items:center;gap:12px;color:#1a1a2e}
+.title .acc{color:#d4820a}
+.desc{font-size:17px;line-height:1.65;max-width:840px;margin-bottom:18px;color:#2c2c3e;font-weight:600}
+.features{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.feat-item{display:flex;align-items:center;gap:14px;font-size:16px;font-weight:700;padding:12px 18px;border-radius:14px;color:#1a1a2e;background:rgba(255,255,255,0.75);border-left:4px solid #d4820a;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.feat-item .fi{font-size:22px;flex-shrink:0}
+.audience-row{position:relative;z-index:20;display:flex;gap:12px;padding:0 56px 22px;flex-wrap:wrap}
+.aud-pill{display:flex;align-items:center;gap:9px;padding:10px 22px;border-radius:50px;font-size:15px;font-weight:800;color:#1a1a2e;background:rgba(255,255,255,0.8);box-shadow:0 2px 8px rgba(0,0,0,0.1);border:2px solid rgba(0,0,0,0.08)}
+.price-banner{position:relative;z-index:20;margin:0 56px 22px;border-radius:20px;padding:22px 28px;display:flex;align-items:center;gap:20px;background:rgba(255,255,255,0.85);box-shadow:0 4px 16px rgba(0,0,0,0.1);border:2px solid rgba(0,0,0,0.07)}
+.price-item{display:flex;align-items:center;gap:14px;flex:1}
+.price-icon{font-size:32px}
+.price-lbl{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#666;margin-bottom:3px}
+.price-val{font-size:22px;font-weight:900;color:#1a1a2e}
+.price-divider{width:2px;height:50px;background:rgba(0,0,0,0.08);border-radius:2px}
+.atelier-banner{position:relative;z-index:20;margin:0 56px 22px;border-radius:20px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:rgba(255,255,255,0.85);box-shadow:0 4px 16px rgba(0,0,0,0.1);border:2px solid #d4820a55}
+.atelier-left{flex:1}
+.atelier-title{font-family:'Fredoka One',cursive;font-size:22px;color:#1a1a2e;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.atelier-title .badge{font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:#d4820a22;color:#d4820a}
+.atelier-desc{font-size:14px;font-weight:700;color:#444;line-height:1.5;margin-bottom:8px}
+.atelier-url{font-size:12px;font-weight:700;word-break:break-all;font-family:monospace;color:#555}
+.atelier-cta{font-size:14px;font-weight:900;margin-top:10px;color:#d4820a}
+.qr-wrap{display:flex;flex-direction:column;align-items:center;gap:8px}
+.qr-wrap img{width:130px;height:130px;border-radius:12px;padding:6px;border:3px solid}
+.qr-label{font-size:10px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:#666}
+.info-row{position:relative;z-index:20;display:flex;gap:14px;padding:0 56px 18px}
+.info-card{flex:1;border-radius:16px;padding:16px 20px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.85);box-shadow:0 2px 10px rgba(0,0,0,0.08);border:2px solid rgba(0,0,0,0.07)}
+.info-icon{font-size:26px;flex-shrink:0}
+.lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;font-weight:800;margin-bottom:3px}
+.val{font-size:16px;font-weight:900;color:#1a1a2e;line-height:1.3}
+.contact-bar{position:relative;z-index:20;display:flex;align-items:center;gap:14px;padding:0 56px 22px;flex-wrap:wrap}
+.ci-item{font-size:14px;font-weight:700;color:#444;display:flex;align-items:center;gap:6px}
+.dot-sep{color:#bbb;font-size:18px}
+.footer{position:relative;z-index:20;margin:0 56px;border-top:2px solid rgba(0,0,0,0.08);padding-top:18px;display:flex;align-items:center;justify-content:space-between}
+.fnote{font-size:13px;color:#888;font-style:italic;font-weight:600}
+.htags{display:flex;gap:8px}
+.ht{font-size:12px;font-weight:800;padding:5px 12px;border-radius:20px;border:2px solid rgba(0,0,0,0.1);color:#555;background:rgba(255,255,255,0.6)}
+</style></head><body>
+<div class="flyer">
+  <div class="bg-pattern"></div>
+  <div class="bg-wash"></div>
+  <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَـنِ الرَّحِيمِ</div>
+  <div class="topbar"><div class="logo-box"><span class="logo-text">Workshop-DIY</span></div></div>
+  <div class="hero">
+    <div class="sub-tag">◆ Workshop-DIY · microbit</div>
+    <div class="atelier-label">Atelier</div>
+    <div class="title">🤖 <span class="acc">Bit</span>-Bot</div>
+    <div class="desc">Pilotez un robot Bit:Bot depuis votre navigateur en Bluetooth — joystick virtuel, suivi de ligne et mode obstacles.</div>
+    <div class="features">
+      <div class="feat-item"><span class="fi">🔧</span><span></span></div>
+      <div class="feat-item"><span class="fi">🔧</span><span></span></div>
+      <div class="feat-item"><span class="fi">🔧</span><span></span></div>
+      <div class="feat-item"><span class="fi">🔧</span><span></span></div>
+    </div>
+  </div>
+  <div class="audience-row">
+    <div class="aud-pill">👦 À partir de 10 ans</div>
+    <div class="aud-pill">💻 PC portable recommandé</div>
+    <div class="aud-pill">🎓 Aucun prérequis</div>
+  </div>
+  <div class="price-banner">
+    <div class="price-item"><div class="price-icon">🪙</div><div><div class="price-lbl">Adhérents Workshop-DIY</div><div class="price-val" style="color:#2e7d32;">Gratuit ✅</div></div></div>
+    <div class="price-divider"></div>
+    <div class="price-item"><div class="price-icon">🎟️</div><div><div class="price-lbl">Non-adhérents</div><div class="price-val">7 € / personne</div></div></div>
+    <div class="price-divider"></div>
+    <div class="price-item" style="flex:0.7"><div class="price-icon">ℹ️</div><div><div class="price-lbl">Devenir adhérent</div><div class="price-val" style="font-size:15px">workshop-diy.org</div></div></div>
+  </div>
+  <div class="atelier-banner">
+    <div class="atelier-left">
+      <div class="atelier-title">🚀 Lancer l’atelier <span class="badge">EN LIGNE</span></div>
+      <div class="atelier-desc">Ouvre l’application dans ton navigateur — aucune installation requise !</div>
+      <div class="atelier-url">https://abourdim.github.io/bit-bot/</div>
+      <div class="atelier-cta">↑ Scanne le QR code ou tape l’URL ▶</div>
+    </div>
+    <div class="qr-wrap"><img src="data:image/png;base64,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" alt="QR" style="border-color:#d4820a;"/><div class="qr-label">Scanner pour lancer</div></div>
+  </div>
+  <div class="info-row">
+    <div class="info-card"><div class="info-icon">📅</div><div><div class="lbl">Date</div><div class="val"><em></em></div></div></div>
+    <div class="info-card"><div class="info-icon">🕘</div><div><div class="lbl">Horaire</div><div class="val"><em></em></div></div></div>
+    <div class="info-card"><div class="info-icon">📍</div><div><div class="lbl">Lieu</div><div class="val"><em></em></div></div></div>
+  </div>
+  <div class="contact-bar">
+    <div class="ci-item">🌐 workshop-diy.org</div><span class="dot-sep">·</span>
+    <div class="ci-item">✉️ contact@workshop-diy.org</div><span class="dot-sep">·</span>
+    <div class="ci-item">📞 06 19 51 51 73</div>
+  </div>
+  <div class="footer">
+    <div class="fnote">✨ Curiosité et sourire bienvenus !</div>
+    <div class="htags"><span class="ht">#AtelierBitBot</span><span class="ht">#WorkshopDIY</span></div>
+  </div>
+</div></body></html>
