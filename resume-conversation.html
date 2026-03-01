@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Résumé — Flyers Workshop DIY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Nunito',sans-serif;
+  background:#fdf6e3;
+  color:#1a1a2e;
+  padding:40px;
+  max-width:1000px;
+  margin:0 auto;
+}
+h1 {
+  font-family:'Fredoka One',cursive;
+  font-size:42px;
+  color:#d4820a;
+  margin-bottom:6px;
+}
+.subtitle {
+  font-size:15px; font-weight:700; color:#888;
+  letter-spacing:2px; text-transform:uppercase;
+  margin-bottom:40px;
+}
+.section {
+  background:rgba(255,255,255,0.85);
+  border-radius:18px; padding:24px 28px;
+  margin-bottom:22px;
+  border-left:5px solid #d4820a;
+  box-shadow:0 3px 12px rgba(0,0,0,0.07);
+}
+.section.teal { border-left-color:#0a9e72; }
+.section.blue { border-left-color:#3a7bd5; }
+.section.purple { border-left-color:#7c3aed; }
+.section-title {
+  font-family:'Fredoka One',cursive;
+  font-size:22px; margin-bottom:12px;
+  display:flex; align-items:center; gap:10px;
+}
+.step {
+  display:flex; gap:14px; align-items:flex-start;
+  padding:10px 0; border-bottom:1px solid rgba(0,0,0,0.06);
+}
+.step:last-child { border-bottom:none; }
+.step-num {
+  min-width:28px; height:28px; border-radius:50%;
+  background:#d4820a; color:#fff;
+  font-size:13px; font-weight:900;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; margin-top:2px;
+}
+.step-num.teal { background:#0a9e72; }
+.step-num.blue { background:#3a7bd5; }
+.step-num.purple { background:#7c3aed; }
+.step-text { font-size:15px; font-weight:600; line-height:1.6; }
+.step-text strong { color:#d4820a; }
+.step-text strong.teal { color:#0a9e72; }
+.step-text strong.blue { color:#3a7bd5; }
+.tag {
+  display:inline-block; font-size:12px; font-weight:800;
+  padding:3px 10px; border-radius:20px; margin:2px 3px;
+  background:rgba(212,130,10,0.12); color:#d4820a;
+  border:1px solid rgba(212,130,10,0.25);
+}
+.tag.teal { background:rgba(10,158,114,0.1); color:#0a9e72; border-color:rgba(10,158,114,0.25); }
+.tag.gray { background:rgba(0,0,0,0.05); color:#555; border-color:rgba(0,0,0,0.1); }
+.file-list { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+.file-item {
+  display:flex; align-items:center; gap:8px;
+  padding:10px 16px; border-radius:12px;
+  background:rgba(255,255,255,0.9); border:2px solid rgba(0,0,0,0.08);
+  font-size:14px; font-weight:700; color:#1a1a2e;
+  box-shadow:0 2px 6px rgba(0,0,0,0.06);
+}
+.note {
+  background:rgba(212,130,10,0.08); border:1.5px solid rgba(212,130,10,0.2);
+  border-radius:14px; padding:14px 18px; margin-top:14px;
+  font-size:14px; font-weight:700; color:#555; line-height:1.6;
+}
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.mini-card {
+  background:rgba(255,255,255,0.9); border-radius:14px;
+  padding:16px 18px; border:2px solid rgba(0,0,0,0.07);
+}
+.mini-card h4 { font-family:'Fredoka One',cursive; font-size:17px; margin-bottom:8px; }
+.mini-card ul { list-style:none; }
+.mini-card ul li { font-size:14px; font-weight:600; color:#444; padding:3px 0; }
+.mini-card ul li::before { content:'→ '; color:#d4820a; font-weight:900; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th { background:#d4820a; color:#fff; padding:10px 14px; text-align:left; font-family:'Fredoka One',cursive; font-size:15px; }
+td { padding:10px 14px; border-bottom:1px solid rgba(0,0,0,0.07); font-weight:600; }
+tr:nth-child(even) td { background:rgba(255,255,255,0.5); }
+.badge {
+  display:inline-block; font-size:11px; font-weight:800; letter-spacing:1px;
+  padding:3px 10px; border-radius:20px; text-transform:uppercase;
+}
+.badge.done { background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7; }
+.badge.file { background:#e3f2fd; color:#1565c0; border:1px solid #90caf9; }
+</style>
+</head>
+<body>
+
+<h1>🛠️ Workshop DIY — Flyers Facebook</h1>
+<div class="subtitle">Résumé de la session de création · Chelles 2026</div>
+
+<!-- OBJECTIF -->
+<div class="section">
+  <div class="section-title">🎯 Objectif</div>
+  <p style="font-size:16px;font-weight:600;line-height:1.7;color:#333;">
+    Créer <strong>2 flyers Facebook indépendants</strong> pour les ateliers
+    <strong>Face-Quest</strong> et <strong>Face-Tracking</strong> du Workshop-DIY,
+    accompagnés de leurs textes de publication prêts à copier-coller.
+  </p>
+</div>
+
+<!-- ATELIERS -->
+<div class="section">
+  <div class="section-title">📚 Les 2 Ateliers</div>
+  <div class="two-col">
+    <div class="mini-card">
+      <h4 style="color:#d4820a;">🕵️ Atelier Face-Quest</h4>
+      <ul>
+        <li>Active la caméra et détecte le visage</li>
+        <li>Enregistre le visage (Enroll)</li>
+        <li>Vérifie l'identité (Verify)</li>
+        <li>Envoie au micro:bit via Bluetooth</li>
+      </ul>
+      <div style="margin-top:10px;">
+        <span class="tag">camera</span>
+        <span class="tag">face-detection</span>
+        <span class="tag">Bluetooth</span>
+        <span class="tag">privacy</span>
+      </div>
+    </div>
+    <div class="mini-card">
+      <h4 style="color:#0a9e72;">😎 Atelier Face-Tracking</h4>
+      <ul>
+        <li>Détecte yeux, bouche, mouvements</li>
+        <li>Parle ou envoie des messages</li>
+        <li>Réaction en temps réel</li>
+        <li>Dialogue micro:bit via BLE</li>
+      </ul>
+      <div style="margin-top:10px;">
+        <span class="tag teal">camera</span>
+        <span class="tag teal">face-tracking</span>
+        <span class="tag teal">BLE</span>
+        <span class="tag teal">kids</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ÉVOLUTION DU DESIGN -->
+<div class="section blue">
+  <div class="section-title" style="color:#3a7bd5;">🎨 Évolution du Design</div>
+  <div class="step"><div class="step-num blue">1</div><div class="step-text"><strong class="blue">V1</strong> — Fond sombre (#0a0e1a), thème jaune/teal, polices Syne + DM Sans</div></div>
+  <div class="step"><div class="step-num blue">2</div><div class="step-text"><strong class="blue">V2</strong> — Ajout logo Workshop-DIY (blanc transparent), badge Made in Chelles, 2 flyers séparés</div></div>
+  <div class="step"><div class="step-num blue">3</div><div class="step-text"><strong class="blue">V3</strong> — Art islamique (étoiles) + Bismillah + micro:bit SVG en filigrane — <em>problème : textes peu lisibles</em></div></div>
+  <div class="step"><div class="step-num blue">4</div><div class="step-text"><strong class="blue">V4 FINALE</strong> — <strong class="blue">Fond clair</strong> (crème / menthe), texte foncé, police Fredoka One kids-friendly, vraie photo micro:bit, motif girih subtil</div></div>
+</div>
+
+<!-- CONTENU DES FLYERS -->
+<div class="section">
+  <div class="section-title">📋 Contenu de Chaque Flyer</div>
+  <table>
+    <tr><th>Zone</th><th>Contenu</th></tr>
+    <tr><td>En-tête</td><td>Logo Workshop-DIY + badge Made in Chelles · Bismillah discret centré</td></tr>
+    <tr><td>Titre</td><td>"ATELIER" + grand titre coloré avec emoji</td></tr>
+    <tr><td>Description</td><td>2 phrases d'accroche</td></tr>
+    <tr><td>Fonctionnalités</td><td>4 items avec icône emoji + bordure colorée</td></tr>
+    <tr><td>Public</td><td>À partir de 10 ans · PC recommandé · Aucun prérequis</td></tr>
+    <tr><td>Tarifs</td><td>Adhérents → Gratuit ✅ · Non-adhérents → 7€ · Adhésion</td></tr>
+    <tr><td>Lancer</td><td>URL + QR code coloré + CTA</td></tr>
+    <tr><td>Infos pratiques</td><td>📅 Dim. 22 fév. 2026 · 🕘 9h–11h30 · 📍 Parc du Souvenir, Chelles</td></tr>
+    <tr><td>Contact</td><td>workshop-diy.org · contact@workshop-diy.org · 06 19 51 51 73</td></tr>
+    <tr><td>Footer</td><td>Tagline + #hashtags</td></tr>
+  </table>
+</div>
+
+<!-- MODIFICATIONS APPLIQUÉES -->
+<div class="section teal">
+  <div class="section-title" style="color:#0a9e72;">✅ Modifications Appliquées</div>
+  <div class="step"><div class="step-num teal">✓</div><div class="step-text">Suppression "Atelier 1 sur 2" → remplacé par "Atelier" au-dessus du titre</div></div>
+  <div class="step"><div class="step-num teal">✓</div><div class="step-text">Ajout infos contact : <strong class="teal">workshop-diy.org</strong> · contact@workshop-diy.org · 06 19 51 51 73</div></div>
+  <div class="step"><div class="step-num teal">✓</div><div class="step-text">Descriptions corrigées selon les vraies fonctionnalités des apps (Enroll/Verify pour Face-Quest, BLE events pour Face-Tracking)</div></div>
+  <div class="step"><div class="step-num teal">✓</div><div class="step-text">Tarification : <strong class="teal">Gratuit adhérents</strong> / 7€ non-adhérents</div></div>
+  <div class="step"><div class="step-num teal">✓</div><div class="step-text">QR codes générés automatiquement (librairie qrcode) pour chaque URL</div></div>
+  <div class="step"><div class="step-num teal">✓</div><div class="step-text">Logo converti blanc→transparent (PIL/numpy) pour fond sombre, puis navy→transparent pour fond clair</div></div>
+  <div class="step"><div class="step-num teal">✓</div><div class="step-text">Vraie image micro:bit utilisée en filigrane (opacity 0.12)</div></div>
+  <div class="step"><div class="step-num teal">✓</div><div class="step-text">Design kids-friendly : Fredoka One, fond clair, cards blanches arrondies</div></div>
+  <div class="step"><div class="step-num teal">✓</div><div class="step-text">Art islamique discret : motif girih SVG inline en fond + Bismillah (opacity 0.4)</div></div>
+</div>
+
+<!-- FICHIERS PRODUITS -->
+<div class="section purple">
+  <div class="section-title" style="color:#7c3aed;">📦 Fichiers Produits</div>
+  <div class="file-list">
+    <div class="file-item">🖼️ flyer-face-quest.png <span class="badge file">PNG</span></div>
+    <div class="file-item">🖼️ flyer-face-tracking.png <span class="badge file">PNG</span></div>
+    <div class="file-item">🔧 flyer-face-quest.html <span class="badge file">HTML</span></div>
+    <div class="file-item">🔧 flyer-face-tracking.html <span class="badge file">HTML</span></div>
+    <div class="file-item">📝 facebook-face-quest.txt <span class="badge file">TXT</span></div>
+    <div class="file-item">📝 facebook-face-tracking.txt <span class="badge file">TXT</span></div>
+    <div class="file-item">📄 template-flyer.html <span class="badge file">TEMPLATE</span></div>
+  </div>
+  <div class="note">
+    💡 <strong>Pour publier :</strong> poster le PNG comme image Facebook + copier-coller le contenu du TXT comme description du post.<br>
+    💡 <strong>Pour modifier :</strong> ouvrir le HTML, chercher/remplacer les textes, re-screenshot avec Playwright ou capture d'écran.
+  </div>
+</div>
+
+<!-- TECH STACK -->
+<div class="section">
+  <div class="section-title">⚙️ Stack Technique</div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
+    <span class="tag gray">Python 3</span>
+    <span class="tag gray">PIL / Pillow</span>
+    <span class="tag gray">NumPy</span>
+    <span class="tag gray">qrcode</span>
+    <span class="tag gray">base64</span>
+    <span class="tag gray">Playwright (Chromium)</span>
+    <span class="tag gray">HTML + CSS</span>
+    <span class="tag gray">SVG inline</span>
+    <span class="tag gray">Google Fonts</span>
+  </div>
+  <table>
+    <tr><th>Tâche</th><th>Outil</th></tr>
+    <tr><td>Logo blanc → transparent</td><td>PIL + numpy (seuil luminance > 220)</td></tr>
+    <tr><td>QR codes colorés</td><td>librairie qrcode, couleur accent</td></tr>
+    <tr><td>Motif islamique</td><td>SVG inline girih → base64 → CSS background</td></tr>
+    <tr><td>HTML → PNG</td><td>Playwright headless Chromium (scrollHeight auto)</td></tr>
+    <tr><td>Images embarquées</td><td>base64 data URI (HTML self-contained)</td></tr>
+  </table>
+</div>
+
+<!-- LIENS -->
+<div class="section teal">
+  <div class="section-title" style="color:#0a9e72;">🔗 Liens des Ateliers</div>
+  <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+    <div style="font-size:15px;font-weight:700;">
+      🕵️ <strong>Face-Quest :</strong>
+      <span style="font-family:monospace;color:#0a9e72;font-size:13px;">https://raw.githack.com/abourdim/face-quest/main/index.html</span>
+    </div>
+    <div style="font-size:15px;font-weight:700;">
+      😎 <strong>Face-Tracking :</strong>
+      <span style="font-family:monospace;color:#0a9e72;font-size:13px;">https://raw.githack.com/abourdim/face-tracking/main/index.html</span>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;margin-top:36px;font-size:13px;color:#aaa;font-weight:700;letter-spacing:1px;">
+  ✨ Workshop-DIY · Chelles · workshop-diy.org · contact@workshop-diy.org · 06 19 51 51 73
+</div>
+
+</body>
+</html>
