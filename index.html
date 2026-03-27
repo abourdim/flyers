@@ -1,1254 +1,1003 @@
 <!DOCTYPE html>
 <html lang="fr"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Workshop-DIY — Flyers</title>
-<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Workshop-DIY — Flyers Ateliers</title>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a1628;--card:#0f1f3a;--accent:#00c853;--gold:#ffd740;--text:#e0e0e0;--text2:#888}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:'El Messiri',sans-serif;min-height:100vh}
-
-.header{text-align:center;padding:40px 20px 30px;background:linear-gradient(180deg,rgba(0,200,83,.08),transparent)}
-.header h1{font-family:'Fredoka',sans-serif;font-size:48px;font-weight:700;color:#fff;margin-bottom:8px}
-.header h1 .acc{color:var(--accent)}
-.header p{color:var(--text2);font-size:16px}
-.header .count{display:inline-block;background:var(--accent);color:#000;font-weight:700;padding:4px 16px;border-radius:20px;font-size:14px;margin-top:12px}
-
-.search-bar{max-width:600px;margin:0 auto 30px;padding:0 20px}
-.search-bar input{width:100%;padding:14px 20px;border-radius:16px;border:2px solid rgba(0,200,83,.2);background:rgba(255,255,255,.05);color:#fff;font-size:16px;font-family:'El Messiri',sans-serif;outline:none;transition:.3s}
-.search-bar input:focus{border-color:var(--accent);box-shadow:0 0 20px rgba(0,200,83,.15)}
-.search-bar input::placeholder{color:var(--text2)}
-
-.grid{max-width:1400px;margin:0 auto;padding:0 20px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:16px}
-
-.card{display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;background:var(--card);border:1px solid rgba(255,255,255,.05);cursor:pointer;transition:.3s;overflow:hidden}
-.card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,200,83,.12)}
-.card .num{font-family:'Fredoka',sans-serif;font-size:14px;color:var(--text2);font-weight:600;min-width:28px}
-.card .emoji{font-size:32px;flex-shrink:0}
-.card .info{flex:1;min-width:0}
-.card .name{font-family:'Fredoka',sans-serif;font-size:18px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.card .purpose{font-size:13px;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:2px 0 6px}
-.card .links{display:flex;gap:6px;flex-wrap:wrap}
-.card .link{font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;background:rgba(0,200,83,.1);color:var(--accent);text-decoration:none;border:1px solid rgba(0,200,83,.2);transition:.2s}
-.card .link:hover{background:var(--accent);color:#000}
-.card .link.app{background:rgba(255,215,64,.1);color:var(--gold);border-color:rgba(255,215,64,.2)}
-.card .link.app:hover{background:var(--gold);color:#000}
-.card .thumb{width:80px;height:113px;object-fit:cover;border-radius:10px;flex-shrink:0;border:1px solid rgba(255,255,255,.08)}
-
-.hidden{display:none!important}
-
-@media(max-width:500px){.grid{grid-template-columns:1fr}.card .thumb{width:60px;height:85px}}
+body{background:#0a1628;color:#fff;font-family:'El Messiri',sans-serif;min-height:100vh}
+.header{text-align:center;padding:40px 24px 20px}
+.header h1{font-family:'Fredoka',sans-serif;font-size:42px;background:linear-gradient(135deg,#ffd740,#00c853);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.header p{color:rgba(255,255,255,.5);font-size:16px;margin-top:8px}
+.count{display:inline-block;background:rgba(0,200,83,.15);color:#00c853;padding:4px 16px;border-radius:20px;font-size:14px;font-weight:700;margin-top:12px}
+.search{max-width:600px;margin:20px auto;padding:0 24px}
+.search input{width:100%;padding:14px 20px;border-radius:16px;border:2px solid rgba(0,200,83,.2);background:rgba(255,255,255,.06);color:#fff;font-size:16px;font-family:'El Messiri',sans-serif;outline:none}
+.search input:focus{border-color:#00c853}
+.search input::placeholder{color:rgba(255,255,255,.3)}
+.grid{max-width:1400px;margin:24px auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(0,200,83,.15);border-radius:16px;overflow:hidden;text-decoration:none;color:#fff;transition:.3s}
+.card:hover{border-color:#00c853;transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,200,83,.15)}
+.card-thumb{aspect-ratio:3/4;overflow:hidden;background:#0d1f35}
+.card-thumb img{width:100%;height:100%;object-fit:cover;transition:.3s}
+.card:hover .card-thumb img{transform:scale(1.05)}
+.card-info{padding:14px 18px}
+.card-num{font-size:11px;color:rgba(255,255,255,.3);font-weight:700;letter-spacing:2px}
+.card-name{font-size:20px;font-weight:700;margin:4px 0}
+.card-cat{font-size:12px;color:rgba(0,200,83,.7);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.empty{text-align:center;color:rgba(255,255,255,.3);padding:60px;font-size:18px;display:none}
 </style>
 </head><body>
 <div class="header">
-  <h1><span class="acc">Workshop-DIY</span> Flyers</h1>
-  <p>Ateliers IA, robotique & code pour enfants</p>
-  <div class="count">📄 119 ateliers</div>
+  <h1>Workshop-DIY — Flyers</h1>
+  <p>Tous les ateliers IA, robotique & code pour enfants</p>
+  <div class="count">119 ateliers</div>
 </div>
-<div class="search-bar">
-  <input type="text" id="search" placeholder="🔍 Rechercher un atelier..." oninput="filter()">
-</div>
+<div class="search"><input type="text" id="search" placeholder="🔍 Rechercher un atelier..."/></div>
 <div class="grid" id="grid">
-
-    <div class="card" onclick="window.open('001-3d-lab/atelier-3d-lab-education.html','_blank')">
-      <div class="num">001</div>
-      <div class="emoji">🧊</div>
-      <div class="info">
-        <div class="name">3d-lab</div>
-        <div class="purpose">Cree des objets 3D dans le navigateur !</div>
-        <div class="links"><a href="001-3d-lab/atelier-3d-lab-education.html" target="_blank" class="link">HTML</a> <a href="001-3d-lab/atelier-3d-lab-education.png" target="_blank" class="link">PNG</a> <a href="001-3d-lab/facebook-3d-lab.txt" target="_blank" class="link">FB</a> <a href="001-3d-lab/mail-atelier-3d-lab-education.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/3d-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="001-3d-lab/atelier-3d-lab-education.png" alt="3d-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('002-AI-hacker-lab/atelier-AI-hacker-lab-ia.html','_blank')">
-      <div class="num">002</div>
-      <div class="emoji">🤖</div>
-      <div class="info">
-        <div class="name">AI-hacker-lab</div>
-        <div class="purpose">IA + Cybersecurite en s amusant !</div>
-        <div class="links"><a href="002-AI-hacker-lab/atelier-AI-hacker-lab-ia.html" target="_blank" class="link">HTML</a> <a href="002-AI-hacker-lab/atelier-AI-hacker-lab-ia.png" target="_blank" class="link">PNG</a> <a href="002-AI-hacker-lab/facebook-AI-hacker-lab.txt" target="_blank" class="link">FB</a> <a href="002-AI-hacker-lab/mail-atelier-AI-hacker-lab-ia.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/AI-hacker-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="002-AI-hacker-lab/atelier-AI-hacker-lab-ia.png" alt="AI-hacker-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('003-PlanPilot/atelier-PlanPilot-outils.html','_blank')">
-      <div class="num">003</div>
-      <div class="emoji">📋</div>
-      <div class="info">
-        <div class="name">PlanPilot</div>
-        <div class="purpose">Organise ta journee !</div>
-        <div class="links"><a href="003-PlanPilot/atelier-PlanPilot-outils.html" target="_blank" class="link">HTML</a> <a href="003-PlanPilot/atelier-PlanPilot-outils.png" target="_blank" class="link">PNG</a> <a href="003-PlanPilot/facebook-PlanPilot.txt" target="_blank" class="link">FB</a> <a href="003-PlanPilot/mail-atelier-PlanPilot-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/PlanPilot/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="003-PlanPilot/atelier-PlanPilot-outils.png" alt="PlanPilot" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('004-al-maqlub/atelier-al-maqlub-arabe.html','_blank')">
-      <div class="num">004</div>
-      <div class="emoji">📜</div>
-      <div class="info">
-        <div class="name">al-maqlub</div>
-        <div class="purpose">Poesie arabe qui se lit a l envers !</div>
-        <div class="links"><a href="004-al-maqlub/atelier-al-maqlub-arabe.html" target="_blank" class="link">HTML</a> <a href="004-al-maqlub/atelier-al-maqlub-arabe.png" target="_blank" class="link">PNG</a> <a href="004-al-maqlub/facebook-al-maqlub.txt" target="_blank" class="link">FB</a> <a href="004-al-maqlub/mail-atelier-al-maqlub-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/al-maqlub/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="004-al-maqlub/atelier-al-maqlub-arabe.png" alt="al-maqlub" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('005-amthal/atelier-amthal-islam.html','_blank')">
-      <div class="num">005</div>
-      <div class="emoji">📖</div>
-      <div class="info">
-        <div class="name">amthal</div>
-        <div class="purpose">Proverbes arabes illustres</div>
-        <div class="links"><a href="005-amthal/atelier-amthal-islam.html" target="_blank" class="link">HTML</a> <a href="005-amthal/atelier-amthal-islam.png" target="_blank" class="link">PNG</a> <a href="005-amthal/facebook-amthal.txt" target="_blank" class="link">FB</a> <a href="005-amthal/mail-atelier-amthal-islam.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/amthal/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="005-amthal/atelier-amthal-islam.png" alt="amthal" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('006-apps/atelier-apps-outils.html','_blank')">
-      <div class="num">006</div>
-      <div class="emoji">📱</div>
-      <div class="info">
-        <div class="name">apps</div>
-        <div class="purpose">Catalogue des apps</div>
-        <div class="links"><a href="006-apps/atelier-apps-outils.html" target="_blank" class="link">HTML</a> <a href="006-apps/atelier-apps-outils.png" target="_blank" class="link">PNG</a> <a href="006-apps/facebook-apps.txt" target="_blank" class="link">FB</a> <a href="006-apps/mail-atelier-apps-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/apps/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="006-apps/atelier-apps-outils.png" alt="apps" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('007-arabic-keyboard/atelier-arabic-keyboard-arabe.html','_blank')">
-      <div class="num">007</div>
-      <div class="emoji">⌨️</div>
-      <div class="info">
-        <div class="name">arabic-keyboard</div>
-        <div class="purpose">Clavier arabe en ligne</div>
-        <div class="links"><a href="007-arabic-keyboard/atelier-arabic-keyboard-arabe.html" target="_blank" class="link">HTML</a> <a href="007-arabic-keyboard/atelier-arabic-keyboard-arabe.png" target="_blank" class="link">PNG</a> <a href="007-arabic-keyboard/facebook-arabic-keyboard.txt" target="_blank" class="link">FB</a> <a href="007-arabic-keyboard/mail-atelier-arabic-keyboard-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/arabic-keyboard/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="007-arabic-keyboard/atelier-arabic-keyboard-arabe.png" alt="arabic-keyboard" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('008-arabic-speaker/atelier-arabic-speaker-arabe.html','_blank')">
-      <div class="num">008</div>
-      <div class="emoji">🔊</div>
-      <div class="info">
-        <div class="name">arabic-speaker</div>
-        <div class="purpose">Fais parler ton ordi en arabe !</div>
-        <div class="links"><a href="008-arabic-speaker/atelier-arabic-speaker-arabe.html" target="_blank" class="link">HTML</a> <a href="008-arabic-speaker/atelier-arabic-speaker-arabe.png" target="_blank" class="link">PNG</a> <a href="008-arabic-speaker/facebook-arabic-speaker.txt" target="_blank" class="link">FB</a> <a href="008-arabic-speaker/mail-atelier-arabic-speaker-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/arabic-speaker/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="008-arabic-speaker/atelier-arabic-speaker-arabe.png" alt="arabic-speaker" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('009-arabic-translator/atelier-arabic-translator-arabe.html','_blank')">
-      <div class="num">009</div>
-      <div class="emoji">🌐</div>
-      <div class="info">
-        <div class="name">arabic-translator</div>
-        <div class="purpose">Traduis en arabe, hors-ligne !</div>
-        <div class="links"><a href="009-arabic-translator/atelier-arabic-translator-arabe.html" target="_blank" class="link">HTML</a> <a href="009-arabic-translator/atelier-arabic-translator-arabe.png" target="_blank" class="link">PNG</a> <a href="009-arabic-translator/facebook-arabic-translator.txt" target="_blank" class="link">FB</a> <a href="009-arabic-translator/mail-atelier-arabic-translator-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/arabic-translator/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="009-arabic-translator/atelier-arabic-translator-arabe.png" alt="arabic-translator" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('010-arabic-tts/atelier-arabic-tts-arabe.html','_blank')">
-      <div class="num">010</div>
-      <div class="emoji">🎤</div>
-      <div class="info">
-        <div class="name">arabic-tts</div>
-        <div class="purpose">Transforme le texte arabe en parole !</div>
-        <div class="links"><a href="010-arabic-tts/atelier-arabic-tts-arabe.html" target="_blank" class="link">HTML</a> <a href="010-arabic-tts/atelier-arabic-tts-arabe.png" target="_blank" class="link">PNG</a> <a href="010-arabic-tts/facebook-arabic-tts.txt" target="_blank" class="link">FB</a> <a href="010-arabic-tts/mail-atelier-arabic-tts-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/arabic-tts/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="010-arabic-tts/atelier-arabic-tts-arabe.png" alt="arabic-tts" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('011-avahi/atelier-avahi-reseau.html','_blank')">
-      <div class="num">011</div>
-      <div class="emoji">📡</div>
-      <div class="info">
-        <div class="name">avahi</div>
-        <div class="purpose">Reseau zero-config</div>
-        <div class="links"><a href="011-avahi/atelier-avahi-reseau.html" target="_blank" class="link">HTML</a> <a href="011-avahi/atelier-avahi-reseau.png" target="_blank" class="link">PNG</a> <a href="011-avahi/facebook-avahi.txt" target="_blank" class="link">FB</a> <a href="011-avahi/mail-atelier-avahi-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/avahi/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="011-avahi/atelier-avahi-reseau.png" alt="avahi" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('012-bash-toolkit/atelier-bash-toolkit-outils.html','_blank')">
-      <div class="num">012</div>
-      <div class="emoji">🧰</div>
-      <div class="info">
-        <div class="name">bash-toolkit</div>
-        <div class="purpose">Scripts Bash utiles !</div>
-        <div class="links"><a href="012-bash-toolkit/atelier-bash-toolkit-outils.html" target="_blank" class="link">HTML</a> <a href="012-bash-toolkit/atelier-bash-toolkit-outils.png" target="_blank" class="link">PNG</a> <a href="012-bash-toolkit/facebook-bash-toolkit.txt" target="_blank" class="link">FB</a> <a href="012-bash-toolkit/mail-atelier-bash-toolkit-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/bash-toolkit/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="012-bash-toolkit/atelier-bash-toolkit-outils.png" alt="bash-toolkit" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('013-bit-54-activities/atelier-bit-54-activities-micro:bit.html','_blank')">
-      <div class="num">013</div>
-      <div class="emoji">📘</div>
-      <div class="info">
-        <div class="name">bit-54-activities</div>
-        <div class="purpose">54 projets micro:bit !</div>
-        <div class="links"><a href="013-bit-54-activities/atelier-bit-54-activities-micro:bit.html" target="_blank" class="link">HTML</a> <a href="013-bit-54-activities/atelier-bit-54-activities-micro:bit.png" target="_blank" class="link">PNG</a> <a href="013-bit-54-activities/facebook-bit-54-activities.txt" target="_blank" class="link">FB</a> <a href="013-bit-54-activities/mail-atelier-bit-54-activities-micro:bit.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/bit-54-activities/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="013-bit-54-activities/atelier-bit-54-activities-micro:bit.png" alt="bit-54-activities" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('014-bit-bot/atelier-bit-bot-robot-ia.html','_blank')">
-      <div class="num">014</div>
-      <div class="emoji">🤖</div>
-      <div class="info">
-        <div class="name">bit-bot</div>
-        <div class="purpose">Parle avec ton robot IA !</div>
-        <div class="links"><a href="014-bit-bot/atelier-bit-bot-robot-ia.html" target="_blank" class="link">HTML</a> <a href="014-bit-bot/atelier-bit-bot-robot-ia.png" target="_blank" class="link">PNG</a> <a href="014-bit-bot/facebook-bit-bot.txt" target="_blank" class="link">FB</a> <a href="014-bit-bot/mail-atelier-bit-bot-robot-ia.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/bit-bot/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="014-bit-bot/atelier-bit-bot-robot-ia.png" alt="bit-bot" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('015-bit-playground/atelier-bit-playground-microbit.html','_blank')">
-      <div class="num">015</div>
-      <div class="emoji">🕹️</div>
-      <div class="info">
-        <div class="name">bit-playground</div>
-        <div class="purpose">Le terrain de jeu micro:bit !</div>
-        <div class="links"><a href="015-bit-playground/atelier-bit-playground-microbit.html" target="_blank" class="link">HTML</a> <a href="015-bit-playground/atelier-bit-playground-microbit.png" target="_blank" class="link">PNG</a> <a href="015-bit-playground/facebook-bit-playground.txt" target="_blank" class="link">FB</a> <a href="015-bit-playground/mail-atelier-bit-playground-microbit.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/bit-playground/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="015-bit-playground/atelier-bit-playground-microbit.png" alt="bit-playground" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('016-bitmoji-lab/atelier-bitmoji-lab-leds-neopixel.html','_blank')">
-      <div class="num">016</div>
-      <div class="emoji">🎪</div>
-      <div class="info">
-        <div class="name">bitmoji-lab</div>
-        <div class="purpose">Dessine des emojis sur des LEDs !</div>
-        <div class="links"><a href="016-bitmoji-lab/atelier-bitmoji-lab-leds-neopixel.html" target="_blank" class="link">HTML</a> <a href="016-bitmoji-lab/atelier-bitmoji-lab-leds-neopixel.png" target="_blank" class="link">PNG</a> <a href="016-bitmoji-lab/facebook-bitmoji-lab.txt" target="_blank" class="link">FB</a> <a href="016-bitmoji-lab/mail-atelier-bitmoji-lab-leds-neopixel.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/bitmoji-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="016-bitmoji-lab/atelier-bitmoji-lab-leds-neopixel.png" alt="bitmoji-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('017-ble-dashboard/atelier-ble-dashboard-hardware.html','_blank')">
-      <div class="num">017</div>
-      <div class="emoji">📊</div>
-      <div class="info">
-        <div class="name">ble-dashboard</div>
-        <div class="purpose">Scanne tout le Bluetooth autour !</div>
-        <div class="links"><a href="017-ble-dashboard/atelier-ble-dashboard-hardware.html" target="_blank" class="link">HTML</a> <a href="017-ble-dashboard/atelier-ble-dashboard-hardware.png" target="_blank" class="link">PNG</a> <a href="017-ble-dashboard/facebook-ble-dashboard.txt" target="_blank" class="link">FB</a> <a href="017-ble-dashboard/mail-atelier-ble-dashboard-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ble-dashboard/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="017-ble-dashboard/atelier-ble-dashboard-hardware.png" alt="ble-dashboard" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('018-ble-logger/atelier-ble-logger-micro:bit.html','_blank')">
-      <div class="num">018</div>
-      <div class="emoji">📶</div>
-      <div class="info">
-        <div class="name">ble-logger</div>
-        <div class="purpose">Espionne le Bluetooth !</div>
-        <div class="links"><a href="018-ble-logger/atelier-ble-logger-micro:bit.html" target="_blank" class="link">HTML</a> <a href="018-ble-logger/atelier-ble-logger-micro:bit.png" target="_blank" class="link">PNG</a> <a href="018-ble-logger/facebook-ble-logger.txt" target="_blank" class="link">FB</a> <a href="018-ble-logger/mail-atelier-ble-logger-micro:bit.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ble-logger/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="018-ble-logger/atelier-ble-logger-micro:bit.png" alt="ble-logger" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('019-bonjour/atelier-bonjour-reseau.html','_blank')">
-      <div class="num">019</div>
-      <div class="emoji">👋</div>
-      <div class="info">
-        <div class="name">bonjour</div>
-        <div class="purpose">Decouvre les appareils sur ton reseau !</div>
-        <div class="links"><a href="019-bonjour/atelier-bonjour-reseau.html" target="_blank" class="link">HTML</a> <a href="019-bonjour/atelier-bonjour-reseau.png" target="_blank" class="link">PNG</a> <a href="019-bonjour/facebook-bonjour.txt" target="_blank" class="link">FB</a> <a href="019-bonjour/mail-atelier-bonjour-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/bonjour/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="019-bonjour/atelier-bonjour-reseau.png" alt="bonjour" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('020-builders-of-light/atelier-builders-of-light-arabe.html','_blank')">
-      <div class="num">020</div>
-      <div class="emoji">🏛️</div>
-      <div class="info">
-        <div class="name">builders-of-light</div>
-        <div class="purpose">Decouvre les savants de l Age d Or !</div>
-        <div class="links"><a href="020-builders-of-light/atelier-builders-of-light-arabe.html" target="_blank" class="link">HTML</a> <a href="020-builders-of-light/atelier-builders-of-light-arabe.png" target="_blank" class="link">PNG</a> <a href="020-builders-of-light/facebook-builders-of-light.txt" target="_blank" class="link">FB</a> <a href="020-builders-of-light/mail-atelier-builders-of-light-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/builders-of-light/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="020-builders-of-light/atelier-builders-of-light-arabe.png" alt="builders-of-light" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('021-callgraph/atelier-callgraph-outils.html','_blank')">
-      <div class="num">021</div>
-      <div class="emoji">🗺️</div>
-      <div class="info">
-        <div class="name">callgraph</div>
-        <div class="purpose">Visualise le code C !</div>
-        <div class="links"><a href="021-callgraph/atelier-callgraph-outils.html" target="_blank" class="link">HTML</a> <a href="021-callgraph/atelier-callgraph-outils.png" target="_blank" class="link">PNG</a> <a href="021-callgraph/facebook-callgraph.txt" target="_blank" class="link">FB</a> <a href="021-callgraph/mail-atelier-callgraph-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/callgraph/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="021-callgraph/atelier-callgraph-outils.png" alt="callgraph" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('022-circuit-lab/atelier-circuit-lab-electronique.html','_blank')">
-      <div class="num">022</div>
-      <div class="emoji">🔋</div>
-      <div class="info">
-        <div class="name">circuit-lab</div>
-        <div class="purpose">Construis des circuits electriques !</div>
-        <div class="links"><a href="022-circuit-lab/atelier-circuit-lab-electronique.html" target="_blank" class="link">HTML</a> <a href="022-circuit-lab/atelier-circuit-lab-electronique.png" target="_blank" class="link">PNG</a> <a href="022-circuit-lab/facebook-circuit-lab.txt" target="_blank" class="link">FB</a> <a href="022-circuit-lab/mail-atelier-circuit-lab-electronique.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/circuit-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="022-circuit-lab/atelier-circuit-lab-electronique.png" alt="circuit-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('023-classroom/atelier-classroom-classe.html','_blank')">
-      <div class="num">023</div>
-      <div class="emoji">🏫</div>
-      <div class="info">
-        <div class="name">classroom</div>
-        <div class="purpose">Ta classe virtuelle !</div>
-        <div class="links"><a href="023-classroom/atelier-classroom-classe.html" target="_blank" class="link">HTML</a> <a href="023-classroom/atelier-classroom-classe.png" target="_blank" class="link">PNG</a> <a href="023-classroom/facebook-classroom.txt" target="_blank" class="link">FB</a> <a href="023-classroom/mail-atelier-classroom-classe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/classroom/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="023-classroom/atelier-classroom-classe.png" alt="classroom" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('024-claude-toolkit/atelier-claude-toolkit-ia.html','_blank')">
-      <div class="num">024</div>
-      <div class="emoji">🔮</div>
-      <div class="info">
-        <div class="name">claude-toolkit</div>
-        <div class="purpose">Automatise avec l IA Claude !</div>
-        <div class="links"><a href="024-claude-toolkit/atelier-claude-toolkit-ia.html" target="_blank" class="link">HTML</a> <a href="024-claude-toolkit/atelier-claude-toolkit-ia.png" target="_blank" class="link">PNG</a> <a href="024-claude-toolkit/facebook-claude-toolkit.txt" target="_blank" class="link">FB</a> <a href="024-claude-toolkit/mail-atelier-claude-toolkit-ia.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/claude-toolkit/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="024-claude-toolkit/atelier-claude-toolkit-ia.png" alt="claude-toolkit" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('025-cowsay/atelier-cowsay-education.html','_blank')">
-      <div class="num">025</div>
-      <div class="emoji">🐄</div>
-      <div class="info">
-        <div class="name">cowsay</div>
-        <div class="purpose">Une vache qui fait des maths !</div>
-        <div class="links"><a href="025-cowsay/atelier-cowsay-education.html" target="_blank" class="link">HTML</a> <a href="025-cowsay/atelier-cowsay-education.png" target="_blank" class="link">PNG</a> <a href="025-cowsay/facebook-cowsay.txt" target="_blank" class="link">FB</a> <a href="025-cowsay/mail-atelier-cowsay-education.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/cowsay/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="025-cowsay/atelier-cowsay-education.png" alt="cowsay" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('026-crypto-academy/atelier-crypto-academy-securite.html','_blank')">
-      <div class="num">026</div>
-      <div class="emoji">🔐</div>
-      <div class="info">
-        <div class="name">crypto-academy</div>
-        <div class="purpose">Apprends la cryptographie !</div>
-        <div class="links"><a href="026-crypto-academy/atelier-crypto-academy-securite.html" target="_blank" class="link">HTML</a> <a href="026-crypto-academy/atelier-crypto-academy-securite.png" target="_blank" class="link">PNG</a> <a href="026-crypto-academy/facebook-crypto-academy.txt" target="_blank" class="link">FB</a> <a href="026-crypto-academy/mail-atelier-crypto-academy-securite.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/crypto-academy/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="026-crypto-academy/atelier-crypto-academy-securite.png" alt="crypto-academy" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('027-crypto-vault/atelier-crypto-vault-securite.html','_blank')">
-      <div class="num">027</div>
-      <div class="emoji">🔒</div>
-      <div class="info">
-        <div class="name">crypto-vault</div>
-        <div class="purpose">Chiffre tes messages secrets !</div>
-        <div class="links"><a href="027-crypto-vault/atelier-crypto-vault-securite.html" target="_blank" class="link">HTML</a> <a href="027-crypto-vault/atelier-crypto-vault-securite.png" target="_blank" class="link">PNG</a> <a href="027-crypto-vault/facebook-crypto-vault.txt" target="_blank" class="link">FB</a> <a href="027-crypto-vault/mail-atelier-crypto-vault-securite.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/crypto-vault/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="027-crypto-vault/atelier-crypto-vault-securite.png" alt="crypto-vault" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('028-dhcp-lab/atelier-dhcp-lab-reseau.html','_blank')">
-      <div class="num">028</div>
-      <div class="emoji">🌐</div>
-      <div class="info">
-        <div class="name">dhcp-lab</div>
-        <div class="purpose">Comment ton ordi recoit son IP !</div>
-        <div class="links"><a href="028-dhcp-lab/atelier-dhcp-lab-reseau.html" target="_blank" class="link">HTML</a> <a href="028-dhcp-lab/atelier-dhcp-lab-reseau.png" target="_blank" class="link">PNG</a> <a href="028-dhcp-lab/facebook-dhcp-lab.txt" target="_blank" class="link">FB</a> <a href="028-dhcp-lab/mail-atelier-dhcp-lab-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/dhcp-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="028-dhcp-lab/atelier-dhcp-lab-reseau.png" alt="dhcp-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('029-dir-pulse/atelier-dir-pulse-outils.html','_blank')">
-      <div class="num">029</div>
-      <div class="emoji">📂</div>
-      <div class="info">
-        <div class="name">dir-pulse</div>
-        <div class="purpose">Surveille tes fichiers en direct !</div>
-        <div class="links"><a href="029-dir-pulse/atelier-dir-pulse-outils.html" target="_blank" class="link">HTML</a> <a href="029-dir-pulse/atelier-dir-pulse-outils.png" target="_blank" class="link">PNG</a> <a href="029-dir-pulse/facebook-dir-pulse.txt" target="_blank" class="link">FB</a> <a href="029-dir-pulse/mail-atelier-dir-pulse-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/dir-pulse/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="029-dir-pulse/atelier-dir-pulse-outils.png" alt="dir-pulse" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('030-docker-lab/atelier-docker-lab-linux.html','_blank')">
-      <div class="num">030</div>
-      <div class="emoji">🐳</div>
-      <div class="info">
-        <div class="name">docker-lab</div>
-        <div class="purpose">Apprends Docker</div>
-        <div class="links"><a href="030-docker-lab/atelier-docker-lab-linux.html" target="_blank" class="link">HTML</a> <a href="030-docker-lab/atelier-docker-lab-linux.png" target="_blank" class="link">PNG</a> <a href="030-docker-lab/facebook-docker-lab.txt" target="_blank" class="link">FB</a> <a href="030-docker-lab/mail-atelier-docker-lab-linux.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/docker-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="030-docker-lab/atelier-docker-lab-linux.png" alt="docker-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('031-eid/atelier-eid-arabe.html','_blank')">
-      <div class="num">031</div>
-      <div class="emoji">🎉</div>
-      <div class="info">
-        <div class="name">eid</div>
-        <div class="purpose">Bonne fete ! Eid Mubarak !</div>
-        <div class="links"><a href="031-eid/atelier-eid-arabe.html" target="_blank" class="link">HTML</a> <a href="031-eid/atelier-eid-arabe.png" target="_blank" class="link">PNG</a> <a href="031-eid/facebook-eid.txt" target="_blank" class="link">FB</a> <a href="031-eid/mail-atelier-eid-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/eid/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="031-eid/atelier-eid-arabe.png" alt="eid" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('032-elarabya/atelier-elarabya-arabe.html','_blank')">
-      <div class="num">032</div>
-      <div class="emoji">🔤</div>
-      <div class="info">
-        <div class="name">elarabya</div>
-        <div class="purpose">Apprends l'arabe</div>
-        <div class="links"><a href="032-elarabya/atelier-elarabya-arabe.html" target="_blank" class="link">HTML</a> <a href="032-elarabya/atelier-elarabya-arabe.png" target="_blank" class="link">PNG</a> <a href="032-elarabya/facebook-elarabya.txt" target="_blank" class="link">FB</a> <a href="032-elarabya/mail-atelier-elarabya-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/elarabya/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="032-elarabya/atelier-elarabya-arabe.png" alt="elarabya" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('033-emojis/atelier-emojis-education.html','_blank')">
-      <div class="num">033</div>
-      <div class="emoji">😀</div>
-      <div class="info">
-        <div class="name">emojis</div>
-        <div class="purpose">Programme avec des emojis !</div>
-        <div class="links"><a href="033-emojis/atelier-emojis-education.html" target="_blank" class="link">HTML</a> <a href="033-emojis/atelier-emojis-education.png" target="_blank" class="link">PNG</a> <a href="033-emojis/facebook-emojis.txt" target="_blank" class="link">FB</a> <a href="033-emojis/mail-atelier-emojis-education.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/emojis/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="033-emojis/atelier-emojis-education.png" alt="emojis" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('034-esp32-c3-kids-lab/atelier-esp32-c3-kids-lab-hardware.html','_blank')">
-      <div class="num">034</div>
-      <div class="emoji">⚡</div>
-      <div class="info">
-        <div class="name">esp32-c3-kids-lab</div>
-        <div class="purpose">Decouvre l ESP32 et l IoT !</div>
-        <div class="links"><a href="034-esp32-c3-kids-lab/atelier-esp32-c3-kids-lab-hardware.html" target="_blank" class="link">HTML</a> <a href="034-esp32-c3-kids-lab/atelier-esp32-c3-kids-lab-hardware.png" target="_blank" class="link">PNG</a> <a href="034-esp32-c3-kids-lab/facebook-esp32-c3-kids-lab.txt" target="_blank" class="link">FB</a> <a href="034-esp32-c3-kids-lab/mail-atelier-esp32-c3-kids-lab-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/esp32-c3-kids-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="034-esp32-c3-kids-lab/atelier-esp32-c3-kids-lab-hardware.png" alt="esp32-c3-kids-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('035-evic-toolkit/atelier-evic-toolkit-hardware.html','_blank')">
-      <div class="num">035</div>
-      <div class="emoji">🔧</div>
-      <div class="info">
-        <div class="name">evic-toolkit</div>
-        <div class="purpose">Outils pour bornes de recharge !</div>
-        <div class="links"><a href="035-evic-toolkit/atelier-evic-toolkit-hardware.html" target="_blank" class="link">HTML</a> <a href="035-evic-toolkit/atelier-evic-toolkit-hardware.png" target="_blank" class="link">PNG</a> <a href="035-evic-toolkit/facebook-evic-toolkit.txt" target="_blank" class="link">FB</a> <a href="035-evic-toolkit/mail-atelier-evic-toolkit-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/evic-toolkit/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="035-evic-toolkit/atelier-evic-toolkit-hardware.png" alt="evic-toolkit" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('036-face-quest/atelier-face-quest-detection-visage.html','_blank')">
-      <div class="num">036</div>
-      <div class="emoji">🕵️</div>
-      <div class="info">
-        <div class="name">face-quest</div>
-        <div class="purpose">Souris pour marquer des points !</div>
-        <div class="links"><a href="036-face-quest/atelier-face-quest-detection-visage.html" target="_blank" class="link">HTML</a> <a href="036-face-quest/atelier-face-quest-detection-visage.png" target="_blank" class="link">PNG</a> <a href="036-face-quest/facebook-face-quest.txt" target="_blank" class="link">FB</a> <a href="036-face-quest/mail-atelier-face-quest-detection-visage.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/face-quest/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="036-face-quest/atelier-face-quest-detection-visage.png" alt="face-quest" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('037-face-tracking/atelier-face-tracking-robot-visage.html','_blank')">
-      <div class="num">037</div>
-      <div class="emoji">👁️</div>
-      <div class="info">
-        <div class="name">face-tracking</div>
-        <div class="purpose">Ton visage controle le robot !</div>
-        <div class="links"><a href="037-face-tracking/atelier-face-tracking-robot-visage.html" target="_blank" class="link">HTML</a> <a href="037-face-tracking/atelier-face-tracking-robot-visage.png" target="_blank" class="link">PNG</a> <a href="037-face-tracking/facebook-face-tracking.txt" target="_blank" class="link">FB</a> <a href="037-face-tracking/mail-atelier-face-tracking-robot-visage.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/face-tracking/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="037-face-tracking/atelier-face-tracking-robot-visage.png" alt="face-tracking" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('038-fihris/atelier-fihris-outils.html','_blank')">
-      <div class="num">038</div>
-      <div class="emoji">📇</div>
-      <div class="info">
-        <div class="name">fihris</div>
-        <div class="purpose">Index de toutes les apps !</div>
-        <div class="links"><a href="038-fihris/atelier-fihris-outils.html" target="_blank" class="link">HTML</a> <a href="038-fihris/atelier-fihris-outils.png" target="_blank" class="link">PNG</a> <a href="038-fihris/facebook-fihris.txt" target="_blank" class="link">FB</a> <a href="038-fihris/mail-atelier-fihris-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/fihris/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="038-fihris/atelier-fihris-outils.png" alt="fihris" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('039-firebase/atelier-firebase-web.html','_blank')">
-      <div class="num">039</div>
-      <div class="emoji">🔥</div>
-      <div class="info">
-        <div class="name">firebase</div>
-        <div class="purpose">Explore Firebase</div>
-        <div class="links"><a href="039-firebase/atelier-firebase-web.html" target="_blank" class="link">HTML</a> <a href="039-firebase/atelier-firebase-web.png" target="_blank" class="link">PNG</a> <a href="039-firebase/facebook-firebase.txt" target="_blank" class="link">FB</a> <a href="039-firebase/mail-atelier-firebase-web.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/firebase/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="039-firebase/atelier-firebase-web.png" alt="firebase" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('040-firmware-update/atelier-firmware-update-hardware.html','_blank')">
-      <div class="num">040</div>
-      <div class="emoji">📲</div>
-      <div class="info">
-        <div class="name">firmware-update</div>
-        <div class="purpose">Mets a jour tes appareils !</div>
-        <div class="links"><a href="040-firmware-update/atelier-firmware-update-hardware.html" target="_blank" class="link">HTML</a> <a href="040-firmware-update/atelier-firmware-update-hardware.png" target="_blank" class="link">PNG</a> <a href="040-firmware-update/facebook-firmware-update.txt" target="_blank" class="link">FB</a> <a href="040-firmware-update/mail-atelier-firmware-update-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/firmware-update/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="040-firmware-update/atelier-firmware-update-hardware.png" alt="firmware-update" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('041-flight-tracker/atelier-flight-tracker-reseau.html','_blank')">
-      <div class="num">041</div>
-      <div class="emoji">✈️</div>
-      <div class="info">
-        <div class="name">flight-tracker</div>
-        <div class="purpose">Suis les avions en temps reel !</div>
-        <div class="links"><a href="041-flight-tracker/atelier-flight-tracker-reseau.html" target="_blank" class="link">HTML</a> <a href="041-flight-tracker/atelier-flight-tracker-reseau.png" target="_blank" class="link">PNG</a> <a href="041-flight-tracker/facebook-flight-tracker.txt" target="_blank" class="link">FB</a> <a href="041-flight-tracker/mail-atelier-flight-tracker-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/flight-tracker/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="041-flight-tracker/atelier-flight-tracker-reseau.png" alt="flight-tracker" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('042-flyers/atelier-flyers-outils.html','_blank')">
-      <div class="num">042</div>
-      <div class="emoji">🪧</div>
-      <div class="info">
-        <div class="name">flyers</div>
-        <div class="purpose">Cree des flyers promotionnels !</div>
-        <div class="links"><a href="042-flyers/atelier-flyers-outils.html" target="_blank" class="link">HTML</a> <a href="042-flyers/atelier-flyers-outils.png" target="_blank" class="link">PNG</a> <a href="042-flyers/facebook-flyers.txt" target="_blank" class="link">FB</a> <a href="042-flyers/mail-atelier-flyers-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/flyers/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="042-flyers/atelier-flyers-outils.png" alt="flyers" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('043-git-date-rewrite/atelier-git-date-rewrite-outils.html','_blank')">
-      <div class="num">043</div>
-      <div class="emoji">📅</div>
-      <div class="info">
-        <div class="name">git-date-rewrite</div>
-        <div class="purpose">Reecris les dates de tes commits !</div>
-        <div class="links"><a href="043-git-date-rewrite/atelier-git-date-rewrite-outils.html" target="_blank" class="link">HTML</a> <a href="043-git-date-rewrite/atelier-git-date-rewrite-outils.png" target="_blank" class="link">PNG</a> <a href="043-git-date-rewrite/facebook-git-date-rewrite.txt" target="_blank" class="link">FB</a> <a href="043-git-date-rewrite/mail-atelier-git-date-rewrite-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/git-date-rewrite/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="043-git-date-rewrite/atelier-git-date-rewrite-outils.png" alt="git-date-rewrite" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('044-git-lab/atelier-git-lab-education.html','_blank')">
-      <div class="num">044</div>
-      <div class="emoji">🌿</div>
-      <div class="info">
-        <div class="name">git-lab</div>
-        <div class="purpose">Apprends Git comme un pro !</div>
-        <div class="links"><a href="044-git-lab/atelier-git-lab-education.html" target="_blank" class="link">HTML</a> <a href="044-git-lab/atelier-git-lab-education.png" target="_blank" class="link">PNG</a> <a href="044-git-lab/facebook-git-lab.txt" target="_blank" class="link">FB</a> <a href="044-git-lab/mail-atelier-git-lab-education.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/git-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="044-git-lab/atelier-git-lab-education.png" alt="git-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('045-git-pulse/atelier-git-pulse-outils.html','_blank')">
-      <div class="num">045</div>
-      <div class="emoji">💓</div>
-      <div class="info">
-        <div class="name">git-pulse</div>
-        <div class="purpose">Gere tous tes repos GitHub !</div>
-        <div class="links"><a href="045-git-pulse/atelier-git-pulse-outils.html" target="_blank" class="link">HTML</a> <a href="045-git-pulse/atelier-git-pulse-outils.png" target="_blank" class="link">PNG</a> <a href="045-git-pulse/facebook-git-pulse.txt" target="_blank" class="link">FB</a> <a href="045-git-pulse/mail-atelier-git-pulse-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/git-pulse/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="045-git-pulse/atelier-git-pulse-outils.png" alt="git-pulse" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('046-golden-age/atelier-golden-age-arabe.html','_blank')">
-      <div class="num">046</div>
-      <div class="emoji">✨</div>
-      <div class="info">
-        <div class="name">golden-age</div>
-        <div class="purpose">Voyage dans l Age d Or islamique !</div>
-        <div class="links"><a href="046-golden-age/atelier-golden-age-arabe.html" target="_blank" class="link">HTML</a> <a href="046-golden-age/atelier-golden-age-arabe.png" target="_blank" class="link">PNG</a> <a href="046-golden-age/facebook-golden-age.txt" target="_blank" class="link">FB</a> <a href="046-golden-age/mail-atelier-golden-age-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/golden-age/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="046-golden-age/atelier-golden-age-arabe.png" alt="golden-age" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('047-hackrf-one/atelier-hackrf-one-hardware.html','_blank')">
-      <div class="num">047</div>
-      <div class="emoji">📡</div>
-      <div class="info">
-        <div class="name">hackrf-one</div>
-        <div class="purpose">Analyse les signaux radio !</div>
-        <div class="links"><a href="047-hackrf-one/atelier-hackrf-one-hardware.html" target="_blank" class="link">HTML</a> <a href="047-hackrf-one/atelier-hackrf-one-hardware.png" target="_blank" class="link">PNG</a> <a href="047-hackrf-one/facebook-hackrf-one.txt" target="_blank" class="link">FB</a> <a href="047-hackrf-one/mail-atelier-hackrf-one-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/hackrf-one/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="047-hackrf-one/atelier-hackrf-one-hardware.png" alt="hackrf-one" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('048-hacktivist-kids/atelier-hacktivist-kids-securite.html','_blank')">
-      <div class="num">048</div>
-      <div class="emoji">🎭</div>
-      <div class="info">
-        <div class="name">hacktivist-kids</div>
-        <div class="purpose">Pranks educatifs pour jeunes agents !</div>
-        <div class="links"><a href="048-hacktivist-kids/atelier-hacktivist-kids-securite.html" target="_blank" class="link">HTML</a> <a href="048-hacktivist-kids/atelier-hacktivist-kids-securite.png" target="_blank" class="link">PNG</a> <a href="048-hacktivist-kids/facebook-hacktivist-kids.txt" target="_blank" class="link">FB</a> <a href="048-hacktivist-kids/mail-atelier-hacktivist-kids-securite.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/hacktivist-kids/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="048-hacktivist-kids/atelier-hacktivist-kids-securite.png" alt="hacktivist-kids" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('049-ierab/atelier-ierab-arabe.html','_blank')">
-      <div class="num">049</div>
-      <div class="emoji">📝</div>
-      <div class="info">
-        <div class="name">ierab</div>
-        <div class="purpose">Grammaire arabe interactive</div>
-        <div class="links"><a href="049-ierab/atelier-ierab-arabe.html" target="_blank" class="link">HTML</a> <a href="049-ierab/atelier-ierab-arabe.png" target="_blank" class="link">PNG</a> <a href="049-ierab/facebook-ierab.txt" target="_blank" class="link">FB</a> <a href="049-ierab/mail-atelier-ierab-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ierab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="049-ierab/atelier-ierab-arabe.png" alt="ierab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('050-jisr/atelier-jisr-arabe.html','_blank')">
-      <div class="num">050</div>
-      <div class="emoji">🌉</div>
-      <div class="info">
-        <div class="name">jisr</div>
-        <div class="purpose">Le pont entre les civilisations !</div>
-        <div class="links"><a href="050-jisr/atelier-jisr-arabe.html" target="_blank" class="link">HTML</a> <a href="050-jisr/atelier-jisr-arabe.png" target="_blank" class="link">PNG</a> <a href="050-jisr/facebook-jisr.txt" target="_blank" class="link">FB</a> <a href="050-jisr/mail-atelier-jisr-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/jisr/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="050-jisr/atelier-jisr-arabe.png" alt="jisr" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('051-kalami/atelier-kalami-arabe.html','_blank')">
-      <div class="num">051</div>
-      <div class="emoji">🗨️</div>
-      <div class="info">
-        <div class="name">kalami</div>
-        <div class="purpose">Parle et traduis en arabe !</div>
-        <div class="links"><a href="051-kalami/atelier-kalami-arabe.html" target="_blank" class="link">HTML</a> <a href="051-kalami/atelier-kalami-arabe.png" target="_blank" class="link">PNG</a> <a href="051-kalami/facebook-kalami.txt" target="_blank" class="link">FB</a> <a href="051-kalami/mail-atelier-kalami-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/kalami/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="051-kalami/atelier-kalami-arabe.png" alt="kalami" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('052-linkedin/atelier-linkedin-outils.html','_blank')">
-      <div class="num">052</div>
-      <div class="emoji">💼</div>
-      <div class="info">
-        <div class="name">linkedin</div>
-        <div class="purpose">Portfolio ingenieur embarque !</div>
-        <div class="links"><a href="052-linkedin/atelier-linkedin-outils.html" target="_blank" class="link">HTML</a> <a href="052-linkedin/atelier-linkedin-outils.png" target="_blank" class="link">PNG</a> <a href="052-linkedin/facebook-linkedin.txt" target="_blank" class="link">FB</a> <a href="052-linkedin/mail-atelier-linkedin-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/linkedin/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="052-linkedin/atelier-linkedin-outils.png" alt="linkedin" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('053-linux-kids-lab/atelier-linux-kids-terminal.html','_blank')">
-      <div class="num">053</div>
-      <div class="emoji">🐧</div>
-      <div class="info">
-        <div class="name">linux-kids-lab</div>
-        <div class="purpose">Deviens un ninja du terminal !</div>
-        <div class="links"><a href="053-linux-kids-lab/atelier-linux-kids-terminal.html" target="_blank" class="link">HTML</a> <a href="053-linux-kids-lab/atelier-linux-kids-terminal.png" target="_blank" class="link">PNG</a> <a href="053-linux-kids-lab/facebook-linux-kids-lab.txt" target="_blank" class="link">FB</a> <a href="053-linux-kids-lab/mail-atelier-linux-kids-terminal.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/linux-kids-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="053-linux-kids-lab/atelier-linux-kids-terminal.png" alt="linux-kids-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('054-loggy/atelier-loggy-outils.html','_blank')">
-      <div class="num">054</div>
-      <div class="emoji">📋</div>
-      <div class="info">
-        <div class="name">loggy</div>
-        <div class="purpose">Analyse tes logs</div>
-        <div class="links"><a href="054-loggy/atelier-loggy-outils.html" target="_blank" class="link">HTML</a> <a href="054-loggy/atelier-loggy-outils.png" target="_blank" class="link">PNG</a> <a href="054-loggy/facebook-loggy.txt" target="_blank" class="link">FB</a> <a href="054-loggy/mail-atelier-loggy-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/loggy/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="054-loggy/atelier-loggy-outils.png" alt="loggy" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('055-luminaries-of-islam/atelier-luminaries-of-islam-arabe.html','_blank')">
-      <div class="num">055</div>
-      <div class="emoji">🌟</div>
-      <div class="info">
-        <div class="name">luminaries-of-islam</div>
-        <div class="purpose">Les grands savants musulmans !</div>
-        <div class="links"><a href="055-luminaries-of-islam/atelier-luminaries-of-islam-arabe.html" target="_blank" class="link">HTML</a> <a href="055-luminaries-of-islam/atelier-luminaries-of-islam-arabe.png" target="_blank" class="link">PNG</a> <a href="055-luminaries-of-islam/facebook-luminaries-of-islam.txt" target="_blank" class="link">FB</a> <a href="055-luminaries-of-islam/mail-atelier-luminaries-of-islam-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/luminaries-of-islam/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="055-luminaries-of-islam/atelier-luminaries-of-islam-arabe.png" alt="luminaries-of-islam" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('056-mac-weird-keys/atelier-mac-weird-keys-outils.html','_blank')">
-      <div class="num">056</div>
-      <div class="emoji">⌨️</div>
-      <div class="info">
-        <div class="name">mac-weird-keys</div>
-        <div class="purpose">Trouve les symboles bizarres du Mac !</div>
-        <div class="links"><a href="056-mac-weird-keys/atelier-mac-weird-keys-outils.html" target="_blank" class="link">HTML</a> <a href="056-mac-weird-keys/atelier-mac-weird-keys-outils.png" target="_blank" class="link">PNG</a> <a href="056-mac-weird-keys/facebook-mac-weird-keys.txt" target="_blank" class="link">FB</a> <a href="056-mac-weird-keys/mail-atelier-mac-weird-keys-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/mac-weird-keys/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="056-mac-weird-keys/atelier-mac-weird-keys-outils.png" alt="mac-weird-keys" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('057-magic-hands/flyer.html','_blank')">
-      <div class="num">057</div>
-      <div class="emoji">🪄</div>
-      <div class="info">
-        <div class="name">magic-hands</div>
-        <div class="purpose">Tes mains font de la magie !</div>
-        <div class="links"><a href="057-magic-hands/flyer.html" target="_blank" class="link">HTML</a> <a href="057-magic-hands/flyer.png" target="_blank" class="link">PNG</a> <a href="057-magic-hands/facebook-magic-hands.txt" target="_blank" class="link">FB</a> <a href="057-magic-hands/mail-atelier-magic-hands-ia-camera.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/magic-hands/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="057-magic-hands/flyer.png" alt="magic-hands" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('058-makecode-adventures/atelier-makecode-adventures-micro:bit.html','_blank')">
-      <div class="num">058</div>
-      <div class="emoji">🧩</div>
-      <div class="info">
-        <div class="name">makecode-adventures</div>
-        <div class="purpose">Programme ton micro:bit !</div>
-        <div class="links"><a href="058-makecode-adventures/atelier-makecode-adventures-micro:bit.html" target="_blank" class="link">HTML</a> <a href="058-makecode-adventures/atelier-makecode-adventures-micro:bit.png" target="_blank" class="link">PNG</a> <a href="058-makecode-adventures/facebook-makecode-adventures.txt" target="_blank" class="link">FB</a> <a href="058-makecode-adventures/mail-atelier-makecode-adventures-micro:bit.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/makecode-adventures/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="058-makecode-adventures/atelier-makecode-adventures-micro:bit.png" alt="makecode-adventures" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('059-mdns/atelier-mdns-reseau.html','_blank')">
-      <div class="num">059</div>
-      <div class="emoji">🔍</div>
-      <div class="info">
-        <div class="name">mdns</div>
-        <div class="purpose">Explore ton reseau local</div>
-        <div class="links"><a href="059-mdns/atelier-mdns-reseau.html" target="_blank" class="link">HTML</a> <a href="059-mdns/atelier-mdns-reseau.png" target="_blank" class="link">PNG</a> <a href="059-mdns/facebook-mdns.txt" target="_blank" class="link">FB</a> <a href="059-mdns/mail-atelier-mdns-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/mdns/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="059-mdns/atelier-mdns-reseau.png" alt="mdns" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('060-meridian/atelier-meridian-outils.html','_blank')">
-      <div class="num">060</div>
-      <div class="emoji">🎬</div>
-      <div class="info">
-        <div class="name">meridian</div>
-        <div class="purpose">Ton propre YouTube prive !</div>
-        <div class="links"><a href="060-meridian/atelier-meridian-outils.html" target="_blank" class="link">HTML</a> <a href="060-meridian/atelier-meridian-outils.png" target="_blank" class="link">PNG</a> <a href="060-meridian/facebook-meridian.txt" target="_blank" class="link">FB</a> <a href="060-meridian/mail-atelier-meridian-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/meridian/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="060-meridian/atelier-meridian-outils.png" alt="meridian" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('061-mission-control/atelier-mission-control-micro:bit.html','_blank')">
-      <div class="num">061</div>
-      <div class="emoji">🛸</div>
-      <div class="info">
-        <div class="name">mission-control</div>
-        <div class="purpose">Pilote ton micro:bit a distance !</div>
-        <div class="links"><a href="061-mission-control/atelier-mission-control-micro:bit.html" target="_blank" class="link">HTML</a> <a href="061-mission-control/atelier-mission-control-micro:bit.png" target="_blank" class="link">PNG</a> <a href="061-mission-control/facebook-mission-control.txt" target="_blank" class="link">FB</a> <a href="061-mission-control/mail-atelier-mission-control-micro:bit.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/mission-control/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="061-mission-control/atelier-mission-control-micro:bit.png" alt="mission-control" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('062-morse-code/atelier-morse-code-micro:bit.html','_blank')">
-      <div class="num">062</div>
-      <div class="emoji">📡</div>
-      <div class="info">
-        <div class="name">morse-code</div>
-        <div class="purpose">Envoie des messages en Morse !</div>
-        <div class="links"><a href="062-morse-code/atelier-morse-code-micro:bit.html" target="_blank" class="link">HTML</a> <a href="062-morse-code/atelier-morse-code-micro:bit.png" target="_blank" class="link">PNG</a> <a href="062-morse-code/facebook-morse-code.txt" target="_blank" class="link">FB</a> <a href="062-morse-code/mail-atelier-morse-code-micro:bit.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/morse-code/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="062-morse-code/atelier-morse-code-micro:bit.png" alt="morse-code" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('063-mqtt-lab/atelier-mqtt-lab-hardware.html','_blank')">
-      <div class="num">063</div>
-      <div class="emoji">📬</div>
-      <div class="info">
-        <div class="name">mqtt-lab</div>
-        <div class="purpose">Connecte des objets entre eux !</div>
-        <div class="links"><a href="063-mqtt-lab/atelier-mqtt-lab-hardware.html" target="_blank" class="link">HTML</a> <a href="063-mqtt-lab/atelier-mqtt-lab-hardware.png" target="_blank" class="link">PNG</a> <a href="063-mqtt-lab/facebook-mqtt-lab.txt" target="_blank" class="link">FB</a> <a href="063-mqtt-lab/mail-atelier-mqtt-lab-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/mqtt-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="063-mqtt-lab/atelier-mqtt-lab-hardware.png" alt="mqtt-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('064-ngrok/atelier-ngrok-reseau.html','_blank')">
-      <div class="num">064</div>
-      <div class="emoji">🚇</div>
-      <div class="info">
-        <div class="name">ngrok</div>
-        <div class="purpose">Tunnel vers Internet</div>
-        <div class="links"><a href="064-ngrok/atelier-ngrok-reseau.html" target="_blank" class="link">HTML</a> <a href="064-ngrok/atelier-ngrok-reseau.png" target="_blank" class="link">PNG</a> <a href="064-ngrok/facebook-ngrok.txt" target="_blank" class="link">FB</a> <a href="064-ngrok/mail-atelier-ngrok-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ngrok/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="064-ngrok/atelier-ngrok-reseau.png" alt="ngrok" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('065-nodered-lab/atelier-nodered-lab-iot.html','_blank')">
-      <div class="num">065</div>
-      <div class="emoji">🔴</div>
-      <div class="info">
-        <div class="name">nodered-lab</div>
-        <div class="purpose">Programmation visuelle IoT</div>
-        <div class="links"><a href="065-nodered-lab/atelier-nodered-lab-iot.html" target="_blank" class="link">HTML</a> <a href="065-nodered-lab/atelier-nodered-lab-iot.png" target="_blank" class="link">PNG</a> <a href="065-nodered-lab/facebook-nodered-lab.txt" target="_blank" class="link">FB</a> <a href="065-nodered-lab/mail-atelier-nodered-lab-iot.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/nodered-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="065-nodered-lab/atelier-nodered-lab-iot.png" alt="nodered-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('066-nusuk/atelier-nusuk-arabe.html','_blank')">
-      <div class="num">066</div>
-      <div class="emoji">🕋</div>
-      <div class="info">
-        <div class="name">nusuk</div>
-        <div class="purpose">Guide du Hajj et de la Omra !</div>
-        <div class="links"><a href="066-nusuk/atelier-nusuk-arabe.html" target="_blank" class="link">HTML</a> <a href="066-nusuk/atelier-nusuk-arabe.png" target="_blank" class="link">PNG</a> <a href="066-nusuk/facebook-nusuk.txt" target="_blank" class="link">FB</a> <a href="066-nusuk/mail-atelier-nusuk-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/nusuk/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="066-nusuk/atelier-nusuk-arabe.png" alt="nusuk" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('067-ocpp/atelier-ocpp-hardware.html','_blank')">
-      <div class="num">067</div>
-      <div class="emoji">🔋</div>
-      <div class="info">
-        <div class="name">ocpp</div>
-        <div class="purpose">Simule des bornes electriques !</div>
-        <div class="links"><a href="067-ocpp/atelier-ocpp-hardware.html" target="_blank" class="link">HTML</a> <a href="067-ocpp/atelier-ocpp-hardware.png" target="_blank" class="link">PNG</a> <a href="067-ocpp/facebook-ocpp.txt" target="_blank" class="link">FB</a> <a href="067-ocpp/mail-atelier-ocpp-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ocpp/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="067-ocpp/atelier-ocpp-hardware.png" alt="ocpp" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('068-ollama-bot/atelier-ollama-bot-ia.html','_blank')">
-      <div class="num">068</div>
-      <div class="emoji">🦙</div>
-      <div class="info">
-        <div class="name">ollama-bot</div>
-        <div class="purpose">Une IA sur ton ordi, sans Internet !</div>
-        <div class="links"><a href="068-ollama-bot/atelier-ollama-bot-ia.html" target="_blank" class="link">HTML</a> <a href="068-ollama-bot/atelier-ollama-bot-ia.png" target="_blank" class="link">PNG</a> <a href="068-ollama-bot/facebook-ollama-bot.txt" target="_blank" class="link">FB</a> <a href="068-ollama-bot/mail-atelier-ollama-bot-ia.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ollama-bot/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="068-ollama-bot/atelier-ollama-bot-ia.png" alt="ollama-bot" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('069-openbot/atelier-openbot-ia.html','_blank')">
-      <div class="num">069</div>
-      <div class="emoji">🚗</div>
-      <div class="info">
-        <div class="name">openbot</div>
-        <div class="purpose">Robot autonome smartphone</div>
-        <div class="links"><a href="069-openbot/atelier-openbot-ia.html" target="_blank" class="link">HTML</a> <a href="069-openbot/atelier-openbot-ia.png" target="_blank" class="link">PNG</a> <a href="069-openbot/facebook-openbot.txt" target="_blank" class="link">FB</a> <a href="069-openbot/mail-atelier-openbot-ia.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/openbot/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="069-openbot/atelier-openbot-ia.png" alt="openbot" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('070-ops-catalog-islamic-kids-apps/atelier-ops-catalog-islamic-kids-apps-arabe.html','_blank')">
-      <div class="num">070</div>
-      <div class="emoji">🌙</div>
-      <div class="info">
-        <div class="name">ops-catalog-islamic-kids-apps</div>
-        <div class="purpose">Jeux islamiques pour enfants !</div>
-        <div class="links"><a href="070-ops-catalog-islamic-kids-apps/atelier-ops-catalog-islamic-kids-apps-arabe.html" target="_blank" class="link">HTML</a> <a href="070-ops-catalog-islamic-kids-apps/atelier-ops-catalog-islamic-kids-apps-arabe.png" target="_blank" class="link">PNG</a> <a href="070-ops-catalog-islamic-kids-apps/facebook-ops-catalog-islamic-kids-apps.txt" target="_blank" class="link">FB</a> <a href="070-ops-catalog-islamic-kids-apps/mail-atelier-ops-catalog-islamic-kids-apps-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ops-catalog-islamic-kids-apps/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="070-ops-catalog-islamic-kids-apps/atelier-ops-catalog-islamic-kids-apps-arabe.png" alt="ops-catalog-islamic-kids-apps" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('071-ops-catalog-islamic-kids-quizzes/atelier-ops-catalog-islamic-kids-quizzes-arabe.html','_blank')">
-      <div class="num">071</div>
-      <div class="emoji">☪️</div>
-      <div class="info">
-        <div class="name">ops-catalog-islamic-kids-quizzes</div>
-        <div class="purpose">1 091 quiz islamiques !</div>
-        <div class="links"><a href="071-ops-catalog-islamic-kids-quizzes/atelier-ops-catalog-islamic-kids-quizzes-arabe.html" target="_blank" class="link">HTML</a> <a href="071-ops-catalog-islamic-kids-quizzes/atelier-ops-catalog-islamic-kids-quizzes-arabe.png" target="_blank" class="link">PNG</a> <a href="071-ops-catalog-islamic-kids-quizzes/facebook-ops-catalog-islamic-kids-quizzes.txt" target="_blank" class="link">FB</a> <a href="071-ops-catalog-islamic-kids-quizzes/mail-atelier-ops-catalog-islamic-kids-quizzes-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ops-catalog-islamic-kids-quizzes/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="071-ops-catalog-islamic-kids-quizzes/atelier-ops-catalog-islamic-kids-quizzes-arabe.png" alt="ops-catalog-islamic-kids-quizzes" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('072-ops-catalog-kids-apps/atelier-ops-catalog-kids-apps-education.html','_blank')">
-      <div class="num">072</div>
-      <div class="emoji">🎠</div>
-      <div class="info">
-        <div class="name">ops-catalog-kids-apps</div>
-        <div class="purpose">190 jeux educatifs pour toi !</div>
-        <div class="links"><a href="072-ops-catalog-kids-apps/atelier-ops-catalog-kids-apps-education.html" target="_blank" class="link">HTML</a> <a href="072-ops-catalog-kids-apps/atelier-ops-catalog-kids-apps-education.png" target="_blank" class="link">PNG</a> <a href="072-ops-catalog-kids-apps/facebook-ops-catalog-kids-apps.txt" target="_blank" class="link">FB</a> <a href="072-ops-catalog-kids-apps/mail-atelier-ops-catalog-kids-apps-education.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ops-catalog-kids-apps/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="072-ops-catalog-kids-apps/atelier-ops-catalog-kids-apps-education.png" alt="ops-catalog-kids-apps" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('073-ops-catalog-kids-quizzes/atelier-ops-catalog-kids-quizzes-education.html','_blank')">
-      <div class="num">073</div>
-      <div class="emoji">🧮</div>
-      <div class="info">
-        <div class="name">ops-catalog-kids-quizzes</div>
-        <div class="purpose">2 215 quiz pour tester tes connaissances !</div>
-        <div class="links"><a href="073-ops-catalog-kids-quizzes/atelier-ops-catalog-kids-quizzes-education.html" target="_blank" class="link">HTML</a> <a href="073-ops-catalog-kids-quizzes/atelier-ops-catalog-kids-quizzes-education.png" target="_blank" class="link">PNG</a> <a href="073-ops-catalog-kids-quizzes/facebook-ops-catalog-kids-quizzes.txt" target="_blank" class="link">FB</a> <a href="073-ops-catalog-kids-quizzes/mail-atelier-ops-catalog-kids-quizzes-education.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ops-catalog-kids-quizzes/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="073-ops-catalog-kids-quizzes/atelier-ops-catalog-kids-quizzes-education.png" alt="ops-catalog-kids-quizzes" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('074-ops-catalog/atelier-ops-catalog-outils.html','_blank')">
-      <div class="num">074</div>
-      <div class="emoji">📦</div>
-      <div class="info">
-        <div class="name">ops-catalog</div>
-        <div class="purpose">488 projets DIY a explorer !</div>
-        <div class="links"><a href="074-ops-catalog/atelier-ops-catalog-outils.html" target="_blank" class="link">HTML</a> <a href="074-ops-catalog/atelier-ops-catalog-outils.png" target="_blank" class="link">PNG</a> <a href="074-ops-catalog/facebook-ops-catalog.txt" target="_blank" class="link">FB</a> <a href="074-ops-catalog/mail-atelier-ops-catalog-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ops-catalog/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="074-ops-catalog/atelier-ops-catalog-outils.png" alt="ops-catalog" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('075-ota/atelier-ota-esp32.html','_blank')">
-      <div class="num">075</div>
-      <div class="emoji">📲</div>
-      <div class="info">
-        <div class="name">ota</div>
-        <div class="purpose">Mise a jour sans fil ESP32</div>
-        <div class="links"><a href="075-ota/atelier-ota-esp32.html" target="_blank" class="link">HTML</a> <a href="075-ota/atelier-ota-esp32.png" target="_blank" class="link">PNG</a> <a href="075-ota/facebook-ota.txt" target="_blank" class="link">FB</a> <a href="075-ota/mail-atelier-ota-esp32.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/ota/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="075-ota/atelier-ota-esp32.png" alt="ota" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('076-passassion-report/atelier-passassion-report-outils.html','_blank')">
-      <div class="num">076</div>
-      <div class="emoji">📊</div>
-      <div class="info">
-        <div class="name">passassion-report</div>
-        <div class="purpose">Genere des rapports de passation !</div>
-        <div class="links"><a href="076-passassion-report/atelier-passassion-report-outils.html" target="_blank" class="link">HTML</a> <a href="076-passassion-report/atelier-passassion-report-outils.png" target="_blank" class="link">PNG</a> <a href="076-passassion-report/facebook-passassion-report.txt" target="_blank" class="link">FB</a> <a href="076-passassion-report/mail-atelier-passassion-report-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/passassion-report/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="076-passassion-report/atelier-passassion-report-outils.png" alt="passassion-report" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('077-pentest-lab/atelier-pentest-lab-securite.html','_blank')">
-      <div class="num">077</div>
-      <div class="emoji">🛡️</div>
-      <div class="info">
-        <div class="name">pentest-lab</div>
-        <div class="purpose">Deviens un hacker ethique !</div>
-        <div class="links"><a href="077-pentest-lab/atelier-pentest-lab-securite.html" target="_blank" class="link">HTML</a> <a href="077-pentest-lab/atelier-pentest-lab-securite.png" target="_blank" class="link">PNG</a> <a href="077-pentest-lab/facebook-pentest-lab.txt" target="_blank" class="link">FB</a> <a href="077-pentest-lab/mail-atelier-pentest-lab-securite.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/pentest-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="077-pentest-lab/atelier-pentest-lab-securite.png" alt="pentest-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('078-piper-arabic-tts/atelier-piper-arabic-tts-arabe.html','_blank')">
-      <div class="num">078</div>
-      <div class="emoji">🎙️</div>
-      <div class="info">
-        <div class="name">piper-arabic-tts</div>
-        <div class="purpose">Voix arabe naturelle dans le navigateur !</div>
-        <div class="links"><a href="078-piper-arabic-tts/atelier-piper-arabic-tts-arabe.html" target="_blank" class="link">HTML</a> <a href="078-piper-arabic-tts/atelier-piper-arabic-tts-arabe.png" target="_blank" class="link">PNG</a> <a href="078-piper-arabic-tts/facebook-piper-arabic-tts.txt" target="_blank" class="link">FB</a> <a href="078-piper-arabic-tts/mail-atelier-piper-arabic-tts-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/piper-arabic-tts/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="078-piper-arabic-tts/atelier-piper-arabic-tts-arabe.png" alt="piper-arabic-tts" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('079-pixel-gateway/atelier-pixel-gateway-micro:bit.html','_blank')">
-      <div class="num">079</div>
-      <div class="emoji">🟥</div>
-      <div class="info">
-        <div class="name">pixel-gateway</div>
-        <div class="purpose">Envoie des couleurs aux NeoPixels !</div>
-        <div class="links"><a href="079-pixel-gateway/atelier-pixel-gateway-micro:bit.html" target="_blank" class="link">HTML</a> <a href="079-pixel-gateway/atelier-pixel-gateway-micro:bit.png" target="_blank" class="link">PNG</a> <a href="079-pixel-gateway/facebook-pixel-gateway.txt" target="_blank" class="link">FB</a> <a href="079-pixel-gateway/mail-atelier-pixel-gateway-micro:bit.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/pixel-gateway/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="079-pixel-gateway/atelier-pixel-gateway-micro:bit.png" alt="pixel-gateway" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('080-playwright/atelier-playwright-web.html','_blank')">
-      <div class="num">080</div>
-      <div class="emoji">🎭</div>
-      <div class="info">
-        <div class="name">playwright</div>
-        <div class="purpose">Tests web automatises</div>
-        <div class="links"><a href="080-playwright/atelier-playwright-web.html" target="_blank" class="link">HTML</a> <a href="080-playwright/atelier-playwright-web.png" target="_blank" class="link">PNG</a> <a href="080-playwright/facebook-playwright.txt" target="_blank" class="link">FB</a> <a href="080-playwright/mail-atelier-playwright-web.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/playwright/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="080-playwright/atelier-playwright-web.png" alt="playwright" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('081-posts/atelier-posts-outils.html','_blank')">
-      <div class="num">081</div>
-      <div class="emoji">📰</div>
-      <div class="info">
-        <div class="name">posts</div>
-        <div class="purpose">Cree des posts pour les reseaux !</div>
-        <div class="links"><a href="081-posts/atelier-posts-outils.html" target="_blank" class="link">HTML</a> <a href="081-posts/atelier-posts-outils.png" target="_blank" class="link">PNG</a> <a href="081-posts/facebook-posts.txt" target="_blank" class="link">FB</a> <a href="081-posts/mail-atelier-posts-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/posts/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="081-posts/atelier-posts-outils.png" alt="posts" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('082-presentation/atelier-presentation-outils.html','_blank')">
-      <div class="num">082</div>
-      <div class="emoji">🎬</div>
-      <div class="info">
-        <div class="name">presentation</div>
-        <div class="purpose">Presentation des apps</div>
-        <div class="links"><a href="082-presentation/atelier-presentation-outils.html" target="_blank" class="link">HTML</a> <a href="082-presentation/atelier-presentation-outils.png" target="_blank" class="link">PNG</a> <a href="082-presentation/facebook-presentation.txt" target="_blank" class="link">FB</a> <a href="082-presentation/mail-atelier-presentation-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/presentation/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="082-presentation/atelier-presentation-outils.png" alt="presentation" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('083-production-chain/atelier-production-chain-outils.html','_blank')">
-      <div class="num">083</div>
-      <div class="emoji">🏭</div>
-      <div class="info">
-        <div class="name">production-chain</div>
-        <div class="purpose">CI/CD pour firmware embarque !</div>
-        <div class="links"><a href="083-production-chain/atelier-production-chain-outils.html" target="_blank" class="link">HTML</a> <a href="083-production-chain/atelier-production-chain-outils.png" target="_blank" class="link">PNG</a> <a href="083-production-chain/facebook-production-chain.txt" target="_blank" class="link">FB</a> <a href="083-production-chain/mail-atelier-production-chain-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/production-chain/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="083-production-chain/atelier-production-chain-outils.png" alt="production-chain" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('084-prompt-hero/atelier-prompt-hero-ia.html','_blank')">
-      <div class="num">084</div>
-      <div class="emoji">💬</div>
-      <div class="info">
-        <div class="name">prompt-hero</div>
-        <div class="purpose">Apprends a parler a l IA !</div>
-        <div class="links"><a href="084-prompt-hero/atelier-prompt-hero-ia.html" target="_blank" class="link">HTML</a> <a href="084-prompt-hero/atelier-prompt-hero-ia.png" target="_blank" class="link">PNG</a> <a href="084-prompt-hero/facebook-prompt-hero.txt" target="_blank" class="link">FB</a> <a href="084-prompt-hero/mail-atelier-prompt-hero-ia.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/prompt-hero/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="084-prompt-hero/atelier-prompt-hero-ia.png" alt="prompt-hero" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('085-puppeteer-playground/atelier-puppeteer-playground-outils.html','_blank')">
-      <div class="num">085</div>
-      <div class="emoji">🎭</div>
-      <div class="info">
-        <div class="name">puppeteer-playground</div>
-        <div class="purpose">Automatise le navigateur !</div>
-        <div class="links"><a href="085-puppeteer-playground/atelier-puppeteer-playground-outils.html" target="_blank" class="link">HTML</a> <a href="085-puppeteer-playground/atelier-puppeteer-playground-outils.png" target="_blank" class="link">PNG</a> <a href="085-puppeteer-playground/facebook-puppeteer-playground.txt" target="_blank" class="link">FB</a> <a href="085-puppeteer-playground/mail-atelier-puppeteer-playground-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/puppeteer-playground/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="085-puppeteer-playground/atelier-puppeteer-playground-outils.png" alt="puppeteer-playground" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('086-pyshark/atelier-pyshark-reseau.html','_blank')">
-      <div class="num">086</div>
-      <div class="emoji">🦈</div>
-      <div class="info">
-        <div class="name">pyshark</div>
-        <div class="purpose">Analyse reseau Python</div>
-        <div class="links"><a href="086-pyshark/atelier-pyshark-reseau.html" target="_blank" class="link">HTML</a> <a href="086-pyshark/atelier-pyshark-reseau.png" target="_blank" class="link">PNG</a> <a href="086-pyshark/facebook-pyshark.txt" target="_blank" class="link">FB</a> <a href="086-pyshark/mail-atelier-pyshark-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/pyshark/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="086-pyshark/atelier-pyshark-reseau.png" alt="pyshark" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('087-python3/atelier-python3-code.html','_blank')">
-      <div class="num">087</div>
-      <div class="emoji">🐍</div>
-      <div class="info">
-        <div class="name">python3</div>
-        <div class="purpose">Apprends Python</div>
-        <div class="links"><a href="087-python3/atelier-python3-code.html" target="_blank" class="link">HTML</a> <a href="087-python3/atelier-python3-code.png" target="_blank" class="link">PNG</a> <a href="087-python3/facebook-python3.txt" target="_blank" class="link">FB</a> <a href="087-python3/mail-atelier-python3-code.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/python3/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="087-python3/atelier-python3-code.png" alt="python3" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('088-qrcodes/atelier-qrcodes-outils.html','_blank')">
-      <div class="num">088</div>
-      <div class="emoji">📱</div>
-      <div class="info">
-        <div class="name">qrcodes</div>
-        <div class="purpose">QR codes faciles</div>
-        <div class="links"><a href="088-qrcodes/atelier-qrcodes-outils.html" target="_blank" class="link">HTML</a> <a href="088-qrcodes/atelier-qrcodes-outils.png" target="_blank" class="link">PNG</a> <a href="088-qrcodes/facebook-qrcodes.txt" target="_blank" class="link">FB</a> <a href="088-qrcodes/mail-atelier-qrcodes-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/qrcodes/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="088-qrcodes/atelier-qrcodes-outils.png" alt="qrcodes" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('089-reddis/atelier-reddis-outils.html','_blank')">
-      <div class="num">089</div>
-      <div class="emoji">🗄️</div>
-      <div class="info">
-        <div class="name">reddis</div>
-        <div class="purpose">Explore Redis</div>
-        <div class="links"><a href="089-reddis/atelier-reddis-outils.html" target="_blank" class="link">HTML</a> <a href="089-reddis/atelier-reddis-outils.png" target="_blank" class="link">PNG</a> <a href="089-reddis/facebook-reddis.txt" target="_blank" class="link">FB</a> <a href="089-reddis/mail-atelier-reddis-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/reddis/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="089-reddis/atelier-reddis-outils.png" alt="reddis" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('090-rocket-shield-vpn/atelier-rocket-shield-vpn-securite.html','_blank')">
-      <div class="num">090</div>
-      <div class="emoji">🚀</div>
-      <div class="info">
-        <div class="name">rocket-shield-vpn</div>
-        <div class="purpose">Apprends le VPN comme un astronaute !</div>
-        <div class="links"><a href="090-rocket-shield-vpn/atelier-rocket-shield-vpn-securite.html" target="_blank" class="link">HTML</a> <a href="090-rocket-shield-vpn/atelier-rocket-shield-vpn-securite.png" target="_blank" class="link">PNG</a> <a href="090-rocket-shield-vpn/facebook-rocket-shield-vpn.txt" target="_blank" class="link">FB</a> <a href="090-rocket-shield-vpn/mail-atelier-rocket-shield-vpn-securite.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/rocket-shield-vpn/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="090-rocket-shield-vpn/atelier-rocket-shield-vpn-securite.png" alt="rocket-shield-vpn" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('091-rxy/atelier-rxy-micro:bit.html','_blank')">
-      <div class="num">091</div>
-      <div class="emoji">🎮</div>
-      <div class="info">
-        <div class="name">rxy</div>
-        <div class="purpose">Fabrique ta telecommande Bluetooth !</div>
-        <div class="links"><a href="091-rxy/atelier-rxy-micro:bit.html" target="_blank" class="link">HTML</a> <a href="091-rxy/atelier-rxy-micro:bit.png" target="_blank" class="link">PNG</a> <a href="091-rxy/facebook-rxy.txt" target="_blank" class="link">FB</a> <a href="091-rxy/mail-atelier-rxy-micro:bit.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/rxy/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="091-rxy/atelier-rxy-micro:bit.png" alt="rxy" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('092-sada/atelier-sada-outils.html','_blank')">
-      <div class="num">092</div>
-      <div class="emoji">📚</div>
-      <div class="info">
-        <div class="name">sada</div>
-        <div class="purpose">564 pages educatives en 3 langues !</div>
-        <div class="links"><a href="092-sada/atelier-sada-outils.html" target="_blank" class="link">HTML</a> <a href="092-sada/atelier-sada-outils.png" target="_blank" class="link">PNG</a> <a href="092-sada/facebook-sada.txt" target="_blank" class="link">FB</a> <a href="092-sada/mail-atelier-sada-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/sada/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="092-sada/atelier-sada-outils.png" alt="sada" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('093-salat-times/atelier-salat-times-arabe.html','_blank')">
-      <div class="num">093</div>
-      <div class="emoji">🕌</div>
-      <div class="info">
-        <div class="name">salat-times</div>
-        <div class="purpose">Horaires de priere + LED Adhan !</div>
-        <div class="links"><a href="093-salat-times/atelier-salat-times-arabe.html" target="_blank" class="link">HTML</a> <a href="093-salat-times/atelier-salat-times-arabe.png" target="_blank" class="link">PNG</a> <a href="093-salat-times/facebook-salat-times.txt" target="_blank" class="link">FB</a> <a href="093-salat-times/mail-atelier-salat-times-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/salat-times/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="093-salat-times/atelier-salat-times-arabe.png" alt="salat-times" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('094-sanitize-names-toolkit/atelier-sanitize-names-toolkit-outils.html','_blank')">
-      <div class="num">094</div>
-      <div class="emoji">✏️</div>
-      <div class="info">
-        <div class="name">sanitize-names-toolkit</div>
-        <div class="purpose">Nettoie les noms de fichiers !</div>
-        <div class="links"><a href="094-sanitize-names-toolkit/atelier-sanitize-names-toolkit-outils.html" target="_blank" class="link">HTML</a> <a href="094-sanitize-names-toolkit/atelier-sanitize-names-toolkit-outils.png" target="_blank" class="link">PNG</a> <a href="094-sanitize-names-toolkit/facebook-sanitize-names-toolkit.txt" target="_blank" class="link">FB</a> <a href="094-sanitize-names-toolkit/mail-atelier-sanitize-names-toolkit-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/sanitize-names-toolkit/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="094-sanitize-names-toolkit/atelier-sanitize-names-toolkit-outils.png" alt="sanitize-names-toolkit" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('095-satellites/atelier-satellites-reseau.html','_blank')">
-      <div class="num">095</div>
-      <div class="emoji">🛰️</div>
-      <div class="info">
-        <div class="name">satellites</div>
-        <div class="purpose">Explore les satellites en orbite !</div>
-        <div class="links"><a href="095-satellites/atelier-satellites-reseau.html" target="_blank" class="link">HTML</a> <a href="095-satellites/atelier-satellites-reseau.png" target="_blank" class="link">PNG</a> <a href="095-satellites/facebook-satellites.txt" target="_blank" class="link">FB</a> <a href="095-satellites/mail-atelier-satellites-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/satellites/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="095-satellites/atelier-satellites-reseau.png" alt="satellites" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('096-save-our-planet/atelier-save-our-planet-education.html','_blank')">
-      <div class="num">096</div>
-      <div class="emoji">🌍</div>
-      <div class="info">
-        <div class="name">save-our-planet</div>
-        <div class="purpose">Des robots sauvent la Terre !</div>
-        <div class="links"><a href="096-save-our-planet/atelier-save-our-planet-education.html" target="_blank" class="link">HTML</a> <a href="096-save-our-planet/atelier-save-our-planet-education.png" target="_blank" class="link">PNG</a> <a href="096-save-our-planet/facebook-save-our-planet.txt" target="_blank" class="link">FB</a> <a href="096-save-our-planet/mail-atelier-save-our-planet-education.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/save-our-planet/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="096-save-our-planet/atelier-save-our-planet-education.png" alt="save-our-planet" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('097-scapy/atelier-scapy-reseau.html','_blank')">
-      <div class="num">097</div>
-      <div class="emoji">🐍</div>
-      <div class="info">
-        <div class="name">scapy</div>
-        <div class="purpose">Construis des paquets reseau !</div>
-        <div class="links"><a href="097-scapy/atelier-scapy-reseau.html" target="_blank" class="link">HTML</a> <a href="097-scapy/atelier-scapy-reseau.png" target="_blank" class="link">PNG</a> <a href="097-scapy/facebook-scapy.txt" target="_blank" class="link">FB</a> <a href="097-scapy/mail-atelier-scapy-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/scapy/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="097-scapy/atelier-scapy-reseau.png" alt="scapy" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('098-sdr-lab/atelier-sdr-lab-hardware.html','_blank')">
-      <div class="num">098</div>
-      <div class="emoji">📻</div>
-      <div class="info">
-        <div class="name">sdr-lab</div>
-        <div class="purpose">Explore les ondes radio !</div>
-        <div class="links"><a href="098-sdr-lab/atelier-sdr-lab-hardware.html" target="_blank" class="link">HTML</a> <a href="098-sdr-lab/atelier-sdr-lab-hardware.png" target="_blank" class="link">PNG</a> <a href="098-sdr-lab/facebook-sdr-lab.txt" target="_blank" class="link">FB</a> <a href="098-sdr-lab/mail-atelier-sdr-lab-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/sdr-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="098-sdr-lab/atelier-sdr-lab-hardware.png" alt="sdr-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('099-smart-home/atelier-smart-home-hardware.html','_blank')">
-      <div class="num">099</div>
-      <div class="emoji">🏠</div>
-      <div class="info">
-        <div class="name">smart-home</div>
-        <div class="purpose">Rends ta maison intelligente !</div>
-        <div class="links"><a href="099-smart-home/atelier-smart-home-hardware.html" target="_blank" class="link">HTML</a> <a href="099-smart-home/atelier-smart-home-hardware.png" target="_blank" class="link">PNG</a> <a href="099-smart-home/facebook-smart-home.txt" target="_blank" class="link">FB</a> <a href="099-smart-home/mail-atelier-smart-home-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/smart-home/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="099-smart-home/atelier-smart-home-hardware.png" alt="smart-home" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('100-sniffers-sallae/atelier-sniffers-sallae-hardware.html','_blank')">
-      <div class="num">100</div>
-      <div class="emoji">🔬</div>
-      <div class="info">
-        <div class="name">sniffers-sallae</div>
-        <div class="purpose">Analyse de signaux</div>
-        <div class="links"><a href="100-sniffers-sallae/atelier-sniffers-sallae-hardware.html" target="_blank" class="link">HTML</a> <a href="100-sniffers-sallae/atelier-sniffers-sallae-hardware.png" target="_blank" class="link">PNG</a> <a href="100-sniffers-sallae/facebook-sniffers-sallae.txt" target="_blank" class="link">FB</a> <a href="100-sniffers-sallae/mail-atelier-sniffers-sallae-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/sniffers-sallae/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="100-sniffers-sallae/atelier-sniffers-sallae-hardware.png" alt="sniffers-sallae" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('101-sync-files/atelier-sync-files-outils.html','_blank')">
-      <div class="num">101</div>
-      <div class="emoji">🔄</div>
-      <div class="info">
-        <div class="name">sync-files</div>
-        <div class="purpose">Synchronise tes fichiers !</div>
-        <div class="links"><a href="101-sync-files/atelier-sync-files-outils.html" target="_blank" class="link">HTML</a> <a href="101-sync-files/atelier-sync-files-outils.png" target="_blank" class="link">PNG</a> <a href="101-sync-files/facebook-sync-files.txt" target="_blank" class="link">FB</a> <a href="101-sync-files/mail-atelier-sync-files-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/sync-files/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="101-sync-files/atelier-sync-files-outils.png" alt="sync-files" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('102-talking-robot/atelier-talking-robot-voix-ia.html','_blank')">
-      <div class="num">102</div>
-      <div class="emoji">🗣️</div>
-      <div class="info">
-        <div class="name">talking-robot</div>
-        <div class="purpose">Un robot qui parle et ecoute !</div>
-        <div class="links"><a href="102-talking-robot/atelier-talking-robot-voix-ia.html" target="_blank" class="link">HTML</a> <a href="102-talking-robot/atelier-talking-robot-voix-ia.png" target="_blank" class="link">PNG</a> <a href="102-talking-robot/facebook-talking-robot.txt" target="_blank" class="link">FB</a> <a href="102-talking-robot/mail-atelier-talking-robot-voix-ia.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/talking-robot/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="102-talking-robot/atelier-talking-robot-voix-ia.png" alt="talking-robot" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('103-teachable-machine/atelier-teachable-machine-ia-gestes.html','_blank')">
-      <div class="num">103</div>
-      <div class="emoji">🧠</div>
-      <div class="info">
-        <div class="name">teachable-machine</div>
-        <div class="purpose">Apprends a ton ordi a te reconnaitre !</div>
-        <div class="links"><a href="103-teachable-machine/atelier-teachable-machine-ia-gestes.html" target="_blank" class="link">HTML</a> <a href="103-teachable-machine/atelier-teachable-machine-ia-gestes.png" target="_blank" class="link">PNG</a> <a href="103-teachable-machine/facebook-teachable-machine.txt" target="_blank" class="link">FB</a> <a href="103-teachable-machine/mail-atelier-teachable-machine-ia-gestes.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/teachable-machine/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="103-teachable-machine/atelier-teachable-machine-ia-gestes.png" alt="teachable-machine" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('104-termlite/atelier-termlite-outils.html','_blank')">
-      <div class="num">104</div>
-      <div class="emoji">🖥️</div>
-      <div class="info">
-        <div class="name">termlite</div>
-        <div class="purpose">Acces a distance depuis le navigateur !</div>
-        <div class="links"><a href="104-termlite/atelier-termlite-outils.html" target="_blank" class="link">HTML</a> <a href="104-termlite/atelier-termlite-outils.png" target="_blank" class="link">PNG</a> <a href="104-termlite/facebook-termlite.txt" target="_blank" class="link">FB</a> <a href="104-termlite/mail-atelier-termlite-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/termlite/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="104-termlite/atelier-termlite-outils.png" alt="termlite" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('105-tesbih/atelier-tesbih-arabe.html','_blank')">
-      <div class="num">105</div>
-      <div class="emoji">📿</div>
-      <div class="info">
-        <div class="name">tesbih</div>
-        <div class="purpose">Tasbih numerique, 100% hors-ligne !</div>
-        <div class="links"><a href="105-tesbih/atelier-tesbih-arabe.html" target="_blank" class="link">HTML</a> <a href="105-tesbih/atelier-tesbih-arabe.png" target="_blank" class="link">PNG</a> <a href="105-tesbih/facebook-tesbih.txt" target="_blank" class="link">FB</a> <a href="105-tesbih/mail-atelier-tesbih-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/tesbih/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="105-tesbih/atelier-tesbih-arabe.png" alt="tesbih" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('106-tethkir/atelier-tethkir-arabe.html','_blank')">
-      <div class="num">106</div>
-      <div class="emoji">📋</div>
-      <div class="info">
-        <div class="name">tethkir</div>
-        <div class="purpose">Organise tes ibadates !</div>
-        <div class="links"><a href="106-tethkir/atelier-tethkir-arabe.html" target="_blank" class="link">HTML</a> <a href="106-tethkir/atelier-tethkir-arabe.png" target="_blank" class="link">PNG</a> <a href="106-tethkir/facebook-tethkir.txt" target="_blank" class="link">FB</a> <a href="106-tethkir/mail-atelier-tethkir-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/tethkir/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="106-tethkir/atelier-tethkir-arabe.png" alt="tethkir" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('107-time-machine/atelier-time-machine-arabe.html','_blank')">
-      <div class="num">107</div>
-      <div class="emoji">⏳</div>
-      <div class="info">
-        <div class="name">time-machine</div>
-        <div class="purpose">Voyage dans le temps des savants !</div>
-        <div class="links"><a href="107-time-machine/atelier-time-machine-arabe.html" target="_blank" class="link">HTML</a> <a href="107-time-machine/atelier-time-machine-arabe.png" target="_blank" class="link">PNG</a> <a href="107-time-machine/facebook-time-machine.txt" target="_blank" class="link">FB</a> <a href="107-time-machine/mail-atelier-time-machine-arabe.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/time-machine/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="107-time-machine/atelier-time-machine-arabe.png" alt="time-machine" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('108-tools/atelier-tools-outils.html','_blank')">
-      <div class="num">108</div>
-      <div class="emoji">🛠️</div>
-      <div class="info">
-        <div class="name">tools</div>
-        <div class="purpose">Toolkit pour creer des apps !</div>
-        <div class="links"><a href="108-tools/atelier-tools-outils.html" target="_blank" class="link">HTML</a> <a href="108-tools/atelier-tools-outils.png" target="_blank" class="link">PNG</a> <a href="108-tools/facebook-tools.txt" target="_blank" class="link">FB</a> <a href="108-tools/mail-atelier-tools-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/tools/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="108-tools/atelier-tools-outils.png" alt="tools" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('109-true-crypt/atelier-true-crypt-securite.html','_blank')">
-      <div class="num">109</div>
-      <div class="emoji">🗄️</div>
-      <div class="info">
-        <div class="name">true-crypt</div>
-        <div class="purpose">Un coffre-fort numerique !</div>
-        <div class="links"><a href="109-true-crypt/atelier-true-crypt-securite.html" target="_blank" class="link">HTML</a> <a href="109-true-crypt/atelier-true-crypt-securite.png" target="_blank" class="link">PNG</a> <a href="109-true-crypt/facebook-true-crypt.txt" target="_blank" class="link">FB</a> <a href="109-true-crypt/mail-atelier-true-crypt-securite.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/true-crypt/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="109-true-crypt/atelier-true-crypt-securite.png" alt="true-crypt" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('110-tshark/atelier-tshark-reseau.html','_blank')">
-      <div class="num">110</div>
-      <div class="emoji">🦈</div>
-      <div class="info">
-        <div class="name">tshark</div>
-        <div class="purpose">Capture reseau en console</div>
-        <div class="links"><a href="110-tshark/atelier-tshark-reseau.html" target="_blank" class="link">HTML</a> <a href="110-tshark/atelier-tshark-reseau.png" target="_blank" class="link">PNG</a> <a href="110-tshark/facebook-tshark.txt" target="_blank" class="link">FB</a> <a href="110-tshark/mail-atelier-tshark-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/tshark/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="110-tshark/atelier-tshark-reseau.png" alt="tshark" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('111-tty/atelier-tty-hardware.html','_blank')">
-      <div class="num">111</div>
-      <div class="emoji">💻</div>
-      <div class="info">
-        <div class="name">tty</div>
-        <div class="purpose">Envoie des scripts par cable !</div>
-        <div class="links"><a href="111-tty/atelier-tty-hardware.html" target="_blank" class="link">HTML</a> <a href="111-tty/atelier-tty-hardware.png" target="_blank" class="link">PNG</a> <a href="111-tty/facebook-tty.txt" target="_blank" class="link">FB</a> <a href="111-tty/mail-atelier-tty-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/tty/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="111-tty/atelier-tty-hardware.png" alt="tty" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('112-usb-logger/atelier-usb-logger-micro:bit.html','_blank')">
-      <div class="num">112</div>
-      <div class="emoji">🔌</div>
-      <div class="info">
-        <div class="name">usb-logger</div>
-        <div class="purpose">Parle a ton micro:bit par USB !</div>
-        <div class="links"><a href="112-usb-logger/atelier-usb-logger-micro:bit.html" target="_blank" class="link">HTML</a> <a href="112-usb-logger/atelier-usb-logger-micro:bit.png" target="_blank" class="link">PNG</a> <a href="112-usb-logger/facebook-usb-logger.txt" target="_blank" class="link">FB</a> <a href="112-usb-logger/mail-atelier-usb-logger-micro:bit.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/usb-logger/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="112-usb-logger/atelier-usb-logger-micro:bit.png" alt="usb-logger" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('113-virus/atelier-virus-securite.html','_blank')">
-      <div class="num">113</div>
-      <div class="emoji">🦠</div>
-      <div class="info">
-        <div class="name">virus</div>
-        <div class="purpose">Comment fonctionne un virus ?</div>
-        <div class="links"><a href="113-virus/atelier-virus-securite.html" target="_blank" class="link">HTML</a> <a href="113-virus/atelier-virus-securite.png" target="_blank" class="link">PNG</a> <a href="113-virus/facebook-virus.txt" target="_blank" class="link">FB</a> <a href="113-virus/mail-atelier-virus-securite.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/virus/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="113-virus/atelier-virus-securite.png" alt="virus" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('114-warsha/atelier-warsha-outils.html','_blank')">
-      <div class="num">114</div>
-      <div class="emoji">🪟</div>
-      <div class="info">
-        <div class="name">warsha</div>
-        <div class="purpose">Multiplexeur de terminal web !</div>
-        <div class="links"><a href="114-warsha/atelier-warsha-outils.html" target="_blank" class="link">HTML</a> <a href="114-warsha/atelier-warsha-outils.png" target="_blank" class="link">PNG</a> <a href="114-warsha/facebook-warsha.txt" target="_blank" class="link">FB</a> <a href="114-warsha/mail-atelier-warsha-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/warsha/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="114-warsha/atelier-warsha-outils.png" alt="warsha" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('115-web-kids/atelier-web-kids-education.html','_blank')">
-      <div class="num">115</div>
-      <div class="emoji">🌈</div>
-      <div class="info">
-        <div class="name">web-kids</div>
-        <div class="purpose">Apprends HTML, CSS, JS en jouant !</div>
-        <div class="links"><a href="115-web-kids/atelier-web-kids-education.html" target="_blank" class="link">HTML</a> <a href="115-web-kids/atelier-web-kids-education.png" target="_blank" class="link">PNG</a> <a href="115-web-kids/facebook-web-kids.txt" target="_blank" class="link">FB</a> <a href="115-web-kids/mail-atelier-web-kids-education.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/web-kids/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="115-web-kids/atelier-web-kids-education.png" alt="web-kids" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('116-web-kvm/atelier-web-kvm-outils.html','_blank')">
-      <div class="num">116</div>
-      <div class="emoji">🖱️</div>
-      <div class="info">
-        <div class="name">web-kvm</div>
-        <div class="purpose">Partage clavier et souris entre PCs !</div>
-        <div class="links"><a href="116-web-kvm/atelier-web-kvm-outils.html" target="_blank" class="link">HTML</a> <a href="116-web-kvm/atelier-web-kvm-outils.png" target="_blank" class="link">PNG</a> <a href="116-web-kvm/facebook-web-kvm.txt" target="_blank" class="link">FB</a> <a href="116-web-kvm/mail-atelier-web-kvm-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/web-kvm/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="116-web-kvm/atelier-web-kvm-outils.png" alt="web-kvm" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('117-wifi-dashboard/atelier-wifi-dashboard-reseau.html','_blank')">
-      <div class="num">117</div>
-      <div class="emoji">📡</div>
-      <div class="info">
-        <div class="name">wifi-dashboard</div>
-        <div class="purpose">Visualise le WiFi autour de toi !</div>
-        <div class="links"><a href="117-wifi-dashboard/atelier-wifi-dashboard-reseau.html" target="_blank" class="link">HTML</a> <a href="117-wifi-dashboard/atelier-wifi-dashboard-reseau.png" target="_blank" class="link">PNG</a> <a href="117-wifi-dashboard/facebook-wifi-dashboard.txt" target="_blank" class="link">FB</a> <a href="117-wifi-dashboard/mail-atelier-wifi-dashboard-reseau.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/wifi-dashboard/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="117-wifi-dashboard/atelier-wifi-dashboard-reseau.png" alt="wifi-dashboard" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('118-wled-kids-lab/atelier-wled-kids-lab-hardware.html','_blank')">
-      <div class="num">118</div>
-      <div class="emoji">💡</div>
-      <div class="info">
-        <div class="name">wled-kids-lab</div>
-        <div class="purpose">Controle des rubans LED colores !</div>
-        <div class="links"><a href="118-wled-kids-lab/atelier-wled-kids-lab-hardware.html" target="_blank" class="link">HTML</a> <a href="118-wled-kids-lab/atelier-wled-kids-lab-hardware.png" target="_blank" class="link">PNG</a> <a href="118-wled-kids-lab/facebook-wled-kids-lab.txt" target="_blank" class="link">FB</a> <a href="118-wled-kids-lab/mail-atelier-wled-kids-lab-hardware.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/wled-kids-lab/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="118-wled-kids-lab/atelier-wled-kids-lab-hardware.png" alt="wled-kids-lab" loading="lazy"/>
-    </div>
-    <div class="card" onclick="window.open('119-workshop-diy/atelier-workshop-diy-outils.html','_blank')">
-      <div class="num">119</div>
-      <div class="emoji">🏗️</div>
-      <div class="info">
-        <div class="name">workshop-diy</div>
-        <div class="purpose">Le site Workshop-DIY !</div>
-        <div class="links"><a href="119-workshop-diy/atelier-workshop-diy-outils.html" target="_blank" class="link">HTML</a> <a href="119-workshop-diy/atelier-workshop-diy-outils.png" target="_blank" class="link">PNG</a> <a href="119-workshop-diy/facebook-workshop-diy.txt" target="_blank" class="link">FB</a> <a href="119-workshop-diy/mail-atelier-workshop-diy-outils.txt" target="_blank" class="link">Mail</a> <a href="https://abourdim.github.io/workshop-diy/" target="_blank" class="link app">App</a></div>
-      </div>
-      <img class="thumb" src="119-workshop-diy/atelier-workshop-diy-outils.png" alt="workshop-diy" loading="lazy"/>
-    </div>
+    <a class="card" href="001-3d-lab/atelier-3d-lab-education.html" target="_blank">
+      <div class="card-thumb"><img src="001-3d-lab/atelier-3d-lab-education.png" alt="3d-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#001</div>
+        <div class="card-name">3d-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="002-AI-hacker-lab/atelier-AI-hacker-lab-ia.html" target="_blank">
+      <div class="card-thumb"><img src="002-AI-hacker-lab/atelier-AI-hacker-lab-ia.png" alt="AI-hacker-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#002</div>
+        <div class="card-name">AI-hacker-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="003-PlanPilot/atelier-PlanPilot-outils.html" target="_blank">
+      <div class="card-thumb"><img src="003-PlanPilot/atelier-PlanPilot-outils.png" alt="PlanPilot" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#003</div>
+        <div class="card-name">PlanPilot</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="004-al-maqlub/atelier-al-maqlub-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="004-al-maqlub/atelier-al-maqlub-arabe.png" alt="al-maqlub" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#004</div>
+        <div class="card-name">al-maqlub</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="005-amthal/atelier-amthal-islam.html" target="_blank">
+      <div class="card-thumb"><img src="005-amthal/atelier-amthal-islam.png" alt="amthal" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#005</div>
+        <div class="card-name">amthal</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="006-apps/atelier-apps-outils.html" target="_blank">
+      <div class="card-thumb"><img src="006-apps/atelier-apps-outils.png" alt="apps" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#006</div>
+        <div class="card-name">apps</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="007-arabic-keyboard/atelier-arabic-keyboard-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="007-arabic-keyboard/atelier-arabic-keyboard-arabe.png" alt="arabic-keyboard" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#007</div>
+        <div class="card-name">arabic-keyboard</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="008-arabic-speaker/atelier-arabic-speaker-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="008-arabic-speaker/atelier-arabic-speaker-arabe.png" alt="arabic-speaker" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#008</div>
+        <div class="card-name">arabic-speaker</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="009-arabic-translator/atelier-arabic-translator-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="009-arabic-translator/atelier-arabic-translator-arabe.png" alt="arabic-translator" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#009</div>
+        <div class="card-name">arabic-translator</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="010-arabic-tts/atelier-arabic-tts-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="010-arabic-tts/atelier-arabic-tts-arabe.png" alt="arabic-tts" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#010</div>
+        <div class="card-name">arabic-tts</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="011-avahi/atelier-avahi-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="011-avahi/atelier-avahi-reseau.png" alt="avahi" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#011</div>
+        <div class="card-name">avahi</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="012-bash-toolkit/atelier-bash-toolkit-outils.html" target="_blank">
+      <div class="card-thumb"><img src="012-bash-toolkit/atelier-bash-toolkit-outils.png" alt="bash-toolkit" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#012</div>
+        <div class="card-name">bash-toolkit</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="013-bit-54-activities/atelier-bit-54-activities-micro:bit.html" target="_blank">
+      <div class="card-thumb"><img src="013-bit-54-activities/atelier-bit-54-activities-micro:bit.png" alt="bit-54-activities" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#013</div>
+        <div class="card-name">bit-54-activities</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="014-bit-bot/atelier-bit-bot-robot-ia.html" target="_blank">
+      <div class="card-thumb"><img src="014-bit-bot/atelier-bit-bot-robot-ia.png" alt="bit-bot" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#014</div>
+        <div class="card-name">bit-bot</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="015-bit-playground/atelier-bit-playground-microbit.html" target="_blank">
+      <div class="card-thumb"><img src="015-bit-playground/atelier-bit-playground-microbit.png" alt="bit-playground" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#015</div>
+        <div class="card-name">bit-playground</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="016-bitmoji-lab/atelier-bitmoji-lab-leds-neopixel.html" target="_blank">
+      <div class="card-thumb"><img src="016-bitmoji-lab/atelier-bitmoji-lab-leds-neopixel.png" alt="bitmoji-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#016</div>
+        <div class="card-name">bitmoji-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="017-ble-dashboard/atelier-ble-dashboard-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="017-ble-dashboard/atelier-ble-dashboard-hardware.png" alt="ble-dashboard" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#017</div>
+        <div class="card-name">ble-dashboard</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="018-ble-logger/atelier-ble-logger-micro:bit.html" target="_blank">
+      <div class="card-thumb"><img src="018-ble-logger/atelier-ble-logger-micro:bit.png" alt="ble-logger" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#018</div>
+        <div class="card-name">ble-logger</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="019-bonjour/atelier-bonjour-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="019-bonjour/atelier-bonjour-reseau.png" alt="bonjour" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#019</div>
+        <div class="card-name">bonjour</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="020-builders-of-light/atelier-builders-of-light-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="020-builders-of-light/atelier-builders-of-light-arabe.png" alt="builders-of-light" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#020</div>
+        <div class="card-name">builders-of-light</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="021-callgraph/atelier-callgraph-outils.html" target="_blank">
+      <div class="card-thumb"><img src="021-callgraph/atelier-callgraph-outils.png" alt="callgraph" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#021</div>
+        <div class="card-name">callgraph</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="022-circuit-lab/atelier-circuit-lab-electronique.html" target="_blank">
+      <div class="card-thumb"><img src="022-circuit-lab/atelier-circuit-lab-electronique.png" alt="circuit-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#022</div>
+        <div class="card-name">circuit-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="023-classroom/atelier-classroom-classe.html" target="_blank">
+      <div class="card-thumb"><img src="023-classroom/atelier-classroom-classe.png" alt="classroom" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#023</div>
+        <div class="card-name">classroom</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="024-claude-toolkit/atelier-claude-toolkit-ia.html" target="_blank">
+      <div class="card-thumb"><img src="024-claude-toolkit/atelier-claude-toolkit-ia.png" alt="claude-toolkit" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#024</div>
+        <div class="card-name">claude-toolkit</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="025-cowsay/atelier-cowsay-education.html" target="_blank">
+      <div class="card-thumb"><img src="025-cowsay/atelier-cowsay-education.png" alt="cowsay" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#025</div>
+        <div class="card-name">cowsay</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="026-crypto-academy/atelier-crypto-academy-securite.html" target="_blank">
+      <div class="card-thumb"><img src="026-crypto-academy/atelier-crypto-academy-securite.png" alt="crypto-academy" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#026</div>
+        <div class="card-name">crypto-academy</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="027-crypto-vault/atelier-crypto-vault-securite.html" target="_blank">
+      <div class="card-thumb"><img src="027-crypto-vault/atelier-crypto-vault-securite.png" alt="crypto-vault" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#027</div>
+        <div class="card-name">crypto-vault</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="028-dhcp-lab/atelier-dhcp-lab-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="028-dhcp-lab/atelier-dhcp-lab-reseau.png" alt="dhcp-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#028</div>
+        <div class="card-name">dhcp-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="029-dir-pulse/atelier-dir-pulse-outils.html" target="_blank">
+      <div class="card-thumb"><img src="029-dir-pulse/atelier-dir-pulse-outils.png" alt="dir-pulse" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#029</div>
+        <div class="card-name">dir-pulse</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="030-docker-lab/atelier-docker-lab-linux.html" target="_blank">
+      <div class="card-thumb"><img src="030-docker-lab/atelier-docker-lab-linux.png" alt="docker-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#030</div>
+        <div class="card-name">docker-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="031-eid/atelier-eid-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="031-eid/atelier-eid-arabe.png" alt="eid" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#031</div>
+        <div class="card-name">eid</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="032-elarabya/atelier-elarabya-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="032-elarabya/atelier-elarabya-arabe.png" alt="elarabya" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#032</div>
+        <div class="card-name">elarabya</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="033-emojis/atelier-emojis-education.html" target="_blank">
+      <div class="card-thumb"><img src="033-emojis/atelier-emojis-education.png" alt="emojis" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#033</div>
+        <div class="card-name">emojis</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="034-esp32-c3-kids-lab/atelier-esp32-c3-kids-lab-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="034-esp32-c3-kids-lab/atelier-esp32-c3-kids-lab-hardware.png" alt="esp32-c3-kids-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#034</div>
+        <div class="card-name">esp32-c3-kids-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="035-evic-toolkit/atelier-evic-toolkit-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="035-evic-toolkit/atelier-evic-toolkit-hardware.png" alt="evic-toolkit" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#035</div>
+        <div class="card-name">evic-toolkit</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="036-face-quest/atelier-face-quest-detection-visage.html" target="_blank">
+      <div class="card-thumb"><img src="036-face-quest/atelier-face-quest-detection-visage.png" alt="face-quest" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#036</div>
+        <div class="card-name">face-quest</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="037-face-tracking/atelier-face-tracking-robot-visage.html" target="_blank">
+      <div class="card-thumb"><img src="037-face-tracking/atelier-face-tracking-robot-visage.png" alt="face-tracking" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#037</div>
+        <div class="card-name">face-tracking</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="038-fihris/atelier-fihris-outils.html" target="_blank">
+      <div class="card-thumb"><img src="038-fihris/atelier-fihris-outils.png" alt="fihris" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#038</div>
+        <div class="card-name">fihris</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="039-firebase/atelier-firebase-web.html" target="_blank">
+      <div class="card-thumb"><img src="039-firebase/atelier-firebase-web.png" alt="firebase" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#039</div>
+        <div class="card-name">firebase</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="040-firmware-update/atelier-firmware-update-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="040-firmware-update/atelier-firmware-update-hardware.png" alt="firmware-update" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#040</div>
+        <div class="card-name">firmware-update</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="041-flight-tracker/atelier-flight-tracker-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="041-flight-tracker/atelier-flight-tracker-reseau.png" alt="flight-tracker" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#041</div>
+        <div class="card-name">flight-tracker</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="042-flyers/atelier-flyers-outils.html" target="_blank">
+      <div class="card-thumb"><img src="042-flyers/atelier-flyers-outils.png" alt="flyers" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#042</div>
+        <div class="card-name">flyers</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="043-git-date-rewrite/atelier-git-date-rewrite-outils.html" target="_blank">
+      <div class="card-thumb"><img src="043-git-date-rewrite/atelier-git-date-rewrite-outils.png" alt="git-date-rewrite" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#043</div>
+        <div class="card-name">git-date-rewrite</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="044-git-lab/atelier-git-lab-education.html" target="_blank">
+      <div class="card-thumb"><img src="044-git-lab/atelier-git-lab-education.png" alt="git-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#044</div>
+        <div class="card-name">git-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="045-git-pulse/atelier-git-pulse-outils.html" target="_blank">
+      <div class="card-thumb"><img src="045-git-pulse/atelier-git-pulse-outils.png" alt="git-pulse" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#045</div>
+        <div class="card-name">git-pulse</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="046-golden-age/atelier-golden-age-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="046-golden-age/atelier-golden-age-arabe.png" alt="golden-age" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#046</div>
+        <div class="card-name">golden-age</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="047-hackrf-one/atelier-hackrf-one-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="047-hackrf-one/atelier-hackrf-one-hardware.png" alt="hackrf-one" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#047</div>
+        <div class="card-name">hackrf-one</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="048-hacktivist-kids/atelier-hacktivist-kids-securite.html" target="_blank">
+      <div class="card-thumb"><img src="048-hacktivist-kids/atelier-hacktivist-kids-securite.png" alt="hacktivist-kids" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#048</div>
+        <div class="card-name">hacktivist-kids</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="049-ierab/atelier-ierab-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="049-ierab/atelier-ierab-arabe.png" alt="ierab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#049</div>
+        <div class="card-name">ierab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="050-jisr/atelier-jisr-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="050-jisr/atelier-jisr-arabe.png" alt="jisr" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#050</div>
+        <div class="card-name">jisr</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="051-kalami/atelier-kalami-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="051-kalami/atelier-kalami-arabe.png" alt="kalami" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#051</div>
+        <div class="card-name">kalami</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="052-linkedin/atelier-linkedin-outils.html" target="_blank">
+      <div class="card-thumb"><img src="052-linkedin/atelier-linkedin-outils.png" alt="linkedin" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#052</div>
+        <div class="card-name">linkedin</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="053-linux-kids-lab/atelier-linux-kids-terminal.html" target="_blank">
+      <div class="card-thumb"><img src="053-linux-kids-lab/atelier-linux-kids-terminal.png" alt="linux-kids-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#053</div>
+        <div class="card-name">linux-kids-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="054-loggy/atelier-loggy-outils.html" target="_blank">
+      <div class="card-thumb"><img src="054-loggy/atelier-loggy-outils.png" alt="loggy" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#054</div>
+        <div class="card-name">loggy</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="055-luminaries-of-islam/atelier-luminaries-of-islam-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="055-luminaries-of-islam/atelier-luminaries-of-islam-arabe.png" alt="luminaries-of-islam" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#055</div>
+        <div class="card-name">luminaries-of-islam</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="056-mac-weird-keys/atelier-mac-weird-keys-outils.html" target="_blank">
+      <div class="card-thumb"><img src="056-mac-weird-keys/atelier-mac-weird-keys-outils.png" alt="mac-weird-keys" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#056</div>
+        <div class="card-name">mac-weird-keys</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="057-magic-hands/atelier-magic-hands-ia-camera.html" target="_blank">
+      <div class="card-thumb"><img src="057-magic-hands/atelier-magic-hands-ia-camera.png" alt="magic-hands" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#057</div>
+        <div class="card-name">magic-hands</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="058-makecode-adventures/atelier-makecode-adventures-micro:bit.html" target="_blank">
+      <div class="card-thumb"><img src="058-makecode-adventures/atelier-makecode-adventures-micro:bit.png" alt="makecode-adventures" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#058</div>
+        <div class="card-name">makecode-adventures</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="059-mdns/atelier-mdns-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="059-mdns/atelier-mdns-reseau.png" alt="mdns" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#059</div>
+        <div class="card-name">mdns</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="060-meridian/atelier-meridian-outils.html" target="_blank">
+      <div class="card-thumb"><img src="060-meridian/atelier-meridian-outils.png" alt="meridian" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#060</div>
+        <div class="card-name">meridian</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="061-mission-control/atelier-mission-control-micro:bit.html" target="_blank">
+      <div class="card-thumb"><img src="061-mission-control/atelier-mission-control-micro:bit.png" alt="mission-control" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#061</div>
+        <div class="card-name">mission-control</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="062-morse-code/atelier-morse-code-micro:bit.html" target="_blank">
+      <div class="card-thumb"><img src="062-morse-code/atelier-morse-code-micro:bit.png" alt="morse-code" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#062</div>
+        <div class="card-name">morse-code</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="063-mqtt-lab/atelier-mqtt-lab-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="063-mqtt-lab/atelier-mqtt-lab-hardware.png" alt="mqtt-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#063</div>
+        <div class="card-name">mqtt-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="064-ngrok/atelier-ngrok-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="064-ngrok/atelier-ngrok-reseau.png" alt="ngrok" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#064</div>
+        <div class="card-name">ngrok</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="065-nodered-lab/atelier-nodered-lab-iot.html" target="_blank">
+      <div class="card-thumb"><img src="065-nodered-lab/atelier-nodered-lab-iot.png" alt="nodered-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#065</div>
+        <div class="card-name">nodered-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="066-nusuk/atelier-nusuk-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="066-nusuk/atelier-nusuk-arabe.png" alt="nusuk" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#066</div>
+        <div class="card-name">nusuk</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="067-ocpp/atelier-ocpp-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="067-ocpp/atelier-ocpp-hardware.png" alt="ocpp" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#067</div>
+        <div class="card-name">ocpp</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="068-ollama-bot/atelier-ollama-bot-ia.html" target="_blank">
+      <div class="card-thumb"><img src="068-ollama-bot/atelier-ollama-bot-ia.png" alt="ollama-bot" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#068</div>
+        <div class="card-name">ollama-bot</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="069-openbot/atelier-openbot-ia.html" target="_blank">
+      <div class="card-thumb"><img src="069-openbot/atelier-openbot-ia.png" alt="openbot" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#069</div>
+        <div class="card-name">openbot</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="070-ops-catalog-islamic-kids-apps/atelier-ops-catalog-islamic-kids-apps-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="070-ops-catalog-islamic-kids-apps/atelier-ops-catalog-islamic-kids-apps-arabe.png" alt="ops-catalog-islamic-kids-apps" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#070</div>
+        <div class="card-name">ops-catalog-islamic-kids-apps</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="071-ops-catalog-islamic-kids-quizzes/atelier-ops-catalog-islamic-kids-quizzes-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="071-ops-catalog-islamic-kids-quizzes/atelier-ops-catalog-islamic-kids-quizzes-arabe.png" alt="ops-catalog-islamic-kids-quizzes" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#071</div>
+        <div class="card-name">ops-catalog-islamic-kids-quizzes</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="072-ops-catalog-kids-apps/atelier-ops-catalog-kids-apps-education.html" target="_blank">
+      <div class="card-thumb"><img src="072-ops-catalog-kids-apps/atelier-ops-catalog-kids-apps-education.png" alt="ops-catalog-kids-apps" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#072</div>
+        <div class="card-name">ops-catalog-kids-apps</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="073-ops-catalog-kids-quizzes/atelier-ops-catalog-kids-quizzes-education.html" target="_blank">
+      <div class="card-thumb"><img src="073-ops-catalog-kids-quizzes/atelier-ops-catalog-kids-quizzes-education.png" alt="ops-catalog-kids-quizzes" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#073</div>
+        <div class="card-name">ops-catalog-kids-quizzes</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="074-ops-catalog/atelier-ops-catalog-outils.html" target="_blank">
+      <div class="card-thumb"><img src="074-ops-catalog/atelier-ops-catalog-outils.png" alt="ops-catalog" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#074</div>
+        <div class="card-name">ops-catalog</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="075-ota/atelier-ota-esp32.html" target="_blank">
+      <div class="card-thumb"><img src="075-ota/atelier-ota-esp32.png" alt="ota" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#075</div>
+        <div class="card-name">ota</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="076-passassion-report/atelier-passassion-report-outils.html" target="_blank">
+      <div class="card-thumb"><img src="076-passassion-report/atelier-passassion-report-outils.png" alt="passassion-report" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#076</div>
+        <div class="card-name">passassion-report</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="077-pentest-lab/atelier-pentest-lab-securite.html" target="_blank">
+      <div class="card-thumb"><img src="077-pentest-lab/atelier-pentest-lab-securite.png" alt="pentest-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#077</div>
+        <div class="card-name">pentest-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="078-piper-arabic-tts/atelier-piper-arabic-tts-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="078-piper-arabic-tts/atelier-piper-arabic-tts-arabe.png" alt="piper-arabic-tts" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#078</div>
+        <div class="card-name">piper-arabic-tts</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="079-pixel-gateway/atelier-pixel-gateway-micro:bit.html" target="_blank">
+      <div class="card-thumb"><img src="079-pixel-gateway/atelier-pixel-gateway-micro:bit.png" alt="pixel-gateway" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#079</div>
+        <div class="card-name">pixel-gateway</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="080-playwright/atelier-playwright-web.html" target="_blank">
+      <div class="card-thumb"><img src="080-playwright/atelier-playwright-web.png" alt="playwright" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#080</div>
+        <div class="card-name">playwright</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="081-posts/atelier-posts-outils.html" target="_blank">
+      <div class="card-thumb"><img src="081-posts/atelier-posts-outils.png" alt="posts" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#081</div>
+        <div class="card-name">posts</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="082-presentation/atelier-presentation-outils.html" target="_blank">
+      <div class="card-thumb"><img src="082-presentation/atelier-presentation-outils.png" alt="presentation" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#082</div>
+        <div class="card-name">presentation</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="083-production-chain/atelier-production-chain-outils.html" target="_blank">
+      <div class="card-thumb"><img src="083-production-chain/atelier-production-chain-outils.png" alt="production-chain" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#083</div>
+        <div class="card-name">production-chain</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="084-prompt-hero/atelier-prompt-hero-ia.html" target="_blank">
+      <div class="card-thumb"><img src="084-prompt-hero/atelier-prompt-hero-ia.png" alt="prompt-hero" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#084</div>
+        <div class="card-name">prompt-hero</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="085-puppeteer-playground/atelier-puppeteer-playground-outils.html" target="_blank">
+      <div class="card-thumb"><img src="085-puppeteer-playground/atelier-puppeteer-playground-outils.png" alt="puppeteer-playground" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#085</div>
+        <div class="card-name">puppeteer-playground</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="086-pyshark/atelier-pyshark-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="086-pyshark/atelier-pyshark-reseau.png" alt="pyshark" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#086</div>
+        <div class="card-name">pyshark</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="087-python3/atelier-python3-code.html" target="_blank">
+      <div class="card-thumb"><img src="087-python3/atelier-python3-code.png" alt="python3" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#087</div>
+        <div class="card-name">python3</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="088-qrcodes/atelier-qrcodes-outils.html" target="_blank">
+      <div class="card-thumb"><img src="088-qrcodes/atelier-qrcodes-outils.png" alt="qrcodes" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#088</div>
+        <div class="card-name">qrcodes</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="089-reddis/atelier-reddis-outils.html" target="_blank">
+      <div class="card-thumb"><img src="089-reddis/atelier-reddis-outils.png" alt="reddis" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#089</div>
+        <div class="card-name">reddis</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="090-rocket-shield-vpn/atelier-rocket-shield-vpn-securite.html" target="_blank">
+      <div class="card-thumb"><img src="090-rocket-shield-vpn/atelier-rocket-shield-vpn-securite.png" alt="rocket-shield-vpn" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#090</div>
+        <div class="card-name">rocket-shield-vpn</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="091-rxy/atelier-rxy-micro:bit.html" target="_blank">
+      <div class="card-thumb"><img src="091-rxy/atelier-rxy-micro:bit.png" alt="rxy" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#091</div>
+        <div class="card-name">rxy</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="092-sada/atelier-sada-outils.html" target="_blank">
+      <div class="card-thumb"><img src="092-sada/atelier-sada-outils.png" alt="sada" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#092</div>
+        <div class="card-name">sada</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="093-salat-times/atelier-salat-times-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="093-salat-times/atelier-salat-times-arabe.png" alt="salat-times" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#093</div>
+        <div class="card-name">salat-times</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="094-sanitize-names-toolkit/atelier-sanitize-names-toolkit-outils.html" target="_blank">
+      <div class="card-thumb"><img src="094-sanitize-names-toolkit/atelier-sanitize-names-toolkit-outils.png" alt="sanitize-names-toolkit" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#094</div>
+        <div class="card-name">sanitize-names-toolkit</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="095-satellites/atelier-satellites-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="095-satellites/atelier-satellites-reseau.png" alt="satellites" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#095</div>
+        <div class="card-name">satellites</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="096-save-our-planet/atelier-save-our-planet-education.html" target="_blank">
+      <div class="card-thumb"><img src="096-save-our-planet/atelier-save-our-planet-education.png" alt="save-our-planet" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#096</div>
+        <div class="card-name">save-our-planet</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="097-scapy/atelier-scapy-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="097-scapy/atelier-scapy-reseau.png" alt="scapy" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#097</div>
+        <div class="card-name">scapy</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="098-sdr-lab/atelier-sdr-lab-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="098-sdr-lab/atelier-sdr-lab-hardware.png" alt="sdr-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#098</div>
+        <div class="card-name">sdr-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="099-smart-home/atelier-smart-home-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="099-smart-home/atelier-smart-home-hardware.png" alt="smart-home" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#099</div>
+        <div class="card-name">smart-home</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="100-sniffers-sallae/atelier-sniffers-sallae-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="100-sniffers-sallae/atelier-sniffers-sallae-hardware.png" alt="sniffers-sallae" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#100</div>
+        <div class="card-name">sniffers-sallae</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="101-sync-files/atelier-sync-files-outils.html" target="_blank">
+      <div class="card-thumb"><img src="101-sync-files/atelier-sync-files-outils.png" alt="sync-files" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#101</div>
+        <div class="card-name">sync-files</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="102-talking-robot/atelier-talking-robot-voix-ia.html" target="_blank">
+      <div class="card-thumb"><img src="102-talking-robot/atelier-talking-robot-voix-ia.png" alt="talking-robot" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#102</div>
+        <div class="card-name">talking-robot</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="103-teachable-machine/atelier-teachable-machine-ia-gestes.html" target="_blank">
+      <div class="card-thumb"><img src="103-teachable-machine/atelier-teachable-machine-ia-gestes.png" alt="teachable-machine" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#103</div>
+        <div class="card-name">teachable-machine</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="104-termlite/atelier-termlite-outils.html" target="_blank">
+      <div class="card-thumb"><img src="104-termlite/atelier-termlite-outils.png" alt="termlite" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#104</div>
+        <div class="card-name">termlite</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="105-tesbih/atelier-tesbih-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="105-tesbih/atelier-tesbih-arabe.png" alt="tesbih" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#105</div>
+        <div class="card-name">tesbih</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="106-tethkir/atelier-tethkir-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="106-tethkir/atelier-tethkir-arabe.png" alt="tethkir" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#106</div>
+        <div class="card-name">tethkir</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="107-time-machine/atelier-time-machine-arabe.html" target="_blank">
+      <div class="card-thumb"><img src="107-time-machine/atelier-time-machine-arabe.png" alt="time-machine" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#107</div>
+        <div class="card-name">time-machine</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="108-tools/atelier-tools-outils.html" target="_blank">
+      <div class="card-thumb"><img src="108-tools/atelier-tools-outils.png" alt="tools" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#108</div>
+        <div class="card-name">tools</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="109-true-crypt/atelier-true-crypt-securite.html" target="_blank">
+      <div class="card-thumb"><img src="109-true-crypt/atelier-true-crypt-securite.png" alt="true-crypt" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#109</div>
+        <div class="card-name">true-crypt</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="110-tshark/atelier-tshark-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="110-tshark/atelier-tshark-reseau.png" alt="tshark" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#110</div>
+        <div class="card-name">tshark</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="111-tty/atelier-tty-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="111-tty/atelier-tty-hardware.png" alt="tty" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#111</div>
+        <div class="card-name">tty</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="112-usb-logger/atelier-usb-logger-micro:bit.html" target="_blank">
+      <div class="card-thumb"><img src="112-usb-logger/atelier-usb-logger-micro:bit.png" alt="usb-logger" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#112</div>
+        <div class="card-name">usb-logger</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="113-virus/atelier-virus-securite.html" target="_blank">
+      <div class="card-thumb"><img src="113-virus/atelier-virus-securite.png" alt="virus" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#113</div>
+        <div class="card-name">virus</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="114-warsha/atelier-warsha-outils.html" target="_blank">
+      <div class="card-thumb"><img src="114-warsha/atelier-warsha-outils.png" alt="warsha" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#114</div>
+        <div class="card-name">warsha</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="115-web-kids/atelier-web-kids-education.html" target="_blank">
+      <div class="card-thumb"><img src="115-web-kids/atelier-web-kids-education.png" alt="web-kids" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#115</div>
+        <div class="card-name">web-kids</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="116-web-kvm/atelier-web-kvm-outils.html" target="_blank">
+      <div class="card-thumb"><img src="116-web-kvm/atelier-web-kvm-outils.png" alt="web-kvm" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#116</div>
+        <div class="card-name">web-kvm</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="117-wifi-dashboard/atelier-wifi-dashboard-reseau.html" target="_blank">
+      <div class="card-thumb"><img src="117-wifi-dashboard/atelier-wifi-dashboard-reseau.png" alt="wifi-dashboard" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#117</div>
+        <div class="card-name">wifi-dashboard</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="118-wled-kids-lab/atelier-wled-kids-lab-hardware.html" target="_blank">
+      <div class="card-thumb"><img src="118-wled-kids-lab/atelier-wled-kids-lab-hardware.png" alt="wled-kids-lab" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#118</div>
+        <div class="card-name">wled-kids-lab</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
+    <a class="card" href="119-workshop-diy/atelier-workshop-diy-outils.html" target="_blank">
+      <div class="card-thumb"><img src="119-workshop-diy/atelier-workshop-diy-outils.png" alt="workshop-diy" loading="lazy"/></div>
+      <div class="card-info">
+        <div class="card-num">#119</div>
+        <div class="card-name">workshop-diy</div>
+        <div class="card-cat"></div>
+      </div>
+    </a>
 </div>
+<div class="empty" id="empty">Aucun atelier trouve</div>
 <script>
-function filter(){
-  const q=document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('.card').forEach(c=>{
-    const text=(c.querySelector('.name')?.textContent+' '+c.querySelector('.purpose')?.textContent).toLowerCase();
-    c.classList.toggle('hidden',q&&!text.includes(q));
+document.getElementById('search').addEventListener('input', function(e) {
+  const q = e.target.value.toLowerCase();
+  let visible = 0;
+  document.querySelectorAll('.card').forEach(c => {
+    const show = c.textContent.toLowerCase().includes(q);
+    c.style.display = show ? '' : 'none';
+    if (show) visible++;
   });
-}
+  document.getElementById('empty').style.display = visible ? 'none' : 'block';
+});
 </script>
 </body></html>
