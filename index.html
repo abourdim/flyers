@@ -836,19 +836,21 @@ function buildDemoPlaylist(){
   APPS.forEach(a=>{const c=a.cats[0];if(!grouped[c])grouped[c]=[];grouped[c].push(a)});
   catOrder.forEach(cat=>{
     if(!grouped[cat])return;
+    if(demoFilter!=='all'&&cat!==demoFilter)return;
     playlist.push({type:'cat-intro',cat:cat});
     grouped[cat].forEach(a=>playlist.push({type:'app',app:a}));
   });
   return playlist;
 }
 
-let demoPlaylist=[];
+let demoPlaylist=[],demoFilter='all';
 
-function toggleDemo(){
+function toggleDemo(cat){
   demoActive=!demoActive;
   document.body.classList.toggle('demo-mode',demoActive);
   document.querySelectorAll('.demo-btn').forEach(b=>b.classList.toggle('on',demoActive));
   if(demoActive){
+    demoFilter=cat||'all';
     demoPlaylist=buildDemoPlaylist();
     demoIdx=-1;
     buildTicker();
@@ -1098,7 +1100,7 @@ function toggleHelp(){
 
 /* ── INIT ── */
 buildGrid();
-// Deep link: #app=name or #demo
+// Deep link: #app=name or #demo or #demo=category
 (function(){
   const h=location.hash;
   if(h.startsWith('#app=')){
@@ -1108,6 +1110,9 @@ buildGrid();
       const pIdx=demoPlaylist.findIndex(p=>p.type==='app'&&p.app.name===name);
       if(pIdx>=0){demoIdx=pIdx;showSlide();}
     }
+  }else if(h.startsWith('#demo=')){
+    const cat=h.slice(6);
+    toggleDemo(cat);
   }else if(h==='#demo'){toggleDemo();}
 })();
 // Animate hero counter
