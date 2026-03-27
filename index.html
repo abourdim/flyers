@@ -19,6 +19,7 @@
 .auth-btn{padding:12px 40px;border-radius:16px;border:none;background:linear-gradient(135deg,#00c853,#00bcd4);color:#fff;font-size:16px;font-weight:700;font-family:'Fredoka',sans-serif;cursor:pointer;transition:.3s}
 .auth-btn:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(0,200,83,.3)}
 .auth-error{color:#ff5252;font-size:14px;font-weight:700;height:20px}
+.auth-countdown{font-family:'Fredoka',sans-serif;font-size:48px;font-weight:700;color:rgba(255,255,255,.15);margin-top:16px}
 :root{
   --bg:#0a1628;--card:#0f1f3a;--card-hover:#132a4a;--border:rgba(0,200,83,.25);
   --accent:#00c853;--accent2:#00e676;--accent-soft:rgba(0,200,83,.1);
@@ -311,6 +312,7 @@ body.demo-mode .demo-overlay{display:flex}
   <input class="auth-input" id="authInput" type="password" placeholder="Mot de passe" autofocus/>
   <button class="auth-btn" id="authBtn">Entrer</button>
   <div class="auth-error" id="authError"></div>
+  <div class="auth-countdown" id="authCountdown">3</div>
 </div>
 
 <div class="top-bar hidden" id="topbar">
@@ -1062,12 +1064,21 @@ heroEmojis.forEach((em,i)=>{
   btn.addEventListener('click',check);
   input.addEventListener('keydown',e=>{if(e.key==='Enter')check();});
   // Auto-start after 3 seconds if no input
-  const autoTimer=setTimeout(()=>{
-    gate.classList.add('hidden');
-    document.body.style.overflow='';
-  },3000);
-  input.addEventListener('input',()=>clearTimeout(autoTimer));
-  btn.addEventListener('click',()=>clearTimeout(autoTimer));
+  const cdEl=document.getElementById('authCountdown');
+  let cdVal=3;
+  const cdInterval=setInterval(()=>{
+    cdVal--;
+    if(cdVal>0){cdEl.textContent=cdVal;}
+    else{
+      clearInterval(cdInterval);
+      cdEl.textContent='';
+      gate.classList.add('hidden');
+      document.body.style.overflow='';
+    }
+  },1000);
+  function cancelCountdown(){clearInterval(cdInterval);cdEl.textContent='';}
+  input.addEventListener('input',cancelCountdown);
+  btn.addEventListener('click',cancelCountdown);
 })();
 </script>
 </body>
