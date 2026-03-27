@@ -31,7 +31,7 @@ body{background:#0a1628;font-family:'El Messiri',sans-serif;margin:0}
 .hero{position:relative;z-index:10;text-align:center;padding:10px 56px 20px}
 .hero-badge{display:inline-block;background:linear-gradient(135deg,#00c853,#00bcd4);color:#fff;font-family:'Nunito',sans-serif;font-size:12px;font-weight:900;letter-spacing:3px;text-transform:uppercase;padding:6px 24px;border-radius:30px;margin-bottom:12px}
 .hero-label{font-family:'Nunito',sans-serif;font-size:16px;font-weight:900;color:#00c853;letter-spacing:5px;text-transform:uppercase;margin-bottom:4px}
-.hero-title{font-family:'El Messiri',sans-serif;font-size:110px;font-weight:700;white-space:nowrap;color:#fff;letter-spacing:4px;line-height:1;margin-bottom:16px;text-shadow:0 0 40px rgba(0,200,83,.4),0 0 80px rgba(0,200,83,.15)}
+.hero-title{font-family:'El Messiri',sans-serif;font-size:95px;font-weight:700;white-space:nowrap;color:#fff;letter-spacing:4px;line-height:1;margin-bottom:16px;text-shadow:0 0 40px rgba(0,200,83,.4),0 0 80px rgba(0,200,83,.15)}
 .hero-title .magic{background:linear-gradient(135deg,#ffd740,#00c853);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-emoji{font-size:64px;margin:0 8px;filter:drop-shadow(0 0 20px rgba(255,215,64,.5))}
 .hero-desc{font-size:18px;color:rgba(255,255,255,.75);line-height:1.7;max-width:800px;margin:0 auto;font-weight:600}
@@ -124,17 +124,17 @@ body{background:#0a1628;font-family:'El Messiri',sans-serif;margin:0}
   <div class="hero">
     <div class="hero-label">Atelier</div>
     <div class="hero-title">
-      <span class="hero-emoji">✨</span><span class="magic">Magic</span>-Hands<span class="hero-emoji">🖐️</span>
+        <span class="hero-emoji">👁️</span><span class="magic">Face</span>-Tracking<span class="hero-emoji">🤖</span>
     </div>
-    <div class="hero-desc">Agite tes mains devant la camera pour declencher des effets magiques — confettis, trainees lumineuses et lueur neon ! Propulse par l'IA MediaPipe de Google.</div>
+    <div class="hero-desc">Suivi de visage en temps reel — les donnees de position sont envoyees vers un micro:bit via BLE pour controler des servos ou LEDs.</div>
   </div>
 
   <!-- Features -->
   <div class="features">
-    <div class="feat"><span class="feat-icon">🖐️</span><span class="feat-text">Bouge tes mains devant la camera — l'IA les detecte en temps reel</span></div>
-    <div class="feat"><span class="feat-icon">🎆</span><span class="feat-text">Declenche des confettis, des trainees de lumiere et des eclats neon</span></div>
-    <div class="feat"><span class="feat-icon">🧠</span><span class="feat-text">Decouvre MediaPipe — la technologie IA qui comprend tes gestes</span></div>
-    <div class="feat"><span class="feat-icon">🌐</span><span class="feat-text">Zero installation — tout fonctionne dans le navigateur web</span></div>
+    <div class="feat"><span class="feat-icon">👁️</span><span class="feat-text">Suivi du visage en temps reel par l'IA</span></div>
+    <div class="feat"><span class="feat-icon">🤖</span><span class="feat-text">Controle un robot avec les mouvements du visage</span></div>
+    <div class="feat"><span class="feat-icon">📡</span><span class="feat-text">Connexion Bluetooth vers un micro:bit</span></div>
+    <div class="feat"><span class="feat-icon">🌐</span><span class="feat-text">Zero installation — tout dans le navigateur</span></div>
   </div>
 
   <!-- Pills -->
@@ -159,11 +159,11 @@ body{background:#0a1628;font-family:'El Messiri',sans-serif;margin:0}
     <div class="qr-left">
       <div class="qr-title"><span class="rocket">🚀</span>Lancer l'atelier<span class="qr-badge">EN LIGNE</span></div>
       <div class="qr-desc">Ouvre l'application dans ton navigateur — aucune installation requise !</div>
-      <div class="qr-url">https://abourdim.github.io/magic-hands/</div>
+      <div class="qr-url">https://abourdim.github.io/face-tracking/</div>
       <div class="qr-cta">↑ Scanne le QR code ou tape l'URL ▶</div>
     </div>
     <div class="qr-wrap">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACfElEQVR4nO1aTarjMAz+5Bi6dOEdYI7i3uwxR5obJEfpAQaS5YMEDZKcNtl0umoEkaCuHWshJH/6sUyMN2lI73ICwZpCWYjjgoka3SYiW96wyACsWzkAAycuo2MlXRNdAe5lOlwBVN0a3cgarEBDD7pHFJPZJN8MaqEsfxooP9RgRUSoPH9agNeU/rN/MtbpwkBhRh07Nk/4WQFeU8LZWbOOzQGWHwLKkhllfnyT/8mFrMGaAMn/hAxb9X5huk0ZOqhP1MwDoSwcflxoVx0LrGwACOi2gWs4XNYUrMATQnRhoquELCJiZnGMgrKot5wcFzCvqZ/O2rK0gXvN5Qsz94fLmk7PCquMzShrvcW9WKuOsivZoZbIfSgrHX1coPbQ2wq1EfeWwe82dNYfLmsKVghp1kffd6m3sJChbPg1g25ivFCWk+OCLXpWqNmO+L+VK7DlxVrcXJ/dYJiNdgmGbnB4Qri4y1jahYa4Ph7ED9YeYqOvDwiQghXvE1s7xMKTphXPBoogSlBmaWMKvcKHteq4NdQzoW9hLOotT9ZiA5PWxEpqHkvoBVsRtzxZC5ZHiI1a5aX2U0OtDeT+cFnT6VnR4tazbWzp4Nrub9/CWl6OywZHAjDt75cZ9L25y/Aia7BOjzdPdo0hNGXwb7nfsCcZoSw/x6XbpOyWamixLGTZofX8kwdZz82ase88Ur3b6ydZGtSI6z3PDmRNp2fNOw0sxMO1m8V4IJS/1kUOZbk8LkWLLnmmpu5QUDaQ9I7DEzp884Qlo46LzRmY9RaRUP/IjeHhsqbTs+ZHeJJMcP+CcPriNYLJL5SVfL15ekXD4bKmYEUo6206XFn/AMe2hhDuHtOmAAAAAElFTkSuQmCC" alt="QR code vers magic-hands"/>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACmUlEQVR4nO1bQY7bMAwc0gJ6lIF9wD5F+UGfVORJ/YH9lPzAPgZwwIKkFKeX7fbQtVCTB0GxeCBIjTQaKST4pM38WU8gXDmShZguWKnaZSWyfNAFD6KL9qqlAAw6WTIGMQOyCObxQTKtCdag2NDSTazhClT0rAn046Y9+/a+6TcFXSSrw+mS74R51JUwbxBpdfu6AD42/sP42VwH2Rsr2VcH8KExzu6arK00fn3bgLxAsI7NIevY2kWs4cqA8j81T0m5JeWECjBlGbMNWe048oqDZ1aq6HG7k8zjoIjaFG/W/OMAOFzxN8laDUxKAkdFlBbq2ihiJR3aQ+SVe8DWnWyjkvn7IwngDcl8AQEZqHjjo2Pl07umPQOEPAgVJRn+U638JKAsb5EsdDBdYEKFiGyQKbuoIdZDWdrC6N/46Fj59K5Jz1Z6rhqEdNUjZfBexlm1jDIp1Iza8+mTxZ1kYFZ10ORAZfCmN+0swxv0Euu5XXOVLOxkJVc/F9dFEMUqGKpuH9WCbVnem/xn27JMfp+aQi+xb6GHai1DYxSOqHZ3UlmG3ZgMUS30US1prM9Qpqueo2zai6cAmw6PlcMVRiaqoKFFeQHYnWTSc3LcRnYyXdA2KgWT8Y19EWyjsW/1hC0iub5vLhaK3Koab8uhi/PB4DupFl7Q43xjVzWUW/gZLFhGh2+eYA9ovr1ck7S9rJdYT+6KCiHbvAxWz29+1LKeQm06PFYOV7y8eULTLXyjskvl8VEvlRHJ4qOnS/rtl0q7TyvL6C80qNxSqLrobb6uRIYtuuQ7tTdPg1TtkLuK9ZSuydrKK7LojclmtyhCBis7IhfpItZwRRUq1J5ioRMMVzV20sGRVxw8syj+EYSDS8Dhiv8yWb8ArmB9td42dvcAAAAASUVORK5CYII=" alt="QR code vers magic-hands"/>
       <div class="qr-label">Scanner pour lancer</div>
     </div>
   </div>
@@ -172,7 +172,7 @@ body{background:#0a1628;font-family:'El Messiri',sans-serif;margin:0}
   <div class="info-row">
     <div class="info-card"><div class="info-icon">📅</div><div><div class="lbl">Date</div><div class="val">Date a confirmer</div></div></div>
     <div class="info-card"><div class="info-icon">🕘</div><div><div class="lbl">Duree</div><div class="val">1h30</div></div></div>
-    <div class="info-card"><div class="info-icon">📍</div><div><div class="lbl">Lieu</div><div class="val">Salle du Parc du Souvenir, Stade Pierre Duport — Chelles</div></div></div>
+    <div class="info-card"><div class="info-icon">📍</div><div><div class="lbl">Lieu</div><div class="val">Parc du Souvenir — Stade P. Duport, Chelles</div></div></div>
   </div>
 
   <!-- Contact -->
@@ -187,7 +187,7 @@ body{background:#0a1628;font-family:'El Messiri',sans-serif;margin:0}
   <!-- Footer -->
   <div class="footer">
     <div class="fnote">✨ Curiosite et sourire bienvenus !</div>
-    <div class="htags"><span class="ht">#AtelierMagicHands</span><span class="ht">#IA</span><span class="ht">#WorkshopDIY</span><span class="ht">#Chelles</span></div>
+    <div class="htags"><span class="ht">#FaceTracking</span><span class="ht">#IA</span><span class="ht">#microbit</span><span class="ht">#WorkshopDIY</span><span class="ht">#Chelles</span></div>
   </div>
 </div>
 </div>
