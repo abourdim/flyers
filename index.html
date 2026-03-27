@@ -1061,6 +1061,13 @@ heroEmojis.forEach((em,i)=>{
   }
   btn.addEventListener('click',check);
   input.addEventListener('keydown',e=>{if(e.key==='Enter')check();});
+  // Auto-start after 3 seconds if no input
+  const autoTimer=setTimeout(()=>{
+    gate.classList.add('hidden');
+    document.body.style.overflow='';
+  },3000);
+  input.addEventListener('input',()=>clearTimeout(autoTimer));
+  btn.addEventListener('click',()=>clearTimeout(autoTimer));
 })();
 </script>
 </body>
