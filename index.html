@@ -149,6 +149,8 @@ body.demo-mode .demo-overlay{display:flex}
 .demo-counter{font-family:'Fredoka',sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,.7);direction:ltr;unicode-bidi:bidi-override}
 .demo-exit{background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:white;font-family:'Fredoka',sans-serif;font-size:12px;font-weight:600;padding:6px 18px;border-radius:12px;cursor:pointer;transition:.25s}
 .demo-exit:hover{background:rgba(239,68,68,.8);border-color:transparent;transform:scale(1.05)}
+.demo-cat-select{background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:white;font-family:'Fredoka',sans-serif;font-size:13px;font-weight:600;padding:6px 14px;border-radius:12px;cursor:pointer;outline:none;appearance:auto}
+.demo-cat-select option{background:#0a1628;color:#e0e8f0}
 
 .demo-stage{position:absolute;inset:0;z-index:205;overflow:hidden;background:#050d1a}
 
@@ -405,6 +407,7 @@ body.demo-mode .demo-overlay{display:flex}
   <div class="demo-bg" id="demoBg"></div>
   <div class="demo-header">
     <div class="demo-title">🛠️ Workshop-DIY Flyers</div>
+    <select class="demo-cat-select" id="demoCatSelect" onchange="switchDemoCat(this.value)"></select>
     <div class="demo-counter" id="demoCounter">1 / 119</div>
     <button class="demo-exit" onclick="toggleDemo()">Fermer ✕</button>
   </div>
@@ -845,6 +848,28 @@ function buildDemoPlaylist(){
 
 let demoPlaylist=[],demoFilter='all';
 
+function populateDemoCatSelect(){
+  const sel=document.getElementById('demoCatSelect');
+  const allLabel=LANG==='ar'?'الكل':LANG==='en'?'All':'Tous';
+  sel.innerHTML=`<option value="all">${allLabel}</option>`;
+  const catOrder=['ai','microbit','hardware','arabic','learning','security','network','camera','classroom','games','tools'];
+  catOrder.forEach(cat=>{
+    const m=CAT_META[cat];if(!m)return;
+    const count=APPS.filter(a=>a.cats[0]===cat).length;
+    const label=(m[LANG]||m.fr);
+    sel.innerHTML+=`<option value="${cat}">${m.emoji} ${label} (${count})</option>`;
+  });
+  sel.value=demoFilter;
+}
+
+function switchDemoCat(cat){
+  demoFilter=cat;
+  demoPlaylist=buildDemoPlaylist();
+  demoIdx=0;
+  clearTimeout(demoTimer);
+  showSlide();
+}
+
 function toggleDemo(cat){
   demoActive=!demoActive;
   document.body.classList.toggle('demo-mode',demoActive);
@@ -852,6 +877,7 @@ function toggleDemo(cat){
   if(demoActive){
     demoFilter=cat||'all';
     demoPlaylist=buildDemoPlaylist();
+    populateDemoCatSelect();
     demoIdx=-1;
     buildTicker();
     spawnParticles();
