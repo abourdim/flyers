@@ -1,0 +1,20 @@
+🧰 ATELIER BASH TOOLKIT — Scripts Bash utiles ! !
+
+Collection de scripts Bash utiles pour automatiser les taches quotidiennes de developpement.
+
+🎯 Outils
+👥 Tout public a partir de 10 ans
+💻 PC recommande — materiel pedagogique fourni sur place
+💰 Gratuit pour les adherents / 7 EUR non-adherents
+
+🚀 Essaye en ligne : https://abourdim.github.io/bash-toolkit/
+
+📅 Date : a confirmer
+⏱️ Duree : 1h30
+📍 Salle du Parc du Souvenir, Stade Pierre Duport, 77500 Chelles
+
+🌐 workshop-diy.org
+✉️ contact@workshop-diy.org
+📞 06 19 51 51 73
+
+#BashToolkit #WorkshopDIY #Chelles #STEM #EdTech #Outils

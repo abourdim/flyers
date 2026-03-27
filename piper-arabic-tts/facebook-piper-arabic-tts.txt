@@ -1,0 +1,20 @@
+🎙️ ATELIER PIPER ARABIC TTS — Voix arabe naturelle dans le navigateur ! !
+
+Synthese vocale arabe via Piper et WebAssembly — voix naturelle, 100% local dans le navigateur.
+
+🎯 Arabe / IA
+👥 Tout public a partir de 10 ans
+💻 PC recommande — materiel pedagogique fourni sur place
+💰 Gratuit pour les adherents / 7 EUR non-adherents
+
+🚀 Essaye en ligne : https://abourdim.github.io/piper-arabic-tts/
+
+📅 Date : a confirmer
+⏱️ Duree : 1h30
+📍 Salle du Parc du Souvenir, Stade Pierre Duport, 77500 Chelles
+
+🌐 workshop-diy.org
+✉️ contact@workshop-diy.org
+📞 06 19 51 51 73
+
+#PiperArabicTts #WorkshopDIY #Chelles #STEM #EdTech #Arabe #IA

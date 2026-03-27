@@ -1,0 +1,20 @@
+📲 ATELIER FIRMWARE UPDATE — Mets a jour tes appareils ! !
+
+Mettez a jour le firmware de vos appareils via une interface web — OTA, USB Serial et BLE.
+
+🎯 Hardware / Outils
+👥 Tout public a partir de 10 ans
+💻 PC recommande — materiel pedagogique fourni sur place
+💰 Gratuit pour les adherents / 7 EUR non-adherents
+
+🚀 Essaye en ligne : https://abourdim.github.io/firmware-update/
+
+📅 Date : a confirmer
+⏱️ Duree : 1h30
+📍 Salle du Parc du Souvenir, Stade Pierre Duport, 77500 Chelles
+
+🌐 workshop-diy.org
+✉️ contact@workshop-diy.org
+📞 06 19 51 51 73
+
+#FirmwareUpdate #WorkshopDIY #Chelles #STEM #EdTech #Hardware #Outils

@@ -1,0 +1,20 @@
+📡 ATELIER HACKRF ONE — Analyse les signaux radio ! !
+
+Explorez le HackRF One — outil SDR pour l analyse et la transmission radio de 1 MHz a 6 GHz.
+
+🎯 Hardware / Securite
+👥 Tout public a partir de 10 ans
+💻 PC recommande — materiel pedagogique fourni sur place
+💰 Gratuit pour les adherents / 7 EUR non-adherents
+
+🚀 Essaye en ligne : https://abourdim.github.io/hackrf-one/
+
+📅 Date : a confirmer
+⏱️ Duree : 1h30
+📍 Salle du Parc du Souvenir, Stade Pierre Duport, 77500 Chelles
+
+🌐 workshop-diy.org
+✉️ contact@workshop-diy.org
+📞 06 19 51 51 73
+
+#HackrfOne #WorkshopDIY #Chelles #STEM #EdTech #Hardware #Securite

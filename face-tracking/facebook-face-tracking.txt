@@ -1,0 +1,20 @@
+👁️ ATELIER FACE TRACKING — Ton visage controle le robot ! !
+
+Suivi de visage en temps reel — les donnees de position sont envoyees vers un micro:bit via BLE pour controler des servos ou LEDs.
+
+🎯 IA / Camera / micro:bit
+👥 Tout public a partir de 10 ans
+💻 PC recommande — materiel pedagogique fourni sur place
+💰 Gratuit pour les adherents / 7 EUR non-adherents
+
+🚀 Essaye en ligne : https://abourdim.github.io/face-tracking/
+
+📅 Date : a confirmer
+⏱️ Duree : 1h30
+📍 Salle du Parc du Souvenir, Stade Pierre Duport, 77500 Chelles
+
+🌐 workshop-diy.org
+✉️ contact@workshop-diy.org
+📞 06 19 51 51 73
+
+#FaceTracking #WorkshopDIY #Chelles #STEM #EdTech #IA #Camera
