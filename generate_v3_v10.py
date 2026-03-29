@@ -4,6 +4,35 @@ import os, json, hashlib, html as html_mod
 
 FLYERS_DIR = "/Users/Shared/repos/flyers"
 
+VBAR_HTML = """<div id="vbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:6px;padding:6px 12px;font-family:system-ui,sans-serif;font-size:11px">
+<span style="color:rgba(255,255,255,.4);margin-right:4px;font-weight:600">VERSION</span>
+</div>
+<script>
+(function(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var cur=f.match(/-v(\d+)\.html$/);
+  var curV=cur?parseInt(cur[1]):1;
+  var vers=[
+    [1,'Original'],[2,'Themed'],[3,'Synthwave'],[4,'Comic'],[5,'Blueprint'],
+    [6,'Galaxy'],[7,'Craft'],[8,'Cyberpunk'],[9,'Swiss'],[10,'8-Bit']
+  ];
+  var bar=document.getElementById('vbar');
+  vers.forEach(function(v){
+    var a=document.createElement('a');
+    a.href=v[0]===1?base:base.replace('.html','-v'+v[0]+'.html');
+    a.textContent='v'+v[0];
+    a.title=v[1];
+    var active=v[0]===curV;
+    a.style.cssText='padding:4px 10px;border-radius:4px;text-decoration:none;font-weight:'+(active?'700':'400')+';color:'+(active?'#fff':'rgba(255,255,255,.5)')+';background:'+(active?'#e63946':'rgba(255,255,255,.08)')+';transition:all .2s;font-size:11px';
+    a.onmouseover=function(){if(!active)this.style.background='rgba(255,255,255,.15)'};
+    a.onmouseout=function(){if(!active)this.style.background='rgba(255,255,255,.08)'};
+    bar.appendChild(a);
+  });
+})();
+</script>"""
+
+
 def esc(t): return html_mod.escape(str(t))
 def hue(slug): return (int(hashlib.md5(slug.encode()).hexdigest()[:8],16)%31)-15
 
@@ -101,7 +130,7 @@ body::before{{content:'';position:absolute;bottom:0;left:0;right:0;height:45%;ba
 .fn{{font-size:10px;color:rgba(255,255,255,.2);font-style:italic}}.htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#ff6f00;border:1px solid rgba(255,111,0,.2);padding:2px 8px;border-radius:8px}}
 '''
-    return head(w['title'],fonts,css)+f'''<body><div class="sun"></div><div class="w">
+    return head(w['title'],fonts,css)+f'''<body>\n' + VBAR_HTML + '\n<div class="sun"></div><div class="w">
 <div class="top">{logo_img(w,"filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate("+str(330+h)+"deg);")}<div class="slg">Workshop DIY</div></div>
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">ATELIER</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
@@ -148,7 +177,7 @@ body::before{{content:'';position:absolute;inset:0;background:radial-gradient(ci
 .fn{{font-size:10px;color:rgba(26,26,46,.25);font-style:italic}}.htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#e91e63;border:2px solid #e91e63;padding:2px 8px;border-radius:4px;font-weight:700}}
 '''
-    return head(w['title'],fonts,css)+f'''<body><div class="w">
+    return head(w['title'],fonts,css)+f'''<body>\n' + VBAR_HTML + '\n<div class="w">
 <div class="top">{logo_img(w,"filter:brightness(0) saturate(2) hue-rotate("+str(h)+"deg);")}<div class="slg">Workshop DIY — POW!</div></div>
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">ATELIER</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
@@ -199,7 +228,7 @@ body::after{{content:'';position:absolute;inset:0;background:
 .fn{{font-size:10px;color:rgba(212,230,241,.2);font-style:italic}}.htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#5dade2;border:1px solid rgba(93,173,226,.2);padding:2px 8px;border-radius:2px}}
 '''
-    return head(w['title'],fonts,css)+f'''<body><div class="w">
+    return head(w['title'],fonts,css)+f'''<body>\n' + VBAR_HTML + '\n<div class="w">
 <div class="top">{logo_img(w,"filter:brightness(0) invert(1) opacity(.5);")}<div class="slg">Workshop DIY — Blueprint</div></div>
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">ATELIER</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
@@ -253,7 +282,7 @@ body{{background:#050510;color:#c8c0e0;font-family:'Outfit',sans-serif;width:108
     # Generate pseudo-random star positions
     import random; rng=random.Random(hash(w['slug']))
     stars_html="".join(f'<div class="star" style="top:{rng.randint(1,98)}%;left:{rng.randint(1,98)}%;opacity:{rng.uniform(.2,.7):.1f};width:{rng.choice([1,2,2,3])}px;height:{rng.choice([1,2,2,3])}px"></div>' for _ in range(40))
-    return head(w['title'],fonts,css)+f'''<body><div class="nebula n1"></div><div class="nebula n2"></div><div class="nebula n3"></div>
+    return head(w['title'],fonts,css)+f'''<body>\n' + VBAR_HTML + '\n<div class="nebula n1"></div><div class="nebula n2"></div><div class="nebula n3"></div>
 <div class="stars">{stars_html}</div><div class="w">
 <div class="top">{logo_img(w,"filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate("+str(240+h)+"deg);")}<div class="slg">Workshop DIY</div></div>
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
@@ -302,7 +331,7 @@ body::before{{content:'';position:absolute;inset:0;background:repeating-linear-g
 .fn{{font-size:10px;color:rgba(62,39,35,.25);font-style:italic}}.htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#e65100;border:1px dashed rgba(230,81,0,.25);padding:2px 8px;border-radius:6px}}
 '''
-    return head(w['title'],fonts,css)+f'''<body><div class="w"><div class="inner">
+    return head(w['title'],fonts,css)+f'''<body>\n' + VBAR_HTML + '\n<div class="w"><div class="inner">
 <div class="top">{logo_img(w,"filter:sepia(1) saturate(.5) brightness(.5);")}<div class="slg">Workshop DIY</div></div>
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">Atelier</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
@@ -352,7 +381,7 @@ body::after{{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;bac
 .fn{{font-size:10px;color:rgba(208,208,224,.15);font-style:italic}}.htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#ff0080;border:1px solid rgba(255,0,128,.2);padding:2px 8px}}
 '''
-    return head(w['title'],fonts,css)+f'''<body><div class="glitch-bar gb1"></div><div class="glitch-bar gb2"></div><div class="glitch-bar gb3"></div><div class="glitch-bar gb4"></div>
+    return head(w['title'],fonts,css)+f'''<body>\n' + VBAR_HTML + '\n<div class="glitch-bar gb1"></div><div class="glitch-bar gb2"></div><div class="glitch-bar gb3"></div><div class="glitch-bar gb4"></div>
 <div class="w">
 <div class="top">{logo_img(w,"filter:brightness(0) invert(1) sepia(1) saturate(10) hue-rotate("+str(300+h)+"deg);")}<div class="slg">Workshop DIY</div></div>
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
@@ -400,7 +429,7 @@ body{{background:#fafafa;color:#1a1a1a;font-family:'Inter',sans-serif;width:1080
 .fn{{font-size:10px;color:#ccc;font-style:italic}}.htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#e63946;border:1px solid rgba(230,57,70,.15);padding:2px 8px;border-radius:2px}}
 '''
-    return head(w['title'],fonts,css)+f'''<body><div class="red-bar"></div><div class="w">
+    return head(w['title'],fonts,css)+f'''<body>\n' + VBAR_HTML + '\n<div class="red-bar"></div><div class="w">
 <div class="top">{logo_img(w,"filter:brightness(0);")}<div class="slg">Workshop DIY</div></div>
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">Atelier</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
@@ -448,7 +477,7 @@ body{{background:#1a1c2c;color:#a7f070;font-family:'VT323',monospace;width:1080p
 .fn{{font-size:14px;color:rgba(167,240,112,.2)}}.htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:12px;color:#f7d87c;border:2px solid rgba(247,216,124,.15);padding:2px 6px}}
 '''
-    return head(w['title'],fonts,css)+f'''<body><div class="scanline"></div><div class="border"></div><div class="border-inner"></div><div class="w">
+    return head(w['title'],fonts,css)+f'''<body>\n' + VBAR_HTML + '\n<div class="scanline"></div><div class="border"></div><div class="border-inner"></div><div class="w">
 <div class="top">{logo_img(w,"filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate("+str(80+h)+"deg);")}<div class="slg">WORKSHOP DIY</div></div>
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">ATELIER</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
@@ -473,8 +502,10 @@ def main():
         for w in workshops:
             filename = w['html_file'].replace('.html', f'-{ver}.html')
             out_path = os.path.join(FLYERS_DIR, w['folder'], filename)
+            html_out = func(w)
+            html_out = html_out.replace('<body>', '<body>\n' + VBAR_HTML, 1)
             with open(out_path, 'w', encoding='utf-8') as f:
-                f.write(func(w))
+                f.write(html_out)
             total += 1
         print(f"  {ver}: {len(workshops)} flyers generated")
 

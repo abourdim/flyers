@@ -62,6 +62,35 @@ body{background:#1a1b26;color:#a9b1d6;font-family:'Inter',sans-serif;width:1080p
 
 </style>
 </head><body>
+<div id="vbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:6px;padding:6px 12px;font-family:system-ui,sans-serif;font-size:11px">
+<span style="color:rgba(255,255,255,.4);margin-right:4px;font-weight:600">VERSION</span>
+</div>
+<script>
+(function(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var cur=f.match(/-v(\d+)\.html$/);
+  var curV=cur?parseInt(cur[1]):1;
+  var vers=[
+    [1,'Original'],[2,'Themed'],[3,'Synthwave'],[4,'Comic'],[5,'Blueprint'],
+    [6,'Galaxy'],[7,'Craft'],[8,'Cyberpunk'],[9,'Swiss'],[10,'8-Bit']
+  ];
+  var bar=document.getElementById('vbar');
+  vers.forEach(function(v){
+    var a=document.createElement('a');
+    a.href=v[0]===1?base:base.replace('.html','-v'+v[0]+'.html');
+    a.textContent='v'+v[0];
+    a.title=v[1];
+    var active=v[0]===curV;
+    a.style.cssText='padding:4px 10px;border-radius:4px;text-decoration:none;font-weight:'+(active?'700':'400')+';color:'+(active?'#fff':'rgba(255,255,255,.5)')+';background:'+(active?'#e63946':'rgba(255,255,255,.08)')+';transition:all .2s;font-size:11px';
+    a.onmouseover=function(){if(!active)this.style.background='rgba(255,255,255,.15)'};
+    a.onmouseout=function(){if(!active)this.style.background='rgba(255,255,255,.08)'};
+    bar.appendChild(a);
+  });
+})();
+</script>
+' + VBAR_HTML + '
+
 <div class="terminal">
 <div class="term-bar"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div><div class="term-title">workshop-diy — evic-toolkit</div></div>
 <div class="term-body">
