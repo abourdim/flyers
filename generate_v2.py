@@ -175,10 +175,10 @@ body::before{{content:'';position:absolute;inset:0;background:
   repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(0,200,83,.07) 39px,rgba(0,200,83,.07) 40px),
   repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(0,200,83,.07) 39px,rgba(0,200,83,.07) 40px);
   pointer-events:none;z-index:0}}
-body::after{{content:'';position:absolute;top:60px;right:60px;width:180px;height:180px;border:2px solid rgba(0,200,83,.15);border-radius:50%;pointer-events:none;z-index:0}}
+
 .wrap{{position:relative;z-index:1;padding:48px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between}}
 .toprow{{display:flex;align-items:center;gap:16px;margin-bottom:8px}}
-.logo img{{height:60px;filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate({80+shift}deg)}}
+.logo img{{height:75px;filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate({80+shift}deg)}}
 .slogan{{font-size:11px;color:rgba(0,200,83,.7);text-transform:uppercase;letter-spacing:2px}}
 .bismillah{{text-align:center;font-family:'IBM Plex Sans',sans-serif;font-size:10px;color:rgba(255,255,255,.06);margin:4px 0}}
 .corner-tl,.corner-tr,.corner-bl,.corner-br{{position:absolute;width:30px;height:30px;z-index:2}}
@@ -196,14 +196,14 @@ body::after{{content:'';position:absolute;top:60px;right:60px;width:180px;height
 .features{{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}}
 .feat{{background:rgba(0,200,83,.06);border:1px solid rgba(0,200,83,.15);border-radius:8px;padding:16px 18px;display:flex;align-items:center;gap:14px}}
 .feat-icon{{font-size:28px}}
-.feat-text{{font-size:14px;font-weight:600;color:#c9d1d9}}
+.feat-text{{font-size:16px;font-weight:600;color:#c9d1d9}}
 .pills{{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}}
 .pill{{font-size:13px;padding:8px 18px;border-radius:4px;background:rgba(0,200,83,.08);border:1px solid rgba(0,200,83,.2);color:#7ee787}}
 .price-bar{{display:flex;align-items:center;justify-content:space-between;background:rgba(0,200,83,.05);border:1px solid rgba(0,200,83,.15);border-radius:8px;padding:20px 28px;margin:20px 0}}
 .price-item{{display:flex;align-items:center;gap:12px}}
 .price-icon{{font-size:28px}}
 .price-lbl{{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.5)}}
-.price-val{{font-size:20px;font-weight:700;color:#c9d1d9}}
+.price-val{{font-size:24px;font-weight:700;color:#c9d1d9}}
 .price-val.free{{color:#00c853}}
 .price-divider{{width:1px;height:40px;background:rgba(0,200,83,.2)}}
 .qr-section{{display:flex;align-items:center;gap:24px;background:rgba(0,200,83,.05);border:1px solid rgba(0,200,83,.15);border-radius:8px;padding:24px 28px;margin:20px 0}}
@@ -214,13 +214,13 @@ body::after{{content:'';position:absolute;top:60px;right:60px;width:180px;height
 .qr-url a{{font-family:'Space Grotesk',monospace;font-size:14px;color:#58a6ff;text-decoration:none}}
 .qr-cta{{font-size:12px;color:#ffd740;margin-top:6px}}
 .qr-wrap{{text-align:center}}
-.qr-img{{width:130px;height:130px;border-radius:8px;background:#fff;padding:6px}}
+.qr-img{{width:155px;height:155px;border-radius:8px;background:#fff;padding:6px}}
 .qr-label{{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.4);margin-top:6px}}
 .info-row{{display:flex;gap:12px;margin:20px 0}}
 .info-card{{flex:1;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:14px 16px}}
 .info-icon{{font-size:22px}}
 .info-lbl{{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.4)}}
-.info-val{{font-size:14px;font-weight:600;color:#c9d1d9}}
+.info-val{{font-size:16px;font-weight:600;color:#c9d1d9}}
 .contact-bar{{text-align:center;font-size:12px;color:rgba(255,255,255,.4);margin:12px 0;padding:10px 0;border-top:1px solid rgba(255,255,255,.06)}}
 .ci{{margin:0 8px}}
 .footer{{text-align:center;padding-top:10px;border-top:1px solid rgba(255,255,255,.06)}}
@@ -273,7 +273,7 @@ body{{background:#1a1b26;color:#a9b1d6;font-family:'Inter',sans-serif;width:1080
 .term-title{{flex:1;text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#565f89}}
 .term-body{{flex:1;padding:36px 44px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}}
 .toprow{{display:flex;align-items:center;gap:16px;margin-bottom:6px}}
-.logo img{{height:50px;filter:brightness(0) invert(1) sepia(1) saturate(2) hue-rotate({200+shift}deg)}}
+.logo img{{height:65px;filter:brightness(0) invert(1) sepia(1) saturate(2) hue-rotate({200+shift}deg)}}
 .slogan{{font-family:'JetBrains Mono',monospace;font-size:10px;color:#565f89}}
 .bismillah{{font-size:9px;color:rgba(255,255,255,.04);text-align:center;margin:2px 0}}
 .comment{{font-family:'JetBrains Mono',monospace;font-size:12px;color:#565f89;margin:12px 0 4px}}
@@ -302,13 +302,13 @@ body{{background:#1a1b26;color:#a9b1d6;font-family:'Inter',sans-serif;width:1080
 .qr-url a{{font-family:'JetBrains Mono',monospace;font-size:13px;color:#7aa2f7;text-decoration:none}}
 .qr-cta{{font-size:11px;color:#e0af68;margin-top:4px}}
 .qr-wrap{{text-align:center}}
-.qr-img{{width:120px;height:120px;border-radius:6px;background:#fff;padding:6px}}
+.qr-img{{width:145px;height:145px;border-radius:6px;background:#fff;padding:6px}}
 .qr-label{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:#565f89;margin-top:4px}}
 .info-row{{display:flex;gap:10px;margin:18px 0}}
 .info-card{{flex:1;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.02);border:1px solid #414868;border-radius:8px;padding:12px 14px}}
 .info-icon{{font-size:20px}}
 .info-lbl{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:#565f89}}
-.info-val{{font-size:13px;font-weight:600;color:#a9b1d6}}
+.info-val{{font-size:15px;font-weight:600;color:#a9b1d6}}
 .contact-bar{{text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#565f89;margin:10px 0;padding:14px 0;border-top:1px solid #414868}}
 .ci{{margin:0 6px}}
 .footer{{text-align:center;padding-top:14px;border-top:1px solid #414868}}
@@ -352,7 +352,7 @@ body::before{{content:'';position:absolute;top:15%;left:50%;transform:translate(
 body::after{{content:'';position:absolute;bottom:10%;right:10%;width:300px;height:300px;background:radial-gradient(circle,rgba(0,245,212,.12) 0%,transparent 60%);pointer-events:none;z-index:0}}
 .wrap{{position:relative;z-index:1;padding:48px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center}}
 .toprow{{display:flex;align-items:center;gap:14px;margin-bottom:6px}}
-.logo img{{height:55px;filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate({280+shift}deg)}}
+.logo img{{height:70px;filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate({280+shift}deg)}}
 .slogan{{font-size:10px;color:rgba(131,56,236,.6);text-transform:uppercase;letter-spacing:3px}}
 .bismillah{{font-size:9px;color:rgba(255,255,255,.04);margin:4px 0}}
 .hero{{margin:20px 0}}
@@ -364,14 +364,14 @@ body::after{{content:'';position:absolute;bottom:10%;right:10%;width:300px;heigh
 .features{{display:flex;gap:14px;width:100%;margin-bottom:16px}}
 .feat{{flex:1;background:rgba(131,56,236,.08);border:1px solid rgba(131,56,236,.2);border-radius:14px;padding:18px 14px;backdrop-filter:blur(8px);text-align:center}}
 .feat-icon{{font-size:32px;display:block;margin-bottom:8px}}
-.feat-text{{font-size:13px;font-weight:600;color:#e0d6ff}}
+.feat-text{{font-size:15px;font-weight:600;color:#e0d6ff}}
 .pills{{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:22px 0}}
 .pill{{font-size:12px;padding:8px 18px;border-radius:20px;background:rgba(0,245,212,.06);border:1px solid rgba(0,245,212,.2);color:#00f5d4}}
 .price-bar{{display:flex;align-items:center;justify-content:center;gap:30px;background:rgba(131,56,236,.06);border:1px solid rgba(131,56,236,.15);border-radius:14px;padding:20px 30px;margin:12px 0;width:100%}}
 .price-item{{display:flex;align-items:center;gap:10px}}
 .price-icon{{font-size:26px}}
 .price-lbl{{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(224,214,255,.4)}}
-.price-val{{font-size:20px;font-weight:700;color:#e0d6ff}}
+.price-val{{font-size:24px;font-weight:700;color:#e0d6ff}}
 .price-val.free{{color:#00f5d4}}
 .price-divider{{width:1px;height:40px;background:rgba(131,56,236,.2)}}
 .qr-section{{display:flex;align-items:center;gap:24px;background:rgba(0,245,212,.04);border:1px solid rgba(0,245,212,.12);border-radius:14px;padding:22px 28px;margin:12px 0;width:100%;text-align:left}}
@@ -382,13 +382,13 @@ body::after{{content:'';position:absolute;bottom:10%;right:10%;width:300px;heigh
 .qr-url a{{font-size:13px;color:#00f5d4;text-decoration:none}}
 .qr-cta{{font-size:11px;color:#ff006e;margin-top:4px}}
 .qr-wrap{{text-align:center}}
-.qr-img{{width:125px;height:125px;border-radius:10px;background:#fff;padding:6px}}
+.qr-img{{width:150px;height:150px;border-radius:10px;background:#fff;padding:6px}}
 .qr-label{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(224,214,255,.3);margin-top:6px}}
 .info-row{{display:flex;gap:12px;margin:12px 0;width:100%}}
 .info-card{{flex:1;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px 16px;text-align:left}}
 .info-icon{{font-size:20px}}
 .info-lbl{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(224,214,255,.3)}}
-.info-val{{font-size:13px;font-weight:600;color:#e0d6ff}}
+.info-val{{font-size:15px;font-weight:600;color:#e0d6ff}}
 .contact-bar{{text-align:center;font-size:11px;color:rgba(224,214,255,.3);margin:10px 0;padding:14px 0;border-top:1px solid rgba(255,255,255,.05)}}
 .ci{{margin:0 6px}}
 .footer{{text-align:center;padding-top:14px;border-top:1px solid rgba(255,255,255,.05)}}
@@ -430,14 +430,14 @@ body{{background:#faf6ef;color:#2c1810;font-family:'Noto Sans Arabic','Amiri',se
 body::before{{content:'';position:absolute;inset:0;background:
   repeating-conic-gradient(from 0deg at 50% 50%,rgba(200,150,12,.03) 0deg 30deg,transparent 30deg 60deg);
   background-size:120px 120px;pointer-events:none;z-index:0}}
-.ornament-tl,.ornament-tr{{position:absolute;width:120px;height:120px;z-index:0}}
+.ornament-tl,.ornament-tr{{position:absolute;width:145px;height:145px;z-index:0}}
 .ornament-tl{{top:20px;left:20px;border-top:3px solid rgba(200,150,12,.3);border-left:3px solid rgba(200,150,12,.3);border-radius:0}}
 .ornament-tr{{top:20px;right:20px;border-top:3px solid rgba(200,150,12,.3);border-right:3px solid rgba(200,150,12,.3)}}
-.ornament-bl{{position:absolute;bottom:20px;left:20px;width:120px;height:120px;border-bottom:3px solid rgba(200,150,12,.3);border-left:3px solid rgba(200,150,12,.3)}}
-.ornament-br{{position:absolute;bottom:20px;right:20px;width:120px;height:120px;border-bottom:3px solid rgba(200,150,12,.3);border-right:3px solid rgba(200,150,12,.3)}}
+.ornament-bl{{position:absolute;bottom:20px;left:20px;width:145px;height:145px;border-bottom:3px solid rgba(200,150,12,.3);border-left:3px solid rgba(200,150,12,.3)}}
+.ornament-br{{position:absolute;bottom:20px;right:20px;width:145px;height:145px;border-bottom:3px solid rgba(200,150,12,.3);border-right:3px solid rgba(200,150,12,.3)}}
 .wrap{{position:relative;z-index:1;padding:48px 60px;height:100%;display:flex;flex-direction:column;justify-content:space-between}}
 .toprow{{display:flex;align-items:center;gap:14px;margin-bottom:4px}}
-.logo img{{height:55px;filter:sepia(1) saturate(2) hue-rotate({20+shift}deg) brightness(0.4)}}
+.logo img{{height:70px;filter:sepia(1) saturate(2) hue-rotate({20+shift}deg) brightness(0.4)}}
 .slogan{{font-size:11px;color:rgba(200,150,12,.7);letter-spacing:1px}}
 .bismillah{{text-align:center;font-family:'Amiri',serif;font-size:28px;color:rgba(200,150,12,.6);margin:16px 0;line-height:1.8}}
 .hero{{margin:10px 0;text-align:center}}
@@ -457,24 +457,24 @@ body::before{{content:'';position:absolute;inset:0;background:
 .price-item{{display:flex;align-items:center;gap:10px}}
 .price-icon{{font-size:26px}}
 .price-lbl{{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(44,24,16,.4)}}
-.price-val{{font-size:18px;font-weight:700;color:#2c1810}}
+.price-val{{font-size:22px;font-weight:700;color:#2c1810}}
 .price-val.free{{color:#1b6b3a}}
 .price-divider{{width:1px;height:36px;background:rgba(200,150,12,.2)}}
 .qr-section{{display:flex;align-items:center;gap:24px;background:rgba(27,107,58,.04);border:1px solid rgba(27,107,58,.12);border-radius:12px;padding:22px 28px;margin:18px 0}}
 .qr-left{{flex:1}}
-.qr-title{{font-family:'El Messiri',sans-serif;font-size:18px;font-weight:700;color:#2c1810}}
+.qr-title{{font-family:'El Messiri',sans-serif;font-size:22px;font-weight:700;color:#2c1810}}
 .qr-badge{{font-size:9px;background:#1b6b3a;color:#fff;padding:3px 10px;border-radius:10px;margin-left:10px}}
 .qr-desc{{font-size:13px;color:rgba(44,24,16,.4);margin:6px 0}}
 .qr-url a{{font-size:13px;color:#1a5276;text-decoration:none}}
 .qr-cta{{font-size:11px;color:#c8960c;margin-top:4px}}
 .qr-wrap{{text-align:center}}
-.qr-img{{width:125px;height:125px;border-radius:10px;background:#fff;padding:6px;border:2px solid rgba(200,150,12,.2)}}
+.qr-img{{width:150px;height:150px;border-radius:10px;background:#fff;padding:6px;border:2px solid rgba(200,150,12,.2)}}
 .qr-label{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(44,24,16,.3);margin-top:6px}}
 .info-row{{display:flex;gap:12px;margin:18px 0}}
 .info-card{{flex:1;display:flex;align-items:center;gap:10px;background:rgba(200,150,12,.04);border:1px solid rgba(200,150,12,.1);border-radius:10px;padding:14px 16px}}
 .info-icon{{font-size:20px}}
 .info-lbl{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(44,24,16,.35)}}
-.info-val{{font-size:13px;font-weight:600;color:#2c1810}}
+.info-val{{font-size:15px;font-weight:600;color:#2c1810}}
 .contact-bar{{text-align:center;font-size:11px;color:rgba(44,24,16,.35);margin:10px 0;padding:14px 0;border-top:1px solid rgba(200,150,12,.1)}}
 .ci{{margin:0 6px}}
 .footer{{text-align:center;padding-top:14px;border-top:1px solid rgba(200,150,12,.1)}}
@@ -526,7 +526,7 @@ body::before{{content:'';position:absolute;inset:0;background:repeating-linear-g
 body::after{{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,.4));pointer-events:none;z-index:1}}
 .wrap{{position:relative;z-index:2;padding:48px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between}}
 .toprow{{display:flex;align-items:center;gap:16px;margin-bottom:8px}}
-.logo img{{height:50px;filter:brightness(0) invert(1) sepia(1) saturate(10) hue-rotate({100+shift}deg) brightness(1.5)}}
+.logo img{{height:65px;filter:brightness(0) invert(1) sepia(1) saturate(10) hue-rotate({100+shift}deg) brightness(1.5)}}
 .slogan{{font-size:10px;color:rgba(0,255,65,.4);letter-spacing:2px;text-transform:uppercase}}
 .bismillah{{font-size:9px;color:rgba(255,255,255,.03);text-align:center;margin:2px 0}}
 .hero{{margin:24px 0}}
@@ -546,7 +546,7 @@ body::after{{content:'';position:absolute;top:0;left:0;right:0;bottom:0;backgrou
 .price-item{{display:flex;align-items:center;gap:10px}}
 .price-icon{{font-size:24px}}
 .price-lbl{{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(176,176,176,.4)}}
-.price-val{{font-size:18px;font-weight:700;color:#b0b0b0}}
+.price-val{{font-size:22px;font-weight:700;color:#b0b0b0}}
 .price-val.free{{color:#00ff41}}
 .price-divider{{width:1px;height:36px;background:rgba(0,255,65,.15)}}
 .qr-section{{display:flex;align-items:center;gap:20px;background:rgba(0,255,65,.03);border:1px solid rgba(0,255,65,.1);border-radius:2px;padding:26px 30px;margin:10px 0;position:relative}}
@@ -558,7 +558,7 @@ body::after{{content:'';position:absolute;top:0;left:0;right:0;bottom:0;backgrou
 .qr-url a{{font-size:13px;color:#00bcd4;text-decoration:none}}
 .qr-cta{{font-size:11px;color:#ff2d2d;margin-top:4px}}
 .qr-wrap{{text-align:center;position:relative}}
-.qr-img{{width:120px;height:120px;border-radius:2px;background:#fff;padding:6px}}
+.qr-img{{width:145px;height:145px;border-radius:2px;background:#fff;padding:6px}}
 .qr-label{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(176,176,176,.3);margin-top:4px}}
 .info-row{{display:flex;gap:10px;margin:18px 0}}
 .info-card{{flex:1;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:2px;padding:12px 14px}}
@@ -610,7 +610,7 @@ body{{background:#1e1e2e;color:#cdd6f4;font-family:'DM Sans',sans-serif;width:10
 .url-bar{{flex:1;background:#11111b;border-radius:6px;padding:6px 14px;font-size:11px;color:#6c7086;margin:0 12px}}
 .page{{background:#1e1e2e;border:1px solid #313244;border-top:none;border-radius:0 0 12px 12px;margin:0 40px;padding:36px 44px;flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}}
 .toprow{{display:flex;align-items:center;gap:14px;margin-bottom:6px}}
-.logo img{{height:50px;filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate({320+shift}deg)}}
+.logo img{{height:65px;filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate({320+shift}deg)}}
 .slogan{{font-size:10px;color:#6c7086;letter-spacing:1px}}
 .bismillah{{font-size:9px;color:rgba(255,255,255,.03);text-align:center;margin:2px 0}}
 .hero{{margin:20px 0}}
@@ -626,7 +626,7 @@ body{{background:#1e1e2e;color:#cdd6f4;font-family:'DM Sans',sans-serif;width:10
 .feat:nth-child(3){{background:rgba(137,180,250,.08);border:1px solid rgba(137,180,250,.15)}}
 .feat:nth-child(4){{background:rgba(249,226,175,.08);border:1px solid rgba(249,226,175,.15)}}
 .feat-icon{{font-size:26px}}
-.feat-text{{font-size:13px;font-weight:600;color:#cdd6f4}}
+.feat-text{{font-size:15px;font-weight:600;color:#cdd6f4}}
 .pills{{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}}
 .pill{{font-size:11px;padding:5px 14px;border-radius:16px;background:rgba(137,180,250,.06);border:1px solid rgba(137,180,250,.15);color:#89b4fa;font-weight:500}}
 .price-bar{{display:flex;align-items:center;gap:16px;background:rgba(249,226,175,.04);border:1px solid #313244;border-radius:10px;padding:22px 28px;margin:14px 0}}
@@ -644,13 +644,13 @@ body{{background:#1e1e2e;color:#cdd6f4;font-family:'DM Sans',sans-serif;width:10
 .qr-url a{{font-size:12px;color:#89b4fa;text-decoration:none}}
 .qr-cta{{font-size:10px;color:{colors[0]};margin-top:4px}}
 .qr-wrap{{text-align:center}}
-.qr-img{{width:115px;height:115px;border-radius:8px;background:#fff;padding:6px}}
+.qr-img{{width:140px;height:140px;border-radius:8px;background:#fff;padding:6px}}
 .qr-label{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:#6c7086;margin-top:4px}}
 .info-row{{display:flex;gap:10px;margin:14px 0}}
 .info-card{{flex:1;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.02);border:1px solid #313244;border-radius:8px;padding:12px 14px}}
 .info-icon{{font-size:18px}}
 .info-lbl{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:#6c7086}}
-.info-val{{font-size:12px;font-weight:600;color:#cdd6f4}}
+.info-val{{font-size:14px;font-weight:600;color:#cdd6f4}}
 .contact-bar{{text-align:center;font-size:10px;color:#6c7086;margin:8px 0;padding:12px 0;border-top:1px solid #313244}}
 .ci{{margin:0 6px}}
 .footer{{text-align:center;padding-top:14px;border-top:1px solid #313244}}
@@ -698,7 +698,7 @@ body::before{{content:'';position:absolute;top:50%;right:-100px;transform:transl
   pointer-events:none;z-index:0}}
 .wrap{{position:relative;z-index:1;padding:48px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between}}
 .toprow{{display:flex;align-items:center;gap:14px;margin-bottom:8px}}
-.logo img{{height:55px;filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate({180+shift}deg)}}
+.logo img{{height:70px;filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate({180+shift}deg)}}
 .slogan{{font-size:10px;color:rgba(0,212,255,.5);text-transform:uppercase;letter-spacing:2px}}
 .bismillah{{font-size:9px;color:rgba(255,255,255,.04);text-align:center;margin:2px 0}}
 .status-bar{{display:flex;gap:20px;margin:8px 0;font-size:11px}}
@@ -715,14 +715,14 @@ body::before{{content:'';position:absolute;top:50%;right:-100px;transform:transl
 .features{{display:flex;flex-direction:column;justify-content:space-between;gap:8px;margin-bottom:20px}}
 .feat{{display:flex;align-items:center;gap:14px;background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.1);border-radius:8px;padding:14px 18px;width:100%}}
 .feat-icon{{font-size:26px}}
-.feat-text{{font-size:14px;font-weight:500;color:#b8d4e8}}
+.feat-text{{font-size:16px;font-weight:500;color:#b8d4e8}}
 .pills{{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}}
 .pill{{font-size:11px;padding:6px 14px;border-radius:4px;background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.15);color:#00d4ff}}
 .price-bar{{display:flex;align-items:center;gap:16px;background:rgba(255,230,109,.04);border:1px solid rgba(255,230,109,.12);border-radius:8px;padding:22px 28px;margin:18px 0}}
 .price-item{{display:flex;align-items:center;gap:10px}}
 .price-icon{{font-size:24px}}
 .price-lbl{{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(184,212,232,.35)}}
-.price-val{{font-size:18px;font-weight:700;color:#b8d4e8}}
+.price-val{{font-size:22px;font-weight:700;color:#b8d4e8}}
 .price-val.free{{color:#00d4ff}}
 .price-divider{{width:1px;height:36px;background:rgba(0,212,255,.15)}}
 .qr-section{{display:flex;align-items:center;gap:20px;background:rgba(0,212,255,.03);border:1px solid rgba(0,212,255,.1);border-radius:8px;padding:26px 30px;margin:18px 0}}
@@ -733,13 +733,13 @@ body::before{{content:'';position:absolute;top:50%;right:-100px;transform:transl
 .qr-url a{{font-size:13px;color:#ffe66d;text-decoration:none}}
 .qr-cta{{font-size:11px;color:#00d4ff;margin-top:4px}}
 .qr-wrap{{text-align:center}}
-.qr-img{{width:120px;height:120px;border-radius:6px;background:#fff;padding:6px}}
+.qr-img{{width:145px;height:145px;border-radius:6px;background:#fff;padding:6px}}
 .qr-label{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(184,212,232,.3);margin-top:4px}}
 .info-row{{display:flex;gap:10px;margin:18px 0}}
 .info-card{{flex:1;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:8px;padding:12px 14px}}
 .info-icon{{font-size:20px}}
 .info-lbl{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(184,212,232,.3)}}
-.info-val{{font-size:13px;font-weight:500;color:#b8d4e8}}
+.info-val{{font-size:15px;font-weight:500;color:#b8d4e8}}
 .contact-bar{{text-align:center;font-size:11px;color:rgba(184,212,232,.3);margin:10px 0;padding:14px 0;border-top:1px solid rgba(255,255,255,.05)}}
 .ci{{margin:0 6px}}
 .footer{{text-align:center;padding-top:14px;border-top:1px solid rgba(255,255,255,.05)}}
@@ -790,7 +790,7 @@ body::before{{content:'';position:absolute;inset:0;background:
 .c7{{background:#ee4266;top:30%;left:50%;width:6px;height:6px}}.c8{{background:#3bceac;bottom:40%;right:40%;width:6px;height:6px}}
 .wrap{{position:relative;z-index:1;padding:44px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center}}
 .toprow{{display:flex;align-items:center;gap:14px;margin-bottom:6px}}
-.logo img{{height:55px;filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate({340+shift}deg)}}
+.logo img{{height:70px;filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate({340+shift}deg)}}
 .slogan{{font-size:11px;color:rgba(255,107,53,.6);text-transform:uppercase;letter-spacing:2px;font-weight:700}}
 .bismillah{{font-size:9px;color:rgba(255,255,255,.04);margin:2px 0}}
 .hero{{margin:22px 0}}
@@ -806,14 +806,14 @@ body::before{{content:'';position:absolute;inset:0;background:
 .feat:nth-child(3){{background:rgba(238,66,102,.1);border:2px solid rgba(238,66,102,.25);transform:rotate(0.5deg)}}
 .feat:nth-child(4){{background:rgba(59,206,172,.1);border:2px solid rgba(59,206,172,.25);transform:rotate(-0.5deg)}}
 .feat-icon{{font-size:30px}}
-.feat-text{{font-size:14px;font-weight:700;color:#f0e6ff}}
+.feat-text{{font-size:16px;font-weight:700;color:#f0e6ff}}
 .pills{{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:20px 0}}
 .pill{{font-size:12px;padding:8px 18px;border-radius:20px;background:rgba(255,210,63,.08);border:2px solid rgba(255,210,63,.2);color:#ffd23f;font-weight:700}}
 .price-bar{{display:flex;align-items:center;justify-content:center;gap:24px;background:rgba(255,107,53,.06);border:2px solid rgba(255,107,53,.2);border-radius:14px;padding:18px 28px;margin:10px 0;width:100%}}
 .price-item{{display:flex;align-items:center;gap:10px}}
 .price-icon{{font-size:26px}}
 .price-lbl{{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(240,230,255,.35)}}
-.price-val{{font-size:20px;font-weight:800;color:#f0e6ff}}
+.price-val{{font-size:24px;font-weight:800;color:#f0e6ff}}
 .price-val.free{{color:#3bceac}}
 .price-divider{{width:2px;height:36px;background:rgba(255,107,53,.2)}}
 .qr-section{{display:flex;align-items:center;gap:20px;background:rgba(59,206,172,.05);border:2px solid rgba(59,206,172,.15);border-radius:14px;padding:26px 30px;margin:10px 0;width:100%;text-align:left}}
@@ -824,13 +824,13 @@ body::before{{content:'';position:absolute;inset:0;background:
 .qr-url a{{font-size:13px;color:#3bceac;text-decoration:none;font-weight:700}}
 .qr-cta{{font-size:11px;color:#ffd23f;margin-top:4px}}
 .qr-wrap{{text-align:center}}
-.qr-img{{width:125px;height:125px;border-radius:10px;background:#fff;padding:6px;border:2px solid rgba(255,210,63,.2)}}
+.qr-img{{width:150px;height:150px;border-radius:10px;background:#fff;padding:6px;border:2px solid rgba(255,210,63,.2)}}
 .qr-label{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(240,230,255,.3);margin-top:6px}}
 .info-row{{display:flex;gap:12px;margin:10px 0;width:100%}}
 .info-card{{flex:1;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.03);border:2px solid rgba(255,255,255,.06);border-radius:10px;padding:14px 16px;text-align:left}}
 .info-icon{{font-size:20px}}
 .info-lbl{{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(240,230,255,.3)}}
-.info-val{{font-size:13px;font-weight:700;color:#f0e6ff}}
+.info-val{{font-size:15px;font-weight:700;color:#f0e6ff}}
 .contact-bar{{text-align:center;font-size:11px;color:rgba(240,230,255,.3);margin:10px 0;padding:14px 0;border-top:2px solid rgba(255,255,255,.05)}}
 .ci{{margin:0 6px}}
 .footer{{text-align:center;padding-top:14px;border-top:2px solid rgba(255,255,255,.05)}}

@@ -4,7 +4,7 @@
     "slug": "3d-lab",
     "html_file": "atelier-3d-lab-education.html",
     "hero_emoji": "🧊",
-    "title": "3D -Lab",
+    "title": "3D-Lab",
     "title_fontsize": 180,
     "description": "Explorez la conception 3D dans le navigateur — creez, faites pivoter et eclairez des objets interactifs avec Three.js.",
     "features": [
@@ -79,7 +79,7 @@
     "slug": "AI-hacker-lab",
     "html_file": "atelier-AI-hacker-lab-ia.html",
     "hero_emoji": "🤖",
-    "title": "Ai -Hacker-Lab",
+    "title": "Ai-Hacker-Lab",
     "title_fontsize": 100,
     "description": "Laboratoire interactif d IA et cybersecurite — explorez le machine learning et les techniques de hacking ethique.",
     "features": [
@@ -229,7 +229,7 @@
     "slug": "al-maqlub",
     "html_file": "atelier-al-maqlub-arabe.html",
     "hero_emoji": "📜",
-    "title": "Al -Maqlub",
+    "title": "Al-Maqlub",
     "title_fontsize": 150,
     "description": "Poesie arabe reversible — musee interactif, createur, jeu et recitateur de poemes palindromes.",
     "features": [
@@ -454,7 +454,7 @@
     "slug": "arabic-keyboard",
     "html_file": "atelier-arabic-keyboard-arabe.html",
     "hero_emoji": "⌨️",
-    "title": "Arabic -Keyboard",
+    "title": "Arabic-Keyboard",
     "title_fontsize": 85,
     "description": "Clavier arabe virtuel dans le navigateur — tape en arabe sans changer la config de ton PC.",
     "features": [
@@ -529,7 +529,7 @@
     "slug": "arabic-speaker",
     "html_file": "atelier-arabic-speaker-arabe.html",
     "hero_emoji": "🔊",
-    "title": "Arabic -Speaker",
+    "title": "Arabic-Speaker",
     "title_fontsize": 100,
     "description": "Synthese vocale et reconnaissance de la parole en arabe — entierement local dans le navigateur.",
     "features": [
@@ -604,7 +604,7 @@
     "slug": "arabic-translator",
     "html_file": "atelier-arabic-translator-arabe.html",
     "hero_emoji": "🌐",
-    "title": "Arabic -Translator",
+    "title": "Arabic-Translator",
     "title_fontsize": 85,
     "description": "Traduisez vers et depuis l arabe dans le navigateur — sans serveur, sans cle API, fonctionne entierement hors ligne.",
     "features": [
@@ -679,7 +679,7 @@
     "slug": "arabic-tts",
     "html_file": "atelier-arabic-tts-arabe.html",
     "hero_emoji": "🎤",
-    "title": "Arabic -Tts",
+    "title": "Arabic-Tts",
     "title_fontsize": 120,
     "description": "Synthese vocale arabe moderne via VITS + HiFi-GAN — serveur FastAPI avec voix haute fidelite.",
     "features": [
@@ -829,7 +829,7 @@
     "slug": "bash-toolkit",
     "html_file": "atelier-bash-toolkit-outils.html",
     "hero_emoji": "🧰",
-    "title": "Bash -Toolkit",
+    "title": "Bash-Toolkit",
     "title_fontsize": 100,
     "description": "Collection de scripts Bash utiles pour automatiser les taches quotidiennes de developpement.",
     "features": [
@@ -904,7 +904,7 @@
     "slug": "bit-54-activities",
     "html_file": "atelier-bit-54-activities-micro:bit.html",
     "hero_emoji": "📘",
-    "title": "Bit -54-Activities",
+    "title": "Bit-54-Activities",
     "title_fontsize": 85,
     "description": "",
     "features": [
@@ -979,7 +979,7 @@
     "slug": "bit-bot",
     "html_file": "atelier-bit-bot-robot-ia.html",
     "hero_emoji": "🤖",
-    "title": "Bit -Bot 🧠",
+    "title": "Bit-Bot 🧠",
     "title_fontsize": 180,
     "description": "Compagnon robot IA qui dialogue par la voix, choisit sa personnalite et se connecte a un micro:bit via Bluetooth.",
     "features": [
@@ -1054,7 +1054,7 @@
     "slug": "bit-playground",
     "html_file": "atelier-bit-playground-microbit.html",
     "hero_emoji": "🕹️",
-    "title": "Bit -Playground 🎮",
+    "title": "Bit-Playground 🎮",
     "title_fontsize": 82,
     "description": "Le terrain de jeu ultime pour micro:bit BLE — LEDs, capteurs, servos, jeux et graphiques depuis le navigateur.",
     "features": [
@@ -1129,7 +1129,7 @@
     "slug": "bitmoji-lab",
     "html_file": "atelier-bitmoji-lab-leds-neopixel.html",
     "hero_emoji": "🎨",
-    "title": "Bitmoji -Lab 💡",
+    "title": "Bitmoji-Lab 💡",
     "title_fontsize": 110,
     "description": "Dessine des emojis et envoie-les vers une matrice LED NeoPixel 8x8 ou 16x16 via micro:bit. Art numerique en couleurs !",
     "features": [
@@ -1205,7 +1205,7 @@
     "slug": "ble-dashboard",
     "html_file": "atelier-ble-dashboard-hardware.html",
     "hero_emoji": "📊",
-    "title": "Ble -Dashboard",
+    "title": "Ble-Dashboard",
     "title_fontsize": 100,
     "description": "Dashboard BLE complet — scanner, connecter, lire, ecrire, surveiller et analyser le spectre 2.4 GHz.",
     "features": [
@@ -1280,7 +1280,7 @@
     "slug": "ble-logger",
     "html_file": "atelier-ble-logger-micro:bit.html",
     "hero_emoji": "📶",
-    "title": "Ble -Logger",
+    "title": "Ble-Logger",
     "title_fontsize": 120,
     "description": "Journal de debogage Bluetooth pour micro:bit — connectez, inspectez les services, lisez capteurs et logguez en temps reel.",
     "features": [
@@ -1430,7 +1430,7 @@
     "slug": "builders-of-light",
     "html_file": "atelier-builders-of-light-arabe.html",
     "hero_emoji": "🏛️",
-    "title": "Builders -Of-Light",
+    "title": "Builders-Of-Light",
     "title_fontsize": 85,
     "description": "Voyage educatif interactif a travers l Age d Or islamique — decouvrez les savants qui ont illumine le monde.",
     "features": [
@@ -1580,7 +1580,7 @@
     "slug": "circuit-lab",
     "html_file": "atelier-circuit-lab-electronique.html",
     "hero_emoji": "⚡",
-    "title": "Circuit -Lab 🔌",
+    "title": "Circuit-Lab 🔌",
     "title_fontsize": 110,
     "description": "Simulateur de circuits electroniques interactif — construis, teste et comprends les composants depuis le navigateur.",
     "features": [
@@ -1730,7 +1730,7 @@
     "slug": "claude-toolkit",
     "html_file": "atelier-claude-toolkit-ia.html",
     "hero_emoji": "🔮",
-    "title": "Claude -Toolkit",
+    "title": "Claude-Toolkit",
     "title_fontsize": 100,
     "description": "Boite a outils CLI pour Claude AI — automatisez vos workflows avec des scripts intelligents.",
     "features": [
@@ -1880,7 +1880,7 @@
     "slug": "crypto-academy",
     "html_file": "atelier-crypto-academy-securite.html",
     "hero_emoji": "🔐",
-    "title": "Crypto -Academy",
+    "title": "Crypto-Academy",
     "title_fontsize": 100,
     "description": "Cryptographie interactive — chiffrement, hachage, signatures numeriques, PKI et TLS avec Web Crypto API.",
     "features": [
@@ -1955,7 +1955,7 @@
     "slug": "crypto-vault",
     "html_file": "atelier-crypto-vault-securite.html",
     "hero_emoji": "🔒",
-    "title": "Crypto -Vault",
+    "title": "Crypto-Vault",
     "title_fontsize": 100,
     "description": "Apprenez la cryptographie en pratique — chiffrez des messages, hachez des mots de passe, verifiez des signatures.",
     "features": [
@@ -2030,7 +2030,7 @@
     "slug": "dhcp-lab",
     "html_file": "atelier-dhcp-lab-reseau.html",
     "hero_emoji": "🌐",
-    "title": "Dhcp -Lab",
+    "title": "Dhcp-Lab",
     "title_fontsize": 150,
     "description": "Serveur DHCP Python zero-dependance avec dashboard web temps reel — apprenez comment IP est attribuee.",
     "features": [
@@ -2105,7 +2105,7 @@
     "slug": "dir-pulse",
     "html_file": "atelier-dir-pulse-outils.html",
     "hero_emoji": "📂",
-    "title": "Dir -Pulse",
+    "title": "Dir-Pulse",
     "title_fontsize": 150,
     "description": "Le battement de coeur de vos repertoires — surveillez les changements de fichiers en temps reel.",
     "features": [
@@ -2180,7 +2180,7 @@
     "slug": "docker-lab",
     "html_file": "atelier-docker-lab-linux.html",
     "hero_emoji": "🐳",
-    "title": "Docker -Lab",
+    "title": "Docker-Lab",
     "title_fontsize": 120,
     "description": "Laboratoire Docker interactif — apprends les conteneurs et la virtualisation legere.",
     "features": [
@@ -2480,7 +2480,7 @@
     "slug": "esp32-c3-kids-lab",
     "html_file": "atelier-esp32-c3-kids-lab-hardware.html",
     "hero_emoji": "⚡",
-    "title": "Esp32 -C3-Kids-Lab",
+    "title": "Esp32-C3-Kids-Lab",
     "title_fontsize": 85,
     "description": "Labo pratique ESP32-C3 — allumez des LEDs, lisez des capteurs, connectez-vous au WiFi et creez vos premiers projets IoT.",
     "features": [
@@ -2555,7 +2555,7 @@
     "slug": "evic-toolkit",
     "html_file": "atelier-evic-toolkit-hardware.html",
     "hero_emoji": "🔧",
-    "title": "Evic -Toolkit",
+    "title": "Evic-Toolkit",
     "title_fontsize": 100,
     "description": "Boite a outils pour firmware de bornes de recharge EV — diagnostic, flashage et configuration.",
     "features": [
@@ -2630,7 +2630,7 @@
     "slug": "face-quest",
     "html_file": "atelier-face-quest-detection-visage.html",
     "hero_emoji": "🎯",
-    "title": "Face -Quest 👤",
+    "title": "Face-Quest 👤",
     "title_fontsize": 120,
     "description": "Chasse aux visages avec l'IA — detecte les visages en temps reel grace a TensorFlow.js, directement dans le navigateur.",
     "features": [
@@ -2705,7 +2705,7 @@
     "slug": "face-tracking",
     "html_file": "atelier-face-tracking-robot-visage.html",
     "hero_emoji": "👁️",
-    "title": "Face -Tracking 🤖",
+    "title": "Face-Tracking 🤖",
     "title_fontsize": 95,
     "description": "Suivi de visage en temps reel — les donnees de position sont envoyees vers un micro:bit via BLE pour controler des servos ou LEDs.",
     "features": [
@@ -2931,7 +2931,7 @@
     "slug": "firmware-update",
     "html_file": "atelier-firmware-update-hardware.html",
     "hero_emoji": "📲",
-    "title": "Firmware -Update",
+    "title": "Firmware-Update",
     "title_fontsize": 85,
     "description": "Mettez a jour le firmware de vos appareils via une interface web — OTA, USB Serial et BLE.",
     "features": [
@@ -3006,7 +3006,7 @@
     "slug": "flight-tracker",
     "html_file": "atelier-flight-tracker-reseau.html",
     "hero_emoji": "✈️",
-    "title": "Flight -Tracker",
+    "title": "Flight-Tracker",
     "title_fontsize": 100,
     "description": "Suivi de vols en temps reel pour enfants — transformez le ciel en salle de classe interactive.",
     "features": [
@@ -3156,7 +3156,7 @@
     "slug": "git-date-rewrite",
     "html_file": "atelier-git-date-rewrite-outils.html",
     "hero_emoji": "📅",
-    "title": "Git -Date-Rewrite",
+    "title": "Git-Date-Rewrite",
     "title_fontsize": 85,
     "description": "Reecrivez les dates de commits de tous vos repos GitHub depuis un seul menu terminal interactif.",
     "features": [
@@ -3231,7 +3231,7 @@
     "slug": "git-lab",
     "html_file": "atelier-git-lab-education.html",
     "hero_emoji": "🌿",
-    "title": "Git -Lab",
+    "title": "Git-Lab",
     "title_fontsize": 180,
     "description": "Apprenez Git et GitHub de maniere interactive — branches, commits, merges et pull requests pour enfants.",
     "features": [
@@ -3306,7 +3306,7 @@
     "slug": "git-pulse",
     "html_file": "atelier-git-pulse-outils.html",
     "hero_emoji": "💓",
-    "title": "Git -Pulse",
+    "title": "Git-Pulse",
     "title_fontsize": 150,
     "description": "Gestionnaire complet de depots GitHub — CLI + interface web pour surveiller et gerer tous vos repos.",
     "features": [
@@ -3381,7 +3381,7 @@
     "slug": "golden-age",
     "html_file": "atelier-golden-age-arabe.html",
     "hero_emoji": "✨",
-    "title": "Golden -Age",
+    "title": "Golden-Age",
     "title_fontsize": 120,
     "description": "Voyage interactif a travers l Age d Or islamique — sciences, medecine, astronomie et inventions.",
     "features": [
@@ -3456,7 +3456,7 @@
     "slug": "hackrf-one",
     "html_file": "atelier-hackrf-one-hardware.html",
     "hero_emoji": "📡",
-    "title": "Hackrf -One",
+    "title": "Hackrf-One",
     "title_fontsize": 120,
     "description": "Explorez le HackRF One — outil SDR pour l analyse et la transmission radio de 1 MHz a 6 GHz.",
     "features": [
@@ -3531,7 +3531,7 @@
     "slug": "hacktivist-kids",
     "html_file": "atelier-hacktivist-kids-securite.html",
     "hero_emoji": "🎭",
-    "title": "Hacktivist -Kids",
+    "title": "Hacktivist-Kids",
     "title_fontsize": 85,
     "description": "Boite a outils de pranks educatifs pour jeunes agents — apprenez la cybersecurite en vous amusant.",
     "features": [
@@ -3906,7 +3906,7 @@
     "slug": "linux-kids-lab",
     "html_file": "atelier-linux-kids-terminal.html",
     "hero_emoji": "🐧",
-    "title": "Linux-Kids -Lab 💻",
+    "title": "Linux-Kids-Lab 💻",
     "title_fontsize": 82,
     "description": "Decouvre le terminal Linux de maniere ludique — commandes, fichiers, scripts et jeux, le tout dans un environnement securise.",
     "features": [
@@ -4057,7 +4057,7 @@
     "slug": "luminaries-of-islam",
     "html_file": "atelier-luminaries-of-islam-arabe.html",
     "hero_emoji": "🌟",
-    "title": "Luminaries -Of-Islam",
+    "title": "Luminaries-Of-Islam",
     "title_fontsize": 72,
     "description": "Les savants du monde musulman — experience educative interactive avec biographies, decouvertes et chronologie.",
     "features": [
@@ -4132,7 +4132,7 @@
     "slug": "mac-weird-keys",
     "html_file": "atelier-mac-weird-keys-outils.html",
     "hero_emoji": "⌨️",
-    "title": "Mac -Weird-Keys",
+    "title": "Mac-Weird-Keys",
     "title_fontsize": 100,
     "description": "Trouvez, apprenez et copiez les symboles bizarres que vous ne pouvez pas taper sur votre clavier Mac.",
     "features": [
@@ -4207,7 +4207,7 @@
     "slug": "magic-hands",
     "html_file": "atelier-magic-hands-ia-camera.html",
     "hero_emoji": "✨",
-    "title": "Magic -Hands 🖐️",
+    "title": "Magic-Hands 🖐️",
     "title_fontsize": 110,
     "description": "Agite tes mains devant la camera pour declencher des effets magiques — confettis, trainees lumineuses et lueur neon ! Propulse par l'IA MediaPipe de Google.",
     "features": [
@@ -4282,7 +4282,7 @@
     "slug": "makecode-adventures",
     "html_file": "atelier-makecode-adventures-micro:bit.html",
     "hero_emoji": "🧩",
-    "title": "Makecode -Adventures",
+    "title": "Makecode-Adventures",
     "title_fontsize": 72,
     "description": "Apprenez la programmation avec Microsoft MakeCode pour micro:bit — missions interactives et defis progressifs pour enfants.",
     "features": [
@@ -4507,7 +4507,7 @@
     "slug": "mission-control",
     "html_file": "atelier-mission-control-micro:bit.html",
     "hero_emoji": "🛸",
-    "title": "Mission -Control",
+    "title": "Mission-Control",
     "title_fontsize": 85,
     "description": "Tableau de bord avec video et chat WebRTC — envoyez des commandes a distance vers un micro:bit via Bluetooth.",
     "features": [
@@ -4582,7 +4582,7 @@
     "slug": "morse-code",
     "html_file": "atelier-morse-code-micro:bit.html",
     "hero_emoji": "📡",
-    "title": "Morse -Code",
+    "title": "Morse-Code",
     "title_fontsize": 120,
     "description": "Apprenez le code Morse de maniere ludique avec une vraie connectivite BLE micro:bit — envoyez des messages en Morse !",
     "features": [
@@ -4657,7 +4657,7 @@
     "slug": "mqtt-lab",
     "html_file": "atelier-mqtt-lab-hardware.html",
     "hero_emoji": "📬",
-    "title": "Mqtt -Lab",
+    "title": "Mqtt-Lab",
     "title_fontsize": 150,
     "description": "Apprenez MQTT, IoT et la cybersecurite de maniere ludique — localement, en prive et gratuitement.",
     "features": [
@@ -4807,7 +4807,7 @@
     "slug": "nodered-lab",
     "html_file": "atelier-nodered-lab-iot.html",
     "hero_emoji": "🔴",
-    "title": "Nodered -Lab",
+    "title": "Nodered-Lab",
     "title_fontsize": 120,
     "description": "Laboratoire Node-RED — programmation visuelle pour l'IoT et l'automatisation.",
     "features": [
@@ -5032,7 +5032,7 @@
     "slug": "ollama-bot",
     "html_file": "atelier-ollama-bot-ia.html",
     "hero_emoji": "🦙",
-    "title": "Ollama -Bot",
+    "title": "Ollama-Bot",
     "title_fontsize": 120,
     "description": "Chattez avec une IA locale via Ollama — prive, hors-ligne, sans cloud. Interface web simple et legere.",
     "features": [
@@ -5182,7 +5182,7 @@
     "slug": "ops-catalog-islamic-kids-apps",
     "html_file": "atelier-ops-catalog-islamic-kids-apps-arabe.html",
     "hero_emoji": "🌙",
-    "title": "Ops -Catalog-Islamic-Kids-Apps",
+    "title": "Ops-Catalog-Islamic-Kids-Apps",
     "title_fontsize": 72,
     "description": "5 applications educatives islamiques interactives pour enfants musulmans — apprentissage par le jeu.",
     "features": [
@@ -5257,7 +5257,7 @@
     "slug": "ops-catalog-islamic-kids-quizzes",
     "html_file": "atelier-ops-catalog-islamic-kids-quizzes-arabe.html",
     "hero_emoji": "☪️",
-    "title": "Ops -Catalog-Islamic-Kids-Quizzes",
+    "title": "Ops-Catalog-Islamic-Kids-Quizzes",
     "title_fontsize": 72,
     "description": "1 091 quiz educatifs islamiques pour enfants musulmans — Coran, Sira, Fiqh et plus.",
     "features": [
@@ -5332,7 +5332,7 @@
     "slug": "ops-catalog-kids-apps",
     "html_file": "atelier-ops-catalog-kids-apps-education.html",
     "hero_emoji": "🎠",
-    "title": "Ops -Catalog-Kids-Apps",
+    "title": "Ops-Catalog-Kids-Apps",
     "title_fontsize": 72,
     "description": "190 jeux educatifs interactifs pour enfants — recreations de GCompris, TuxMath et plus.",
     "features": [
@@ -5407,7 +5407,7 @@
     "slug": "ops-catalog-kids-quizzes",
     "html_file": "atelier-ops-catalog-kids-quizzes-education.html",
     "hero_emoji": "🧮",
-    "title": "Ops -Catalog-Kids-Quizzes",
+    "title": "Ops-Catalog-Kids-Quizzes",
     "title_fontsize": 72,
     "description": "2 215 quiz educatifs — maths, sciences, geographie, anglais, codage et arts pour enfants.",
     "features": [
@@ -5482,7 +5482,7 @@
     "slug": "ops-catalog",
     "html_file": "atelier-ops-catalog-outils.html",
     "hero_emoji": "📦",
-    "title": "Ops -Catalog",
+    "title": "Ops-Catalog",
     "title_fontsize": 120,
     "description": "Catalogue interactif de 488+ projets DIY hardware, radio et securite — repartis en 55 categories.",
     "features": [
@@ -5632,7 +5632,7 @@
     "slug": "passassion-report",
     "html_file": "atelier-passassion-report-outils.html",
     "hero_emoji": "📊",
-    "title": "Passassion -Report",
+    "title": "Passassion-Report",
     "title_fontsize": 85,
     "description": "Generateur de rapports de passation — documentez le transfert de projets et responsabilites.",
     "features": [
@@ -5707,7 +5707,7 @@
     "slug": "pentest-lab",
     "html_file": "atelier-pentest-lab-securite.html",
     "hero_emoji": "🛡️",
-    "title": "Pentest -Lab",
+    "title": "Pentest-Lab",
     "title_fontsize": 120,
     "description": "Bac a sable cybersecurite pour debutants — apprenez les bases via des defis guides et exercices CTF interactifs.",
     "features": [
@@ -5782,7 +5782,7 @@
     "slug": "piper-arabic-tts",
     "html_file": "atelier-piper-arabic-tts-arabe.html",
     "hero_emoji": "🎙️",
-    "title": "Piper -Arabic-Tts",
+    "title": "Piper-Arabic-Tts",
     "title_fontsize": 85,
     "description": "Synthese vocale arabe via Piper et WebAssembly — voix naturelle, 100% local dans le navigateur.",
     "features": [
@@ -5857,7 +5857,7 @@
     "slug": "pixel-gateway",
     "html_file": "atelier-pixel-gateway-micro:bit.html",
     "hero_emoji": "🟥",
-    "title": "Pixel -Gateway",
+    "title": "Pixel-Gateway",
     "title_fontsize": 100,
     "description": "Envoyez des emojis colores vers une matrice NeoPixel connectee a un micro:bit — via USB Serial ou Bluetooth LE.",
     "features": [
@@ -6157,7 +6157,7 @@
     "slug": "production-chain",
     "html_file": "atelier-production-chain-outils.html",
     "hero_emoji": "🏭",
-    "title": "Production -Chain",
+    "title": "Production-Chain",
     "title_fontsize": 85,
     "description": "Infrastructure CI/CD conteneurisee pour equipes firmware et Linux embarque.",
     "features": [
@@ -6232,7 +6232,7 @@
     "slug": "prompt-hero",
     "html_file": "atelier-prompt-hero-ia.html",
     "hero_emoji": "💬",
-    "title": "Prompt -Hero",
+    "title": "Prompt-Hero",
     "title_fontsize": 120,
     "description": "Apprenez a ecrire des prompts efficaces pour l IA — exercices interactifs adaptes aux enfants et debutants.",
     "features": [
@@ -6307,7 +6307,7 @@
     "slug": "puppeteer-playground",
     "html_file": "atelier-puppeteer-playground-outils.html",
     "hero_emoji": "🎭",
-    "title": "Puppeteer -Playground",
+    "title": "Puppeteer-Playground",
     "title_fontsize": 72,
     "description": "Automatisation de navigateur avec Puppeteer — apprenez, experimentez et creez des demos.",
     "features": [
@@ -6682,7 +6682,7 @@
     "slug": "rocket-shield-vpn",
     "html_file": "atelier-rocket-shield-vpn-securite.html",
     "hero_emoji": "🚀",
-    "title": "Rocket -Shield-Vpn",
+    "title": "Rocket-Shield-Vpn",
     "title_fontsize": 85,
     "description": "Apprenez le VPN comme un commandant spatial — application educative interactive sur les tunnels chiffres.",
     "features": [
@@ -6907,7 +6907,7 @@
     "slug": "salat-times",
     "html_file": "atelier-salat-times-arabe.html",
     "hero_emoji": "🕌",
-    "title": "Salat -Times",
+    "title": "Salat-Times",
     "title_fontsize": 120,
     "description": "Horaires de priere precis + lanterne Adhan connectee a un micro:bit V2 — allume une LED a chaque appel a la priere.",
     "features": [
@@ -6982,7 +6982,7 @@
     "slug": "sanitize-names-toolkit",
     "html_file": "atelier-sanitize-names-toolkit-outils.html",
     "hero_emoji": "✏️",
-    "title": "Sanitize -Names-Toolkit",
+    "title": "Sanitize-Names-Toolkit",
     "title_fontsize": 72,
     "description": "Nettoyez et normalisez les noms de fichiers et dossiers — supprimez accents, espaces et caracteres speciaux.",
     "features": [
@@ -7132,7 +7132,7 @@
     "slug": "save-our-planet",
     "html_file": "atelier-save-our-planet-education.html",
     "hero_emoji": "🌍",
-    "title": "Save -Our-Planet",
+    "title": "Save-Our-Planet",
     "title_fontsize": 85,
     "description": "Application web interactive trilingue pour enfants — des robots sauvent la Terre en 2050.",
     "features": [
@@ -7282,7 +7282,7 @@
     "slug": "sdr-lab",
     "html_file": "atelier-sdr-lab-hardware.html",
     "hero_emoji": "📻",
-    "title": "Sdr -Lab",
+    "title": "Sdr-Lab",
     "title_fontsize": 180,
     "description": "Apprenez la radio logicielle (SDR) de maniere interactive — spectres, modulations, decodage. 100% hors-ligne.",
     "features": [
@@ -7357,7 +7357,7 @@
     "slug": "smart-home",
     "html_file": "atelier-smart-home-hardware.html",
     "hero_emoji": "🏠",
-    "title": "Smart -Home",
+    "title": "Smart-Home",
     "title_fontsize": 120,
     "description": "Connectez, automatisez et controlez — labo domotique pour enfants avec capteurs, relais et interface web.",
     "features": [
@@ -7432,7 +7432,7 @@
     "slug": "sniffers-sallae",
     "html_file": "atelier-sniffers-sallae-hardware.html",
     "hero_emoji": "🔬",
-    "title": "Sniffers -Sallae",
+    "title": "Sniffers-Sallae",
     "title_fontsize": 85,
     "description": "Analyseur logique Saleae — visualise les signaux SPI, I2C, UART en temps reel.",
     "features": [
@@ -7507,7 +7507,7 @@
     "slug": "sync-files",
     "html_file": "atelier-sync-files-outils.html",
     "hero_emoji": "🔄",
-    "title": "Sync -Files",
+    "title": "Sync-Files",
     "title_fontsize": 120,
     "description": "Synchronisation intelligente de fichiers pour developpeurs travaillant sur plusieurs PC.",
     "features": [
@@ -7582,7 +7582,7 @@
     "slug": "talking-robot",
     "html_file": "atelier-talking-robot-voix-ia.html",
     "hero_emoji": "🗣️",
-    "title": "Talking -Robot 🤖",
+    "title": "Talking-Robot 🤖",
     "title_fontsize": 95,
     "description": "Robot web qui parle, ecoute, montre des emotions et envoie des commandes a un micro:bit via Bluetooth.",
     "features": [
@@ -7658,7 +7658,7 @@
     "slug": "teachable-machine",
     "html_file": "atelier-teachable-machine-ia-gestes.html",
     "hero_emoji": "🧠",
-    "title": "Teachable -Machine 👋",
+    "title": "Teachable-Machine 👋",
     "title_fontsize": 72,
     "description": "Entraine tes propres modeles IA pour reconnaitre gestes et sons, puis envoie les resultats vers un micro:bit en temps reel.",
     "features": [
@@ -7959,7 +7959,7 @@
     "slug": "time-machine",
     "html_file": "atelier-time-machine-arabe.html",
     "hero_emoji": "⏳",
-    "title": "Time -Machine",
+    "title": "Time-Machine",
     "title_fontsize": 100,
     "description": "Jeu educatif interactif sur les savants musulmans qui ont change le monde — voyagez dans le temps !",
     "features": [
@@ -8109,7 +8109,7 @@
     "slug": "true-crypt",
     "html_file": "atelier-true-crypt-securite.html",
     "hero_emoji": "🗄️",
-    "title": "True -Crypt",
+    "title": "True-Crypt",
     "title_fontsize": 120,
     "description": "Gestionnaire de volumes chiffres dans le navigateur — conteneurs AES-256-GCM inspires de TrueCrypt/VeraCrypt.",
     "features": [
@@ -8334,7 +8334,7 @@
     "slug": "usb-logger",
     "html_file": "atelier-usb-logger-micro:bit.html",
     "hero_emoji": "🔌",
-    "title": "Usb -Logger",
+    "title": "Usb-Logger",
     "title_fontsize": 120,
     "description": "Communication micro:bit via USB WebSerial — envoyez et recevez des donnees directement depuis le navigateur.",
     "features": [
@@ -8559,7 +8559,7 @@
     "slug": "web-kids",
     "html_file": "atelier-web-kids-education.html",
     "hero_emoji": "🌈",
-    "title": "Web -Kids",
+    "title": "Web-Kids",
     "title_fontsize": 150,
     "description": "Plateforme de codage educative zero-dependance pour enfants de 6 a 14 ans — HTML, CSS, JS dans le navigateur.",
     "features": [
@@ -8634,7 +8634,7 @@
     "slug": "web-kvm",
     "html_file": "atelier-web-kvm-outils.html",
     "hero_emoji": "🖱️",
-    "title": "Web -Kvm",
+    "title": "Web-Kvm",
     "title_fontsize": 180,
     "description": "Switch KVM logiciel — partagez clavier et souris entre plusieurs ordinateurs via le reseau local.",
     "features": [
@@ -8709,7 +8709,7 @@
     "slug": "wifi-dashboard",
     "html_file": "atelier-wifi-dashboard-reseau.html",
     "hero_emoji": "📡",
-    "title": "Wifi -Dashboard",
+    "title": "Wifi-Dashboard",
     "title_fontsize": 100,
     "description": "Scanner WiFi temps reel, analyseur de canaux et moniteur de signal — visualisez votre environnement radio.",
     "features": [
@@ -8784,7 +8784,7 @@
     "slug": "wled-kids-lab",
     "html_file": "atelier-wled-kids-lab-hardware.html",
     "hero_emoji": "💡",
-    "title": "Wled -Kids-Lab",
+    "title": "Wled-Kids-Lab",
     "title_fontsize": 100,
     "description": "Controlez des rubans LED WS2812 / NeoPixel avec WLED — choisissez couleurs, effets et luminosite. Introduction ludique aux LEDs.",
     "features": [
@@ -8859,7 +8859,7 @@
     "slug": "workshop-diy",
     "html_file": "atelier-workshop-diy-outils.html",
     "hero_emoji": "🏗️",
-    "title": "Workshop -Diy",
+    "title": "Workshop-Diy",
     "title_fontsize": 100,
     "description": "Le site principal Workshop-DIY — on construit, on apprend, on partage.",
     "features": [

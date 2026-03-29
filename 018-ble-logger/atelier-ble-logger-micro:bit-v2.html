@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ble -Logger</title>
+<title>Ble-Logger</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600&display=swap">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -14,10 +14,10 @@ body::before{content:'';position:absolute;inset:0;background:
   repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(0,200,83,.07) 39px,rgba(0,200,83,.07) 40px),
   repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(0,200,83,.07) 39px,rgba(0,200,83,.07) 40px);
   pointer-events:none;z-index:0}
-body::after{content:'';position:absolute;top:60px;right:60px;width:180px;height:180px;border:2px solid rgba(0,200,83,.15);border-radius:50%;pointer-events:none;z-index:0}
+
 .wrap{position:relative;z-index:1;padding:48px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between}
 .toprow{display:flex;align-items:center;gap:16px;margin-bottom:8px}
-.logo img{height:60px;filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(85deg)}
+.logo img{height:75px;filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(85deg)}
 .slogan{font-size:11px;color:rgba(0,200,83,.7);text-transform:uppercase;letter-spacing:2px}
 .bismillah{text-align:center;font-family:'IBM Plex Sans',sans-serif;font-size:10px;color:rgba(255,255,255,.06);margin:4px 0}
 .corner-tl,.corner-tr,.corner-bl,.corner-br{position:absolute;width:30px;height:30px;z-index:2}
@@ -35,14 +35,14 @@ body::after{content:'';position:absolute;top:60px;right:60px;width:180px;height:
 .features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
 .feat{background:rgba(0,200,83,.06);border:1px solid rgba(0,200,83,.15);border-radius:8px;padding:16px 18px;display:flex;align-items:center;gap:14px}
 .feat-icon{font-size:28px}
-.feat-text{font-size:14px;font-weight:600;color:#c9d1d9}
+.feat-text{font-size:16px;font-weight:600;color:#c9d1d9}
 .pills{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
 .pill{font-size:13px;padding:8px 18px;border-radius:4px;background:rgba(0,200,83,.08);border:1px solid rgba(0,200,83,.2);color:#7ee787}
 .price-bar{display:flex;align-items:center;justify-content:space-between;background:rgba(0,200,83,.05);border:1px solid rgba(0,200,83,.15);border-radius:8px;padding:20px 28px;margin:20px 0}
 .price-item{display:flex;align-items:center;gap:12px}
 .price-icon{font-size:28px}
 .price-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.5)}
-.price-val{font-size:20px;font-weight:700;color:#c9d1d9}
+.price-val{font-size:24px;font-weight:700;color:#c9d1d9}
 .price-val.free{color:#00c853}
 .price-divider{width:1px;height:40px;background:rgba(0,200,83,.2)}
 .qr-section{display:flex;align-items:center;gap:24px;background:rgba(0,200,83,.05);border:1px solid rgba(0,200,83,.15);border-radius:8px;padding:24px 28px;margin:20px 0}
@@ -53,13 +53,13 @@ body::after{content:'';position:absolute;top:60px;right:60px;width:180px;height:
 .qr-url a{font-family:'Space Grotesk',monospace;font-size:14px;color:#58a6ff;text-decoration:none}
 .qr-cta{font-size:12px;color:#ffd740;margin-top:6px}
 .qr-wrap{text-align:center}
-.qr-img{width:130px;height:130px;border-radius:8px;background:#fff;padding:6px}
+.qr-img{width:155px;height:155px;border-radius:8px;background:#fff;padding:6px}
 .qr-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.4);margin-top:6px}
 .info-row{display:flex;gap:12px;margin:20px 0}
 .info-card{flex:1;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:14px 16px}
 .info-icon{font-size:22px}
 .info-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.4)}
-.info-val{font-size:14px;font-weight:600;color:#c9d1d9}
+.info-val{font-size:16px;font-weight:600;color:#c9d1d9}
 .contact-bar{text-align:center;font-size:12px;color:rgba(255,255,255,.4);margin:12px 0;padding:10px 0;border-top:1px solid rgba(255,255,255,.06)}
 .ci{margin:0 8px}
 .footer{text-align:center;padding-top:10px;border-top:1px solid rgba(255,255,255,.06)}
@@ -75,7 +75,7 @@ body::after{content:'';position:absolute;top:60px;right:60px;width:180px;height:
 <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero">
 <div class="hero-label">ATELIER</div>
-<div class="hero-title"><span class="hero-emoji">📶</span>Ble -Logger</div>
+<div class="hero-title"><span class="hero-emoji">📶</span>Ble-Logger</div>
 <div class="hero-desc">Journal de debogage Bluetooth pour micro:bit — connectez, inspectez les services, lisez capteurs et logguez en temps reel.</div>
 </div>
 <div class="section-label">Au programme</div>
