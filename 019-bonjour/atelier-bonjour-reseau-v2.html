@@ -16,7 +16,7 @@ body::before{content:'';position:absolute;top:50%;right:-100px;transform:transla
   radial-gradient(circle,transparent 70%,rgba(0,212,255,.02) 71%,rgba(0,212,255,.02) 72%,transparent 73%),
   radial-gradient(circle,transparent 90%,rgba(0,212,255,.015) 91%,rgba(0,212,255,.015) 92%,transparent 93%);
   pointer-events:none;z-index:0}
-.wrap{position:relative;z-index:1;padding:48px 56px;height:100%;display:flex;flex-direction:column}
+.wrap{position:relative;z-index:1;padding:48px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between}
 .toprow{display:flex;align-items:center;gap:14px;margin-bottom:8px}
 .logo img{height:55px;filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(188deg)}
 .slogan{font-size:10px;color:rgba(0,212,255,.5);text-transform:uppercase;letter-spacing:2px}
@@ -26,26 +26,26 @@ body::before{content:'';position:absolute;top:50%;right:-100px;transform:transla
 .status-dot.online{background:#00d4ff}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .status-item{color:rgba(184,212,232,.5)}
-.hero{margin:14px 0}
+.hero{margin:22px 0}
 .hero-label{font-family:'Exo 2',sans-serif;font-size:13px;color:#00d4ff;letter-spacing:4px;text-transform:uppercase}
 .hero-title{font-family:'Exo 2',sans-serif;font-size:110px;font-weight:800;color:#e8f4fd;line-height:1.1;white-space:nowrap}
 .hero-emoji{font-size:49px;margin-right:10px;filter:drop-shadow(0 0 15px rgba(0,212,255,.5))}
-.hero-desc{font-size:16px;color:rgba(184,212,232,.6);margin:10px 0;max-width:700px;line-height:1.5}
-.section-lbl{font-family:'Exo 2',sans-serif;font-size:12px;color:#ffe66d;letter-spacing:3px;text-transform:uppercase;margin:16px 0 10px}
-.features{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.hero-desc{font-size:18px;color:rgba(184,212,232,.6);margin:10px 0;max-width:700px;line-height:1.5}
+.section-lbl{font-family:'Exo 2',sans-serif;font-size:12px;color:#ffe66d;letter-spacing:3px;text-transform:uppercase;margin:24px 0 14px}
+.features{display:flex;flex-direction:column;justify-content:space-between;gap:8px;margin-bottom:20px}
 .feat{display:flex;align-items:center;gap:14px;background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.1);border-radius:8px;padding:14px 18px;width:100%}
 .feat-icon{font-size:26px}
 .feat-text{font-size:14px;font-weight:500;color:#b8d4e8}
-.pills{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
 .pill{font-size:11px;padding:6px 14px;border-radius:4px;background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.15);color:#00d4ff}
-.price-bar{display:flex;align-items:center;gap:16px;background:rgba(255,230,109,.04);border:1px solid rgba(255,230,109,.12);border-radius:8px;padding:16px 22px;margin:10px 0}
+.price-bar{display:flex;align-items:center;gap:16px;background:rgba(255,230,109,.04);border:1px solid rgba(255,230,109,.12);border-radius:8px;padding:22px 28px;margin:18px 0}
 .price-item{display:flex;align-items:center;gap:10px}
 .price-icon{font-size:24px}
 .price-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(184,212,232,.35)}
 .price-val{font-size:18px;font-weight:700;color:#b8d4e8}
 .price-val.free{color:#00d4ff}
 .price-divider{width:1px;height:36px;background:rgba(0,212,255,.15)}
-.qr-section{display:flex;align-items:center;gap:20px;background:rgba(0,212,255,.03);border:1px solid rgba(0,212,255,.1);border-radius:8px;padding:20px 24px;margin:10px 0}
+.qr-section{display:flex;align-items:center;gap:20px;background:rgba(0,212,255,.03);border:1px solid rgba(0,212,255,.1);border-radius:8px;padding:26px 30px;margin:18px 0}
 .qr-left{flex:1}
 .qr-title{font-family:'Exo 2',sans-serif;font-size:16px;font-weight:700;color:#e8f4fd}
 .qr-badge{font-size:9px;background:#00d4ff;color:#001f3f;padding:2px 8px;border-radius:4px;margin-left:8px}
@@ -55,14 +55,14 @@ body::before{content:'';position:absolute;top:50%;right:-100px;transform:transla
 .qr-wrap{text-align:center}
 .qr-img{width:120px;height:120px;border-radius:6px;background:#fff;padding:6px}
 .qr-label{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(184,212,232,.3);margin-top:4px}
-.info-row{display:flex;gap:10px;margin:10px 0}
+.info-row{display:flex;gap:10px;margin:18px 0}
 .info-card{flex:1;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:8px;padding:12px 14px}
 .info-icon{font-size:20px}
 .info-lbl{font-size:8px;text-transform:uppercase;letter-spacing:1px;color:rgba(184,212,232,.3)}
 .info-val{font-size:13px;font-weight:500;color:#b8d4e8}
-.contact-bar{text-align:center;font-size:11px;color:rgba(184,212,232,.3);margin:10px 0;padding:8px 0;border-top:1px solid rgba(255,255,255,.05)}
+.contact-bar{text-align:center;font-size:11px;color:rgba(184,212,232,.3);margin:10px 0;padding:14px 0;border-top:1px solid rgba(255,255,255,.05)}
 .ci{margin:0 6px}
-.footer{text-align:center;margin-top:auto;padding-top:8px;border-top:1px solid rgba(255,255,255,.05)}
+.footer{text-align:center;padding-top:14px;border-top:1px solid rgba(255,255,255,.05)}
 .fnote{font-size:11px;color:rgba(184,212,232,.2);font-style:italic}
 .htags{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}
 .ht{font-size:10px;color:#00d4ff;border:1px solid rgba(0,212,255,.15);padding:2px 8px;border-radius:4px}
