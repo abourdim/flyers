@@ -118,7 +118,7 @@ def common_head(title, fonts_url, extra_css):
 <link rel="stylesheet" href="{fonts_url}">
 <style>
 *{{margin:0;padding:0;box-sizing:border-box}}
-html,body{{width:1080px;height:1527px;overflow:hidden}}
+html,body{{width:1080px;height:1527px}}
 {extra_css}
 </style>
 </head>'''
@@ -199,7 +199,7 @@ def theme_circuit(w):
     tsize = adaptive_title_size(w['title'], 120)
     fonts = "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600&display=swap"
     css = f'''
-body{{background:#0d1117;color:#c9d1d9;font-family:'IBM Plex Sans',sans-serif;width:1080px;height:1527px;position:relative;overflow:hidden}}
+body{{background:#0d1117;color:#c9d1d9;font-family:'IBM Plex Sans',sans-serif;width:1080px;height:1527px;position:relative;}}
 body::before{{content:'';position:absolute;inset:0;background:
   repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(0,200,83,.07) 39px,rgba(0,200,83,.07) 40px),
   repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(0,200,83,.07) 39px,rgba(0,200,83,.07) 40px);
@@ -294,13 +294,13 @@ def theme_terminal(w):
         feats_html += f'<div class="cmd"><span class="prompt">$</span> <span class="cmd-text">{esc(f["text"])}</span><span class="cursor">█</span></div>'
 
     css = f'''
-body{{background:#1a1b26;color:#a9b1d6;font-family:'Inter',sans-serif;width:1080px;height:1527px;overflow:hidden}}
-.terminal{{margin:40px;border:2px solid #414868;border-radius:12px;height:calc(100% - 80px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}}
+body{{background:#1a1b26;color:#a9b1d6;font-family:'Inter',sans-serif;width:1080px;height:1527px}}
+.terminal{{margin:40px;border:2px solid #414868;border-radius:12px;height:calc(100% - 80px);display:flex;flex-direction:column;justify-content:space-between;}}
 .term-bar{{background:#24283b;padding:12px 20px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #414868}}
 .dot{{width:12px;height:12px;border-radius:50%}}
 .dot-r{{background:#f7768e}}.dot-y{{background:#e0af68}}.dot-g{{background:#9ece6a}}
 .term-title{{flex:1;text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#565f89}}
-.term-body{{flex:1;padding:36px 44px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}}
+.term-body{{flex:1;padding:36px 44px;display:flex;flex-direction:column;justify-content:space-between;}}
 .toprow{{display:flex;align-items:center;gap:16px;margin-bottom:6px}}
 .logo img{{height:65px;filter:brightness(0) invert(1) sepia(1) saturate(2) hue-rotate({200+shift}deg)}}
 .slogan{{font-family:'JetBrains Mono',monospace;font-size:10px;color:#565f89}}
@@ -376,7 +376,7 @@ def theme_neural(w):
     tsize = adaptive_title_size(w['title'], 110)
     fonts = "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@400;600&display=swap"
     css = f'''
-body{{background:#0f0a1e;color:#e0d6ff;font-family:'Poppins',sans-serif;width:1080px;height:1527px;overflow:hidden;position:relative}}
+body{{background:#0f0a1e;color:#e0d6ff;font-family:'Poppins',sans-serif;width:1080px;height:1527px;position:relative}}
 body::before{{content:'';position:absolute;top:15%;left:50%;transform:translate(-50%,-30%);width:600px;height:600px;background:radial-gradient(circle,rgba(131,56,236,.2) 0%,rgba(255,0,110,.1) 40%,transparent 70%);pointer-events:none;z-index:0}}
 body::after{{content:'';position:absolute;bottom:10%;right:10%;width:300px;height:300px;background:radial-gradient(circle,rgba(0,245,212,.12) 0%,transparent 60%);pointer-events:none;z-index:0}}
 .wrap{{position:relative;z-index:1;padding:48px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center}}
@@ -455,7 +455,7 @@ def theme_arabesque(w):
     tsize = adaptive_title_size(w['title'], 100)
     fonts = "https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@400;600&display=swap"
     css = f'''
-body{{background:#faf6ef;color:#2c1810;font-family:'Noto Sans Arabic','Amiri',serif;width:1080px;height:1527px;overflow:hidden;position:relative}}
+body{{background:#faf6ef;color:#2c1810;font-family:'Noto Sans Arabic','Amiri',serif;width:1080px;height:1527px;position:relative}}
 body::before{{content:'';position:absolute;inset:0;background:
   repeating-conic-gradient(from 0deg at 50% 50%,rgba(200,150,12,.03) 0deg 30deg,transparent 30deg 60deg);
   background-size:120px 120px;pointer-events:none;z-index:0}}
@@ -550,7 +550,7 @@ def theme_glitch(w):
         feats_html += f'<div class="log-entry"><span class="log-prefix">{p}</span> {esc(f["text"])}</div>'
 
     css = f'''
-body{{background:#0a0a0a;color:#b0b0b0;font-family:'Source Code Pro',monospace;width:1080px;height:1527px;overflow:hidden;position:relative}}
+body{{background:#0a0a0a;color:#b0b0b0;font-family:'Source Code Pro',monospace;width:1080px;height:1527px;position:relative}}
 body::before{{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,65,.015) 2px,rgba(0,255,65,.015) 4px);pointer-events:none;z-index:1}}
 body::after{{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,.4));pointer-events:none;z-index:1}}
 .wrap{{position:relative;z-index:2;padding:48px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between}}
@@ -632,12 +632,12 @@ def theme_pixel(w):
     fonts = "https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap"
     colors = ["#f38ba8", "#a6e3a1", "#89b4fa", "#f9e2af"]
     css = f'''
-body{{background:#1e1e2e;color:#cdd6f4;font-family:'DM Sans',sans-serif;width:1080px;height:1527px;overflow:hidden;position:relative}}
+body{{background:#1e1e2e;color:#cdd6f4;font-family:'DM Sans',sans-serif;width:1080px;height:1527px;position:relative}}
 .browser-bar{{background:#181825;padding:12px 20px;display:flex;align-items:center;gap:8px;margin:30px 40px 0;border-radius:12px 12px 0 0;border:1px solid #313244;border-bottom:none}}
 .dot{{width:10px;height:10px;border-radius:50%}}
 .dot-r{{background:#f38ba8}}.dot-y{{background:#f9e2af}}.dot-g{{background:#a6e3a1}}
 .url-bar{{flex:1;background:#11111b;border-radius:6px;padding:6px 14px;font-size:11px;color:#6c7086;margin:0 12px}}
-.page{{background:#1e1e2e;border:1px solid #313244;border-top:none;border-radius:0 0 12px 12px;margin:0 40px;padding:36px 44px;flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}}
+.page{{background:#1e1e2e;border:1px solid #313244;border-top:none;border-radius:0 0 12px 12px;margin:0 40px;padding:36px 44px;flex:1;display:flex;flex-direction:column;justify-content:space-between;}}
 .toprow{{display:flex;align-items:center;gap:14px;margin-bottom:6px}}
 .logo img{{height:65px;filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate({320+shift}deg)}}
 .slogan{{font-size:10px;color:#6c7086;letter-spacing:1px}}
@@ -718,7 +718,7 @@ def theme_signal(w):
     tsize = adaptive_title_size(w['title'], 110)
     fonts = "https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap"
     css = f'''
-body{{background:#001f3f;color:#b8d4e8;font-family:'Roboto',sans-serif;width:1080px;height:1527px;overflow:hidden;position:relative}}
+body{{background:#001f3f;color:#b8d4e8;font-family:'Roboto',sans-serif;width:1080px;height:1527px;position:relative}}
 body::before{{content:'';position:absolute;top:50%;right:-100px;transform:translateY(-50%);width:500px;height:500px;border-radius:50%;background:
   radial-gradient(circle,transparent 30%,rgba(0,212,255,.04) 31%,rgba(0,212,255,.04) 32%,transparent 33%),
   radial-gradient(circle,transparent 50%,rgba(0,212,255,.03) 51%,rgba(0,212,255,.03) 52%,transparent 53%),
@@ -807,7 +807,7 @@ def theme_arcade(w):
     tsize = adaptive_title_size(w['title'], 120)
     fonts = "https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;800&display=swap"
     css = f'''
-body{{background:#1a0533;color:#f0e6ff;font-family:'Nunito',sans-serif;width:1080px;height:1527px;overflow:hidden;position:relative}}
+body{{background:#1a0533;color:#f0e6ff;font-family:'Nunito',sans-serif;width:1080px;height:1527px;position:relative}}
 body::before{{content:'';position:absolute;inset:0;background:
   radial-gradient(circle at 10% 20%,rgba(255,107,53,.08) 0%,transparent 30%),
   radial-gradient(circle at 80% 70%,rgba(238,66,102,.08) 0%,transparent 30%),

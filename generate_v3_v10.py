@@ -40,7 +40,7 @@ def head(title, fonts, css):
     return f'''<!DOCTYPE html>
 <html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><link rel="stylesheet" href="{fonts}">
-<style>*{{margin:0;padding:0;box-sizing:border-box}}html,body{{width:1080px;height:1527px;overflow:hidden}}{css}</style></head>'''
+<style>*{{margin:0;padding:0;box-sizing:border-box}}html,body{{width:1080px;height:1527px}}{css}</style></head>'''
 
 def tsize(title, base=110):
     est = len(title)*base*0.55
@@ -94,7 +94,7 @@ def v3(w):
     ts=tsize(w['title'],110);h=hue(w['slug'])
     fonts="https://fonts.googleapis.com/css2?family=Audiowide&family=Quicksand:wght@400;600;700&display=swap"
     css=f'''
-body{{background:linear-gradient(180deg,#0b0024 0%,#1a0a3e 30%,#4a1942 55%,#c2185b 75%,#ff6f00 90%,#ffd54f 100%);color:#fff;font-family:'Quicksand',sans-serif;width:1080px;height:1527px;position:relative;overflow:hidden}}
+body{{background:linear-gradient(180deg,#0b0024 0%,#1a0a3e 30%,#4a1942 55%,#c2185b 75%,#ff6f00 90%,#ffd54f 100%);color:#fff;font-family:'Quicksand',sans-serif;width:1080px;height:1527px;position:relative;}}
 body::before{{content:'';position:absolute;bottom:0;left:0;right:0;height:45%;background:
   repeating-linear-gradient(90deg,transparent,transparent 53px,rgba(255,111,0,.12) 53px,rgba(255,111,0,.12) 54px),
   repeating-linear-gradient(180deg,transparent,transparent 29px,rgba(255,111,0,.08) 29px,rgba(255,111,0,.08) 30px);
@@ -144,7 +144,7 @@ def v4(w):
     ts=tsize(w['title'],105);h=hue(w['slug'])
     fonts="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700;800&display=swap"
     css=f'''
-body{{background:#ffe135;color:#1a1a2e;font-family:'Nunito',sans-serif;width:1080px;height:1527px;position:relative;overflow:hidden}}
+body{{background:#ffe135;color:#1a1a2e;font-family:'Nunito',sans-serif;width:1080px;height:1527px;position:relative;}}
 body::before{{content:'';position:absolute;inset:0;background:radial-gradient(circle,#1a1a2e 1px,transparent 1px);background-size:20px 20px;opacity:.06;pointer-events:none}}
 .w{{position:relative;z-index:1;padding:44px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between}}
 .top{{display:flex;align-items:center;gap:14px;margin-bottom:6px}}
@@ -191,7 +191,7 @@ def v5(w):
     ts=tsize(w['title'],105);h=hue(w['slug'])
     fonts="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
     css=f'''
-body{{background:#0a3d6b;color:#d4e6f1;font-family:'IBM Plex Mono',monospace;width:1080px;height:1527px;position:relative;overflow:hidden}}
+body{{background:#0a3d6b;color:#d4e6f1;font-family:'IBM Plex Mono',monospace;width:1080px;height:1527px;position:relative;}}
 body::before{{content:'';position:absolute;inset:0;background:
   repeating-linear-gradient(0deg,transparent,transparent 29px,rgba(255,255,255,.04) 29px,rgba(255,255,255,.04) 30px),
   repeating-linear-gradient(90deg,transparent,transparent 29px,rgba(255,255,255,.04) 29px,rgba(255,255,255,.04) 30px);pointer-events:none}}
@@ -242,7 +242,7 @@ def v6(w):
     ts=tsize(w['title'],110);h=hue(w['slug'])
     fonts="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Outfit:wght@400;500;600&display=swap"
     css=f'''
-body{{background:#050510;color:#c8c0e0;font-family:'Outfit',sans-serif;width:1080px;height:1527px;position:relative;overflow:hidden}}
+body{{background:#050510;color:#c8c0e0;font-family:'Outfit',sans-serif;width:1080px;height:1527px;position:relative;}}
 .nebula{{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}}
 .n1{{top:5%;left:15%;width:400px;height:400px;background:rgba(100,50,200,.12)}}
 .n2{{bottom:20%;right:10%;width:350px;height:350px;background:rgba(0,150,200,.1)}}
@@ -297,7 +297,7 @@ def v7(w):
     ts=tsize(w['title'],100);h=hue(w['slug'])
     fonts="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Nunito:wght@400;700&display=swap"
     css=f'''
-body{{background:#d4a574;color:#3e2723;font-family:'Nunito',sans-serif;width:1080px;height:1527px;position:relative;overflow:hidden}}
+body{{background:#d4a574;color:#3e2723;font-family:'Nunito',sans-serif;width:1080px;height:1527px;position:relative;}}
 body::before{{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 100px,rgba(0,0,0,.02) 100px,rgba(0,0,0,.02) 101px);pointer-events:none}}
 
 .w{{position:relative;z-index:1;padding:44px 56px;height:100%;display:flex;flex-direction:column;justify-content:space-between}}
@@ -345,7 +345,7 @@ def v8(w):
     ts=tsize(w['title'],110);h=hue(w['slug'])
     fonts="https://fonts.googleapis.com/css2?family=Russo+One&family=Barlow:wght@400;600;700&display=swap"
     css=f'''
-body{{background:#0a0014;color:#d0d0e0;font-family:'Barlow',sans-serif;width:1080px;height:1527px;position:relative;overflow:hidden}}
+body{{background:#0a0014;color:#d0d0e0;font-family:'Barlow',sans-serif;width:1080px;height:1527px;position:relative;}}
 body::before{{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#ff0080,#00ffff,#ff0080);z-index:3}}
 body::after{{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#00ffff,#ff0080,#00ffff);z-index:3}}
 .glitch-bar{{position:absolute;height:2px;background:#ff0080;opacity:.3;z-index:0}}
@@ -396,7 +396,7 @@ def v9(w):
     ts=tsize(w['title'],100);h=hue(w['slug'])
     fonts="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
     css=f'''
-body{{background:#fafafa;color:#1a1a1a;font-family:'Inter',sans-serif;width:1080px;height:1527px;position:relative;overflow:hidden}}
+body{{background:#fafafa;color:#1a1a1a;font-family:'Inter',sans-serif;width:1080px;height:1527px;position:relative;}}
 .red-bar{{position:absolute;top:0;left:0;width:8px;height:100%;background:#e63946;z-index:2}}
 .w{{position:relative;z-index:1;padding:48px 48px 48px 72px;height:100%;display:flex;flex-direction:column;justify-content:space-between}}
 .top{{display:flex;align-items:center;gap:14px;margin-bottom:8px}}
