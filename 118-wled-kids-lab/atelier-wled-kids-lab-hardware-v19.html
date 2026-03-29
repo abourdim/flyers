@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wled-Kids-Lab</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1080px;min-height:1527px}
+body{background:#888;font-family:'Space Mono',monospace;width:1080px;min-height:1527px;display:flex;justify-content:center}
+.receipt{background:#fff;width:700px;min-height:calc(1527px - 60px);margin:30px 0;padding:40px 50px;box-shadow:0 2px 20px rgba(0,0,0,.3);display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.receipt::before,.receipt::after{content:'';position:absolute;left:0;right:0;height:20px;background:repeating-linear-gradient(90deg,transparent,transparent 8px,#fff 8px,#fff 16px)}
+.receipt::before{top:-10px;background:repeating-linear-gradient(-45deg,#888,#888 5px,transparent 5px,transparent 10px)}
+.receipt::after{bottom:-10px;background:repeating-linear-gradient(45deg,#888,#888 5px,transparent 5px,transparent 10px)}
+.bis{font-size:8px;color:rgba(0,0,0,.03);text-align:center}
+.store{text-align:center;font-size:20px;font-weight:700;letter-spacing:2px}
+.addr{text-align:center;font-size:11px;color:#888}
+.sep{text-align:center;color:#ccc;letter-spacing:2px;font-size:12px;overflow:hidden}
+.hero-t{font-size:60px;font-weight:700;text-align:center;color:#000;line-height:1.1;white-space:nowrap}
+.hero-e{font-size:30px;margin-right:6px}
+.hero-d{font-size:13px;color:#666;text-align:center;line-height:1.5;max-width:550px;margin:6px auto}
+.items{width:100%}
+.item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #ddd;font-size:14px}
+.item-name{flex:1}.item-price{color:#888;text-align:right}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.pill{font-size:10px;padding:4px 10px;border:1px dashed #ccc;color:#888}
+.total{display:flex;justify-content:space-between;font-size:20px;font-weight:700;border-top:2px solid #000;padding-top:12px;margin-top:8px}
+.qr-sec{display:flex;align-items:center;gap:20px;padding:16px 0;border-top:1px dashed #ccc}
+.qr-l{flex:1}.qr-t{font-size:14px;font-weight:700}
+.qr-b{font-size:8px;background:#000;color:#fff;padding:2px 6px;margin-left:6px}
+.qr-d{font-size:11px;color:#aaa}.qr-u a{font-size:12px;color:#000;text-decoration:none}
+.qr-c{font-size:10px;color:#888}.qr-r{text-align:center}
+.qr-img{width:130px;height:130px;background:#fff;padding:4px}.qr-lb{font-size:8px;color:#ccc}
+.info-row{display:flex;gap:8px}.ic{flex:1;display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px dashed #eee}
+.ic-i{font-size:16px}.ic-l{font-size:8px;text-transform:uppercase;color:#ccc}.ic-v{font-size:12px;color:#333}
+.contact{text-align:center;font-size:10px;color:#ccc;padding:10px 0}
+.footer{text-align:center;padding-top:8px}
+.fn{font-size:10px;color:#ddd}.htags{display:flex;justify-content:center;flex-wrap:wrap;gap:4px;margin-top:6px}
+.ht{font-size:9px;color:#888;border:1px dashed #ddd;padding:2px 6px}
+.thankyou{text-align:center;font-size:16px;font-weight:700;letter-spacing:3px;color:#888}
+</style></head><body>
+<div id="vbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:4px;padding:6px 12px;font-family:system-ui,sans-serif;font-size:11px">
+<span style="color:rgba(255,255,255,.4);margin-right:4px;font-weight:600">VERSION</span>
+</div>
+<script>
+(function(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var cur=f.match(/-v(\d+)\.html$/);
+  var curV=cur?parseInt(cur[1]):1;
+  var vers=[
+    [1,'Original'],[2,'Themed'],[3,'Synthwave'],[4,'Comic'],[5,'Blueprint'],
+    [6,'Galaxy'],[7,'Craft'],[8,'Cyberpunk'],[9,'Swiss'],[10,'8-Bit'],
+    [11,'Matrix'],[12,'Newspaper'],[13,'Recipe'],[14,'Boarding Pass'],[15,'Vinyl'],
+    [16,'Periodic'],[17,'Ransom'],[18,'Win95'],[19,'Receipt'],[20,'Chalkboard'],
+    [21,'Telegram'],[22,'Minecraft'],[23,'Sticky Notes'],[24,'Film Noir'],[25,'Lego'],
+    [26,'CRT'],[27,'Kawaii'],[28,'Polaroid'],[29,'NASA'],[30,'Graffiti']
+  ];
+  var bar=document.getElementById('vbar');
+  vers.forEach(function(v){
+    var a=document.createElement('a');
+    a.href=v[0]===1?base:base.replace('.html','-v'+v[0]+'.html');
+    a.textContent='v'+v[0];
+    a.title=v[1];
+    var active=v[0]===curV;
+    a.style.cssText='padding:3px 7px;border-radius:3px;text-decoration:none;font-weight:'+(active?'700':'400')+';color:'+(active?'#fff':'rgba(255,255,255,.5)')+';background:'+(active?'#e63946':'rgba(255,255,255,.08)')+';transition:all .2s;font-size:10px';
+    a.onmouseover=function(){if(!active)this.style.background='rgba(255,255,255,.15)'};
+    a.onmouseout=function(){if(!active)this.style.background='rgba(255,255,255,.08)'};
+    bar.appendChild(a);
+  });
+})();
+</script>
+<div class="receipt">
+<div class="store">WORKSHOP-DIY</div>
+<div class="addr">Chelles · workshop-diy.org</div>
+<div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+<div class="sep">================================</div>
+<div class="hero-t"><span class="hero-e">💡</span>Wled-Kids-Lab</div>
+<div class="hero-d">Controlez des rubans LED WS2812 / NeoPixel avec WLED — choisissez couleurs, effets et luminosite. Introduction ludique aux LEDs.</div>
+<div class="sep">--------------------------------</div>
+<div class="items"><div class="item"><span class="item-name">💡 Controle de LEDs et effets lumineux</span><span class="item-price">✓</span></div><div class="item"><span class="item-name">💡 Pilotage de matrices NeoPixel couleur</span><span class="item-price">✓</span></div><div class="item"><span class="item-name">🔌 Interaction avec du materiel physique</span><span class="item-price">✓</span></div><div class="item"><span class="item-name">🎯 Controle des rubans LED colores</span><span class="item-price">✓</span></div></div>
+<div class="total"><span>TOTAL</span><span>Gratuit ✅</span></div>
+<div class="sep">================================</div>
+<div class="pills"><span class="pill">👥 Tout public a partir de 10 ans</span><span class="pill">💻 PC recommande</span><span class="pill">🎓 Aucun prerequis</span><span class="pill">🧰 Materiel pedagogique fourni sur place</span></div><div class="qr-sec"><div class="qr-l"><div class="qr-t">Lancer l'atelier <span class="qr-b">EN LIGNE</span></div>
+<div class="qr-d">Ouvre l'application dans ton navigateur</div>
+<div class="qr-u"><a href="https://abourdim.github.io/wled-kids-lab/">https://abourdim.github.io/wled-kids-lab/</a></div>
+<div class="qr-c">↑ Scanne le QR code ou tape l'URL ▶</div></div>
+<div class="qr-r"><a href="https://abourdim.github.io/wled-kids-lab/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmwAAAJsAQAAAABo7sKIAAAEX0lEQVR4nO3dUW6jMAAEUBj1n97/dnuDcAKvcJxgm2lXmmGlXXXeRytIZqQGqcgY4rUsN9pxZ9uypE4HI0ukTgcjS6ROByP70+uWUh7f7ttKqZvnvmNH+SL2b/+xSJ0MepRJnQ5GlkidDj+vrnSGU8Ll/duxb1/XL2L/wx97G9xXdUidDkaWSJ0ORpZI3T/z2X203/vn83c7O2xlWZft8dxcj83X+46zRLf5OcRyZA1wwlep08HIEqnTwcgSqfPPFVftNFHt6/sk8hg2ZzkUOhhZInU6GFkidToYWSJ1t392e7vKVLULTHXm4tfxQr0QReVQ6GBkidTpYGSJ1OlgZInU+eOK7fLfv54syvsq07mvt02xHAodjCyROh2MLJE6HYwskTr3s1s7r3PD5U6nfV3bvteoY73Ecih0MLJE6nQwskTqdDCyROp0K7+aVEcTdW5i2PenhzH2HAodjCyROh2MLJE6HYwskTrdx3QvU7vy9HJu9pefhutSpX9fDoUORpZInQ5GlkidDkaWSJ2hjM/dnRPX53MT/ZMW07T21t71qsqh0MHIEqnTwcgSqdPByBKpM5T+X/03+9jdT6VLPB/tzqHQwcgSqdPByBKp08HIEqkzlHHk0I8mphPB8EJ530d7Di5yrrDAi89Sp4ORJVKng5ElUufeM7u+t9vEQ31ue3iMu81tPx/obrvrr9LPfOdQ6GBkidTpYGSJ1OlgZInUGco8pJiGDy/t7edsxqNtZr7iJrir6Cl1OhhZInU6GFkidYby1ZcFts3X98z254Xzu2dPma9wwW4YpE4HI0ukTgcjS6TOUA7f3AdVvjlDLPP7MrdtgBO+Sp0ORpZInQ5GlkidofCLSZebodiPpZ/Wzn1QJrgFo9TpYGSJ1OlgZInU3TSuYIOL83an89XpFPNor2VcYYEXn6VOByNLpE4HI0uk7q+NK0o3whjmK5bxR8YVPtzQ0UmdDkaWSJ0ORpZInaG8TwnT5vVBO7K46iTzFQY44avU6WBkidTpYGSJ1BkKXVt7mLg+33du9rrBRQ6FDkaWSJ0ORpZInQ5GlkidoVDT7U7zpSYyHMnctgt2wyB1OhhZInU6GFkidTrU1Sgm9bxQl6SoP/pVK85Z7r0tYjGMNXIodDCyROp0MLJE6nQwskTqDIU/VHcZV1zmMNjMd65BGeCEr1Kng5ElUqeDkSVS56+huveLWNQvgJrWS13HF9buhW5NpBwKHYwskTodjCyROh2MLJG6v/PZbe+Rw+tk0F+S2tqrbXHVX/WSVA6FDkaWSJ0ORpZInQ5Glkjd7Z/dfvznH5bVZg/kVfUaVNbb9uGGjk7qdDCyROp0MLJE6vxrUNvlVthyXJdqX0xev3B8X7vvH1+OzXZJanu8V13NodDByBKp08HIEqnTwcgSqbtv/Yrlq6W2L0tc7O8TRpX1K1ywGwap08HIEqnTwcgSqdOt10frDHsOhQ5GlkidDkaWSJ0ORpZI3SL7DbVl+QxyTn7MAAAAAElFTkSuQmCC" alt="QR" class="qr-img"/></a><div class="qr-lb">SCANNER</div></div></div><div class="info-row"><div class="ic"><div class="ic-i">📅</div><div><div class="ic-l">DATE</div><div class="ic-v">Date a confirmer</div></div></div><div class="ic"><div class="ic-i">🕘</div><div><div class="ic-l">DUREE</div><div class="ic-v">1h30</div></div></div><div class="ic"><div class="ic-i">📍</div><div><div class="ic-l">LIEU</div><div class="ic-v">Salle du Parc du Souvenir, Stade Pierre Duport — Chelles</div></div></div></div><div class="contact">🌐 workshop-diy.org · ✉️ contact@workshop-diy.org · 📞 06 19 51 51 73</div>
+<div class="thankyou">MERCI DE VOTRE VISITE !</div>
+<div class="footer"><div class="fn">✨ Curiosite et sourire bienvenus !</div><div class="htags"><span class="ht">#Wledkidslab</span><span class="ht">#Hardware</span><span class="ht">#WorkshopDIY</span><span class="ht">#Chelles</span></div></div></div></body></html>

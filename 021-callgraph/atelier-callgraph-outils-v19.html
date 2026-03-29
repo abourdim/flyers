@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Callgraph</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1080px;min-height:1527px}
+body{background:#888;font-family:'Space Mono',monospace;width:1080px;min-height:1527px;display:flex;justify-content:center}
+.receipt{background:#fff;width:700px;min-height:calc(1527px - 60px);margin:30px 0;padding:40px 50px;box-shadow:0 2px 20px rgba(0,0,0,.3);display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.receipt::before,.receipt::after{content:'';position:absolute;left:0;right:0;height:20px;background:repeating-linear-gradient(90deg,transparent,transparent 8px,#fff 8px,#fff 16px)}
+.receipt::before{top:-10px;background:repeating-linear-gradient(-45deg,#888,#888 5px,transparent 5px,transparent 10px)}
+.receipt::after{bottom:-10px;background:repeating-linear-gradient(45deg,#888,#888 5px,transparent 5px,transparent 10px)}
+.bis{font-size:8px;color:rgba(0,0,0,.03);text-align:center}
+.store{text-align:center;font-size:20px;font-weight:700;letter-spacing:2px}
+.addr{text-align:center;font-size:11px;color:#888}
+.sep{text-align:center;color:#ccc;letter-spacing:2px;font-size:12px;overflow:hidden}
+.hero-t{font-size:60px;font-weight:700;text-align:center;color:#000;line-height:1.1;white-space:nowrap}
+.hero-e{font-size:30px;margin-right:6px}
+.hero-d{font-size:13px;color:#666;text-align:center;line-height:1.5;max-width:550px;margin:6px auto}
+.items{width:100%}
+.item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #ddd;font-size:14px}
+.item-name{flex:1}.item-price{color:#888;text-align:right}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.pill{font-size:10px;padding:4px 10px;border:1px dashed #ccc;color:#888}
+.total{display:flex;justify-content:space-between;font-size:20px;font-weight:700;border-top:2px solid #000;padding-top:12px;margin-top:8px}
+.qr-sec{display:flex;align-items:center;gap:20px;padding:16px 0;border-top:1px dashed #ccc}
+.qr-l{flex:1}.qr-t{font-size:14px;font-weight:700}
+.qr-b{font-size:8px;background:#000;color:#fff;padding:2px 6px;margin-left:6px}
+.qr-d{font-size:11px;color:#aaa}.qr-u a{font-size:12px;color:#000;text-decoration:none}
+.qr-c{font-size:10px;color:#888}.qr-r{text-align:center}
+.qr-img{width:130px;height:130px;background:#fff;padding:4px}.qr-lb{font-size:8px;color:#ccc}
+.info-row{display:flex;gap:8px}.ic{flex:1;display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px dashed #eee}
+.ic-i{font-size:16px}.ic-l{font-size:8px;text-transform:uppercase;color:#ccc}.ic-v{font-size:12px;color:#333}
+.contact{text-align:center;font-size:10px;color:#ccc;padding:10px 0}
+.footer{text-align:center;padding-top:8px}
+.fn{font-size:10px;color:#ddd}.htags{display:flex;justify-content:center;flex-wrap:wrap;gap:4px;margin-top:6px}
+.ht{font-size:9px;color:#888;border:1px dashed #ddd;padding:2px 6px}
+.thankyou{text-align:center;font-size:16px;font-weight:700;letter-spacing:3px;color:#888}
+</style></head><body>
+<div id="vbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:4px;padding:6px 12px;font-family:system-ui,sans-serif;font-size:11px">
+<span style="color:rgba(255,255,255,.4);margin-right:4px;font-weight:600">VERSION</span>
+</div>
+<script>
+(function(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var cur=f.match(/-v(\d+)\.html$/);
+  var curV=cur?parseInt(cur[1]):1;
+  var vers=[
+    [1,'Original'],[2,'Themed'],[3,'Synthwave'],[4,'Comic'],[5,'Blueprint'],
+    [6,'Galaxy'],[7,'Craft'],[8,'Cyberpunk'],[9,'Swiss'],[10,'8-Bit'],
+    [11,'Matrix'],[12,'Newspaper'],[13,'Recipe'],[14,'Boarding Pass'],[15,'Vinyl'],
+    [16,'Periodic'],[17,'Ransom'],[18,'Win95'],[19,'Receipt'],[20,'Chalkboard'],
+    [21,'Telegram'],[22,'Minecraft'],[23,'Sticky Notes'],[24,'Film Noir'],[25,'Lego'],
+    [26,'CRT'],[27,'Kawaii'],[28,'Polaroid'],[29,'NASA'],[30,'Graffiti']
+  ];
+  var bar=document.getElementById('vbar');
+  vers.forEach(function(v){
+    var a=document.createElement('a');
+    a.href=v[0]===1?base:base.replace('.html','-v'+v[0]+'.html');
+    a.textContent='v'+v[0];
+    a.title=v[1];
+    var active=v[0]===curV;
+    a.style.cssText='padding:3px 7px;border-radius:3px;text-decoration:none;font-weight:'+(active?'700':'400')+';color:'+(active?'#fff':'rgba(255,255,255,.5)')+';background:'+(active?'#e63946':'rgba(255,255,255,.08)')+';transition:all .2s;font-size:10px';
+    a.onmouseover=function(){if(!active)this.style.background='rgba(255,255,255,.15)'};
+    a.onmouseout=function(){if(!active)this.style.background='rgba(255,255,255,.08)'};
+    bar.appendChild(a);
+  });
+})();
+</script>
+<div class="receipt">
+<div class="store">WORKSHOP-DIY</div>
+<div class="addr">Chelles · workshop-diy.org</div>
+<div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+<div class="sep">================================</div>
+<div class="hero-t"><span class="hero-e">🗺️</span>Callgraph</div>
+<div class="hero-d">Analyseur de graphe d appels interactif pour codebases C — ideal pour le transfert de projets embarques.</div>
+<div class="sep">--------------------------------</div>
+<div class="items"><div class="item"><span class="item-name">💻 Ecriture et execution de code</span><span class="item-price">✓</span></div><div class="item"><span class="item-name">🛠️ Outils pratiques pour les makers</span><span class="item-price">✓</span></div><div class="item"><span class="item-name">🎯 Visualise le code C</span><span class="item-price">✓</span></div><div class="item"><span class="item-name">🚀 Prise en main immediate, sans installation</span><span class="item-price">✓</span></div></div>
+<div class="total"><span>TOTAL</span><span>Gratuit ✅</span></div>
+<div class="sep">================================</div>
+<div class="pills"><span class="pill">👥 Tout public a partir de 10 ans</span><span class="pill">💻 PC recommande</span><span class="pill">🎓 Aucun prerequis</span><span class="pill">🧰 Materiel pedagogique fourni sur place</span></div><div class="qr-sec"><div class="qr-l"><div class="qr-t">Lancer l'atelier <span class="qr-b">EN LIGNE</span></div>
+<div class="qr-d">Ouvre l'application dans ton navigateur</div>
+<div class="qr-u"><a href="https://abourdim.github.io/callgraph/">https://abourdim.github.io/callgraph/</a></div>
+<div class="qr-c">↑ Scanne le QR code ou tape l'URL ▶</div></div>
+<div class="qr-r"><a href="https://abourdim.github.io/callgraph/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmwAAAJsAQAAAABo7sKIAAAEgUlEQVR4nO2dQY6rOABEoZQ9fYO5/7HmBuEE/opjYkwqf1HFSJ2h3iKdYOqpiVtt2cZ4LtOJrDjTNk3R6cDIEqLTgZElRKcDI0u4mm6dj9Rj+7PqKT/t3f7YwDdc7JngVNsUnQ6MLCE6HRhZQnS/5ru71dd952KtbUKjNgxlWsru4zwt9+lDLDWrAyNLiE4HRpYQnQ6MLCE6/7tbe9+gUTsSpdzH0qWUUv5961wcdSeB6GSgRxnR6cDIEqLTgZG9uu72l7J13noOtV+x/gwdiS+8WEQnAz3KiE4HRpYQnQ6upLvxw0t5jjcdxqUOQ1LfdrGITgZ6lBGdDowsITodXFG3PMaWStkagT6FvTyO9dKllP2g0zLGvuRiTwJniZ5EpwMjS4hOB0aWEN0v++7mHdvUdp+q6C91qqIVTCyWmtWBkSVEpwMjS4hOB0aWEJ3OrU1GHOg3PtXRqG1Iqr5rpQsbiEpV6MDIEqLTgZElRKcDI0uIzl9f8cNvhur3PPXeRB+hmh+xrK84CZwlehKdDowsITodGFlCdAbl2QbUiYftXSvYeEu8H6uUck9V6MDIEqLTgZElRKcDI0uIzqA82ToN9d3+Y28wDrPc0750i6UqdGBkCdHpwMgSotOBkSVEd+Z3t7w6DfXdMLe9f1naeW0gKnPbLrANA9HpwMgSotOBkSVE566vmB8v9V9/n6toH7dp7e3jfZzqvr+W69WuSKpCB0aWEJ0OjCwhOh0YWUJ0BuU5evRxlKmXfhi16mQMygJe/Eh0OjCyhOh0YGQJ0RmUVzNx+Pf/oTV4e6lkvsIHJzh2RKcDI0uITgdGlhCdQSGT2W+3RQ0tycdeR8nctgOs9BvR6cDIEqLTgZElRGdQ9rcxjUVDg3HoQ0yvsaqhdUlV6MDIEqLTgZElRKcDI0uIzqDsWojhsU+t9MP6ijLGNlWqQgdGlhCdDowsITodGFlCdDr4+NjAwzKKfeeiru/+51W6e0ZUqkIHRpYQnQ6MLCE6HRhZQnQGZVye/T6s9OlmqPvjx/GmqVSFDowsITodGFlCdDowsoToDAqZwt6PMh1Go/pKvc6uTUlV6MDIEqLTgZElRKcDI0uI7pTnzJZxD7x2bNscry3IW+fh5PWwV16qQgdGlhCdDowsITodGFlCdDq33i50+s53bXk22zBvbc1EX9WdqrCAFz8SnQ6MLCE6HRhZQnTud1fGhwDun1O+DU6xLfGmV3bUnQaik4EeZUSnAyNLiE4HRvbqulv72QedOnX4aRt0atTnQQ19jfn1jKhff7GITgZ6lBGdDowsITodXLGtONA3vauDTrXB6E3Hs3G4787f5jV+98UiOhnoUUZ0OjCyhOh0cCXd7WNJbw36tER7xOzQ15j/w98O0clAjzKi04GRJUSnAyNLuKRueVuQ17ZPPWxYUQsODwRZMl9xnT+Uk8BZoifR6cDIEqK7wP4VjL5Xxdt8xfJoLPo9VNm/4v/9h4LoZKBHGdHpwMheXTfTnbNV1t99sYhOBnqUEZ0OjCwhOh0Y2a/T/QF8sUFIoRh4IQAAAABJRU5ErkJggg==" alt="QR" class="qr-img"/></a><div class="qr-lb">SCANNER</div></div></div><div class="info-row"><div class="ic"><div class="ic-i">📅</div><div><div class="ic-l">DATE</div><div class="ic-v">Date a confirmer</div></div></div><div class="ic"><div class="ic-i">🕘</div><div><div class="ic-l">DUREE</div><div class="ic-v">1h30</div></div></div><div class="ic"><div class="ic-i">📍</div><div><div class="ic-l">LIEU</div><div class="ic-v">Salle du Parc du Souvenir, Stade Pierre Duport — Chelles</div></div></div></div><div class="contact">🌐 workshop-diy.org · ✉️ contact@workshop-diy.org · 📞 06 19 51 51 73</div>
+<div class="thankyou">MERCI DE VOTRE VISITE !</div>
+<div class="footer"><div class="fn">✨ Curiosite et sourire bienvenus !</div><div class="htags"><span class="ht">#Callgraph</span><span class="ht">#Outils</span><span class="ht">#WorkshopDIY</span><span class="ht">#Chelles</span></div></div></div></body></html>

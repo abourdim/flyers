@@ -38,7 +38,7 @@ body::before{content:'';position:absolute;bottom:0;left:0;right:0;height:45%;bac
 .fn{font-size:10px;color:rgba(255,255,255,.2);font-style:italic}.htags{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}
 .ht{font-size:10px;color:#ff6f00;border:1px solid rgba(255,111,0,.2);padding:2px 8px;border-radius:8px}
 </style></head><body>
-<div id="vbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:6px;padding:6px 12px;font-family:system-ui,sans-serif;font-size:11px">
+<div id="vbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:4px;padding:6px 12px;font-family:system-ui,sans-serif;font-size:11px">
 <span style="color:rgba(255,255,255,.4);margin-right:4px;font-weight:600">VERSION</span>
 </div>
 <script>
@@ -49,7 +49,11 @@ body::before{content:'';position:absolute;bottom:0;left:0;right:0;height:45%;bac
   var curV=cur?parseInt(cur[1]):1;
   var vers=[
     [1,'Original'],[2,'Themed'],[3,'Synthwave'],[4,'Comic'],[5,'Blueprint'],
-    [6,'Galaxy'],[7,'Craft'],[8,'Cyberpunk'],[9,'Swiss'],[10,'8-Bit']
+    [6,'Galaxy'],[7,'Craft'],[8,'Cyberpunk'],[9,'Swiss'],[10,'8-Bit'],
+    [11,'Matrix'],[12,'Newspaper'],[13,'Recipe'],[14,'Boarding Pass'],[15,'Vinyl'],
+    [16,'Periodic'],[17,'Ransom'],[18,'Win95'],[19,'Receipt'],[20,'Chalkboard'],
+    [21,'Telegram'],[22,'Minecraft'],[23,'Sticky Notes'],[24,'Film Noir'],[25,'Lego'],
+    [26,'CRT'],[27,'Kawaii'],[28,'Polaroid'],[29,'NASA'],[30,'Graffiti']
   ];
   var bar=document.getElementById('vbar');
   vers.forEach(function(v){
@@ -58,7 +62,7 @@ body::before{content:'';position:absolute;bottom:0;left:0;right:0;height:45%;bac
     a.textContent='v'+v[0];
     a.title=v[1];
     var active=v[0]===curV;
-    a.style.cssText='padding:4px 10px;border-radius:4px;text-decoration:none;font-weight:'+(active?'700':'400')+';color:'+(active?'#fff':'rgba(255,255,255,.5)')+';background:'+(active?'#e63946':'rgba(255,255,255,.08)')+';transition:all .2s;font-size:11px';
+    a.style.cssText='padding:3px 7px;border-radius:3px;text-decoration:none;font-weight:'+(active?'700':'400')+';color:'+(active?'#fff':'rgba(255,255,255,.5)')+';background:'+(active?'#e63946':'rgba(255,255,255,.08)')+';transition:all .2s;font-size:10px';
     a.onmouseover=function(){if(!active)this.style.background='rgba(255,255,255,.15)'};
     a.onmouseout=function(){if(!active)this.style.background='rgba(255,255,255,.08)'};
     bar.appendChild(a);

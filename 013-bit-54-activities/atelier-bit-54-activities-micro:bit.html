@@ -88,7 +88,7 @@ body{background:#0a1628;font-family:'El Messiri',sans-serif;margin:0}
 .au-programme{position:relative;z-index:10;text-align:center;font-family:'Fredoka',sans-serif;font-size:22px;font-weight:700;color:#00c853;letter-spacing:2px;padding:8px 56px 0;text-transform:uppercase}
 </style>
 </head><body>
-<div id="vbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:6px;padding:6px 12px;font-family:system-ui,sans-serif;font-size:11px">
+<div id="vbar" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:4px;padding:6px 12px;font-family:system-ui,sans-serif;font-size:11px">
 <span style="color:rgba(255,255,255,.4);margin-right:4px;font-weight:600">VERSION</span>
 </div>
 <script>
@@ -99,7 +99,11 @@ body{background:#0a1628;font-family:'El Messiri',sans-serif;margin:0}
   var curV=cur?parseInt(cur[1]):1;
   var vers=[
     [1,'Original'],[2,'Themed'],[3,'Synthwave'],[4,'Comic'],[5,'Blueprint'],
-    [6,'Galaxy'],[7,'Craft'],[8,'Cyberpunk'],[9,'Swiss'],[10,'8-Bit']
+    [6,'Galaxy'],[7,'Craft'],[8,'Cyberpunk'],[9,'Swiss'],[10,'8-Bit'],
+    [11,'Matrix'],[12,'Newspaper'],[13,'Recipe'],[14,'Boarding Pass'],[15,'Vinyl'],
+    [16,'Periodic'],[17,'Ransom'],[18,'Win95'],[19,'Receipt'],[20,'Chalkboard'],
+    [21,'Telegram'],[22,'Minecraft'],[23,'Sticky Notes'],[24,'Film Noir'],[25,'Lego'],
+    [26,'CRT'],[27,'Kawaii'],[28,'Polaroid'],[29,'NASA'],[30,'Graffiti']
   ];
   var bar=document.getElementById('vbar');
   vers.forEach(function(v){
