@@ -895,7 +895,9 @@ def main():
         theme_func = THEME_FUNCS[theme]
         html_content = theme_func(w)
 
-        out_path = os.path.join(FLYERS_DIR, w['folder'], w['html_file'])
+        # Write as -v2.html alongside the original
+        v2_filename = w['html_file'].replace('.html', '-v2.html')
+        out_path = os.path.join(FLYERS_DIR, w['folder'], v2_filename)
         with open(out_path, 'w', encoding='utf-8') as f:
             f.write(html_content)
 
