@@ -517,4 +517,51 @@ body{background:#e8e0d4;color:#1a1a1a;font-family:'Source Sans 3',sans-serif;wid
 <div style="border-top:1px solid #333;padding-top:20px;margin-top:20px;font-size:13px;color:#666">workshop-diy.org &#183; contact@workshop-diy.org &#183; 06 19 51 51 73</div>
 </div>
 </div>
+<script>
+(function(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var cur=f.match(/-v(\d+)\.html$/);
+  var curV=cur?parseInt(cur[1]):1;
+  var vers=[
+    {v:1,n:'Original'},{v:2,n:'Themed'},{v:3,n:'Synthwave'},{v:4,n:'Comic'},{v:5,n:'Blueprint'},
+    {v:6,n:'Galaxy'},{v:7,n:'Craft'},{v:8,n:'Cyberpunk'},{v:9,n:'Swiss'},{v:10,n:'8-Bit'},
+    {v:11,n:'Matrix'},{v:12,n:'Newspaper'},{v:13,n:'Recipe'},{v:14,n:'Boarding Pass'},{v:15,n:'Vinyl'},
+    {v:16,n:'Periodic'},{v:17,n:'Ransom'},{v:18,n:'Win95'},{v:19,n:'Receipt'},{v:20,n:'Chalkboard'},
+    {v:21,n:'Telegram'},{v:22,n:'Minecraft'},{v:23,n:'Sticky Notes'},{v:24,n:'Film Noir'},{v:25,n:'Lego'},
+    {v:26,n:'CRT'},{v:27,n:'Kawaii'},{v:28,n:'Polaroid'},{v:29,n:'NASA'},{v:30,n:'Graffiti'}
+  ];
+  var grid=document.getElementById('vgal-grid');
+  if(!grid||grid.children.length>0)return;
+  vers.forEach(function(vi){
+    var htmlFile=vi.v===1?base:base.replace('.html','-v'+vi.v+'.html');
+    var pngFile=vi.v===1?base.replace('.html','.png'):base.replace('.html','-v'+vi.v+'.png');
+    var active=vi.v===curV;
+    var card=document.createElement('a');
+    card.href=htmlFile;
+    card.style.cssText='text-decoration:none;border-radius:10px;overflow:hidden;border:3px solid '+(active?'#e63946':'rgba(255,255,255,.1)')+';transition:all .2s;display:flex;flex-direction:column;background:rgba(255,255,255,.05)';
+    card.onmouseover=function(){if(!active){this.style.borderColor='rgba(255,255,255,.3)';this.style.transform='scale(1.03)'}};
+    card.onmouseout=function(){if(!active){this.style.borderColor='rgba(255,255,255,.1)';this.style.transform='scale(1)'}};
+    var img=document.createElement('img');
+    img.src=pngFile;img.loading='lazy';
+    img.style.cssText='width:100%;aspect-ratio:1080/1527;object-fit:cover;display:block;background:#111';
+    var row=document.createElement('div');
+    row.style.cssText='display:flex;align-items:center;justify-content:space-between;padding:6px 10px';
+    var label=document.createElement('div');
+    label.style.cssText='font-family:system-ui,sans-serif;font-size:12px;color:'+(active?'#e63946':'rgba(255,255,255,.6)')+';font-weight:'+(active?'700':'400');
+    label.textContent='v'+vi.v+' \u2014 '+vi.n;
+    var dl=document.createElement('a');
+    dl.href=pngFile;
+    dl.download=base.replace('atelier-','').replace('.html','')+(vi.v===1?'':'-v'+vi.v)+'.png';
+    dl.textContent='\u2B07';dl.title='Telecharger';
+    dl.style.cssText='font-size:16px;text-decoration:none;color:rgba(255,255,255,.4);padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.08)';
+    dl.onmouseover=function(){this.style.color='#fff';this.style.background='#e63946'};
+    dl.onmouseout=function(){this.style.color='rgba(255,255,255,.4)';this.style.background='rgba(255,255,255,.08)'};
+    dl.onclick=function(e){e.stopPropagation()};
+    row.appendChild(label);row.appendChild(dl);
+    card.appendChild(img);card.appendChild(row);
+    grid.appendChild(card);
+  });
+})();
+</script>
 </body></html>
