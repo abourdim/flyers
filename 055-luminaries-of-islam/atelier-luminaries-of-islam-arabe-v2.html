@@ -303,4 +303,33 @@ function konamiRoulette(){
   },100);
 }
 </script>
+<div id="vfit-btn" onclick="toggleFit()" style="position:fixed;top:34px;right:700px;z-index:10000;background:#795548;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3)">🔍 Fit</div>
+<script>
+var fitted=false;
+function toggleFit(){
+  var btn=document.getElementById('vfit-btn');
+  if(!fitted){
+    var vw=window.innerWidth,vh=window.innerHeight;
+    var pw=1080,ph=1527;
+    var scale=Math.min(vw/pw,vh/ph);
+    document.body.style.transformOrigin='top left';
+    document.body.style.transform='scale('+scale+')';
+    document.body.style.width=pw+'px';
+    document.body.style.height=ph+'px';
+    document.documentElement.style.overflow='hidden';
+    btn.textContent='🔍 100%';
+    btn.style.transform='scale('+(1/scale)+')';
+    btn.style.transformOrigin='top right';
+    fitted=true;
+  } else {
+    document.body.style.transform='none';
+    document.body.style.width='';
+    document.body.style.height='';
+    document.documentElement.style.overflow='';
+    btn.textContent='\uD83D\uDD0D Fit';
+    btn.style.transform='none';
+    fitted=false;
+  }
+}
+</script>
 </body></html>
