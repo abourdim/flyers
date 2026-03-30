@@ -117,6 +117,13 @@ body.rtl .search-box input{padding:12px 44px 12px 16px}
 .tag-tools{background:rgba(148,163,184,.15);color:#94a3b8}
 .card-link{position:absolute;top:12px;right:12px;background:rgba(10,22,40,.9);backdrop-filter:blur(8px);border-radius:12px;padding:6px 14px;font-size:11px;font-weight:700;color:var(--accent);opacity:0;transition:.25s;border:1px solid var(--border)}
 .card:hover .card-link{opacity:1}
+.card-actions{display:flex;gap:6px;padding:0 20px 16px;flex-wrap:wrap}
+.card-act{font-size:11px;font-weight:700;padding:5px 12px;border-radius:10px;border:none;cursor:pointer;transition:.25s;display:flex;align-items:center;gap:4px}
+.card-act:hover{transform:scale(1.05);filter:brightness(1.15)}
+.card-act-png{background:rgba(0,200,83,.15);color:#00c853}
+.card-act-fb{background:rgba(24,119,242,.15);color:#5b9cf5}
+.card-act-mail{background:rgba(76,175,80,.15);color:#66bb6a}
+.card-act .ok{display:none;color:#4caf50}
 .card-badge{position:absolute;top:12px;left:12px;z-index:4;display:flex;align-items:center;gap:4px;
   background:linear-gradient(135deg,#d4a03c,#f59e0b);color:#1a0a00;font-family:'Fredoka',sans-serif;font-size:11px;font-weight:700;
   padding:4px 12px;border-radius:12px;box-shadow:0 2px 12px rgba(245,158,11,.4);animation:badge-glow 2s ease-in-out infinite alternate}
@@ -786,6 +793,11 @@ function buildGrid(){
         <div class="card-desc">${descText}</div>
         <div class="card-tags">${a.cats.map(c=>`<span class="tag tag-${c}">${CAT_META[c]?CAT_META[c].emoji+' '+(CAT_META[c][LANG]||CAT_META[c].fr):c}</span>`).join('')}</div>
       </div>
+      <div class="card-actions">
+        <a class="card-act card-act-png" href="${a.png}" download="${a.name}.png" onclick="event.stopPropagation()">⬇ PNG</a>
+        <button class="card-act card-act-fb" onclick="event.stopPropagation();copyCardTxt(this,'${a.html.split('/')[0]}','fb')">📋 FB</button>
+        <button class="card-act card-act-mail" onclick="event.stopPropagation();copyCardTxt(this,'${a.html.split('/')[0]}','mail')">📋 Mail</button>
+      </div>
       <div class="card-link">${I18N[LANG].openFlyer} →</div>`;
     g.appendChild(card);
   });
@@ -810,6 +822,19 @@ function buildFilters(cats){
 }
 
 function setFilter(c){activeFilter=c;buildGrid()}
+function copyCardTxt(btn,folder,type){
+  var name=folder.replace(/^\d+-/,'');
+  var base=folder.split('/').pop();
+  // Find the html filename from APPS
+  var app=APPS.find(a=>a.html.startsWith(folder+'/'));
+  var htmlBase=app?app.html.split('/').pop().replace('.html',''):'';
+  var url=type==='fb'?folder+'/facebook-'+name+'.txt':folder+'/mail-'+htmlBase+'.txt';
+  var orig=btn.textContent;
+  fetch(url).then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}).then(txt=>{
+    navigator.clipboard.writeText(txt).then(()=>{btn.textContent='✅ Copié !';setTimeout(()=>{btn.textContent=orig},1500)});
+  }).catch(()=>{btn.textContent='❌';setTimeout(()=>{btn.textContent=orig},1500)});
+}
+
 function setLang(l){
   LANG=l;
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('on',b.textContent.trim()===(l==='fr'?'FR':l==='en'?'EN':'عر')));
