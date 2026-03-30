@@ -1,8 +1,8 @@
 🤖 ATELIER BIT BOT — Parle avec ton robot IA ! !
 
-Compagnon robot IA qui dialogue par la voix, choisit sa personnalite et se connecte a un micro:bit via Bluetooth.
+Compagnon robot IA qui dialogue par la voix, choisit sa personnalite et se connecte a un micro-bit via Bluetooth.
 
-🎯 micro:bit / IA
+🎯 micro-bit / IA
 👥 Tout public a partir de 10 ans
 💻 PC recommande — materiel pedagogique fourni sur place
 💰 Gratuit pour les adherents / 7 EUR non-adherents
@@ -17,4 +17,4 @@ Compagnon robot IA qui dialogue par la voix, choisit sa personnalite et se conne
 ✉️ contact@workshop-diy.org
 📞 06 19 51 51 73
 
-#BitBot #WorkshopDIY #Chelles #STEM #EdTech #micro:bit #IA
+#BitBot #WorkshopDIY #Chelles #STEM #EdTech #micro-bit #IA

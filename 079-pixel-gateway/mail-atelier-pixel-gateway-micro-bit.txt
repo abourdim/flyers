@@ -1,0 +1,20 @@
+Objet : Inscription atelier « Pixel Gateway » — Workshop-DIY / agenda Ville + Chelles mag'
+
+Madame, Monsieur,
+
+Nous souhaitons inscrire l'evenement suivant sur l'agenda en ligne de la Ville, et egalement dans le bloc-notes du Chelles mag'.
+
+- Intitule : Atelier Pixel Gateway — Envoie des couleurs aux NeoPixels !
+- Date : A confirmer
+- Horaire : 1h30
+- Lieu : Salle du Parc du Souvenir, situee dans le Stade Pierre Duport, 77500 Chelles
+- Tarif : Gratuit pour les adherents / 7 EUR pour les non-adherents
+- Public concerne : Tout public a partir de 10 ans
+- Contact : Workshop-DIY — contact@workshop-diy.org — 06 19 51 51 73 — workshop-diy.org
+
+Vous trouverez l'affiche de l'atelier en piece jointe (atelier-pixel-gateway-micro-bit.png).
+
+Cordialement,
+Workshop-DIY
+Ateliers IA, robotique & code pour enfants
+workshop-diy.org

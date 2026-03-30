@@ -17,11 +17,11 @@ Tarif :
   - Non-adherents : 7 € / personne
 
 Public concerne : Tout public a partir de 10 ans
-Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro:bit, etc.)
+Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro-bit, etc.)
 
 Description :
 Compagnon robot IA qui dialogue par la voix, choisit sa personnalite
-et se connecte a un micro:bit via Bluetooth. Tout fonctionne dans le
+et se connecte a un micro-bit via Bluetooth. Tout fonctionne dans le
 navigateur web, aucune installation requise.
 
 Contact :

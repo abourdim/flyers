@@ -902,7 +902,7 @@
   {
     "folder": "013-bit-54-activities",
     "slug": "bit-54-activities",
-    "html_file": "atelier-bit-54-activities-micro:bit.html",
+    "html_file": "atelier-bit-54-activities-micro-bit.html",
     "hero_emoji": "📘",
     "title": "Bit-54-Activities",
     "title_fontsize": 85,
@@ -922,7 +922,7 @@
       },
       {
         "emoji": "🎯",
-        "text": "54 projets micro:bit"
+        "text": "54 projets micro-bit"
       }
     ],
     "pills": [
@@ -968,7 +968,7 @@
     ],
     "hashtags": [
       "#Bit54Activities",
-      "#micro:bit",
+      "#micro-bit",
       "#WorkshopDIY",
       "#Chelles"
     ],
@@ -981,7 +981,7 @@
     "hero_emoji": "🤖",
     "title": "Bit-Bot 🧠",
     "title_fontsize": 180,
-    "description": "Compagnon robot IA qui dialogue par la voix, choisit sa personnalite et se connecte a un micro:bit via Bluetooth.",
+    "description": "Compagnon robot IA qui dialogue par la voix, choisit sa personnalite et se connecte a un micro-bit via Bluetooth.",
     "features": [
       {
         "emoji": "🎙️",
@@ -1056,7 +1056,7 @@
     "hero_emoji": "🕹️",
     "title": "Bit-Playground 🎮",
     "title_fontsize": 82,
-    "description": "Le terrain de jeu ultime pour micro:bit BLE — LEDs, capteurs, servos, jeux et graphiques depuis le navigateur.",
+    "description": "Le terrain de jeu ultime pour micro-bit BLE — LEDs, capteurs, servos, jeux et graphiques depuis le navigateur.",
     "features": [
       {
         "emoji": "📡",
@@ -1131,7 +1131,7 @@
     "hero_emoji": "🎨",
     "title": "Bitmoji-Lab 💡",
     "title_fontsize": 110,
-    "description": "Dessine des emojis et envoie-les vers une matrice LED NeoPixel 8x8 ou 16x16 via micro:bit. Art numerique en couleurs !",
+    "description": "Dessine des emojis et envoie-les vers une matrice LED NeoPixel 8x8 ou 16x16 via micro-bit. Art numerique en couleurs !",
     "features": [
       {
         "emoji": "💡",
@@ -1278,11 +1278,11 @@
   {
     "folder": "018-ble-logger",
     "slug": "ble-logger",
-    "html_file": "atelier-ble-logger-micro:bit.html",
+    "html_file": "atelier-ble-logger-micro-bit.html",
     "hero_emoji": "📶",
     "title": "Ble-Logger",
     "title_fontsize": 120,
-    "description": "Journal de debogage Bluetooth pour micro:bit — connectez, inspectez les services, lisez capteurs et logguez en temps reel.",
+    "description": "Journal de debogage Bluetooth pour micro-bit — connectez, inspectez les services, lisez capteurs et logguez en temps reel.",
     "features": [
       {
         "emoji": "📡",
@@ -1294,7 +1294,7 @@
       },
       {
         "emoji": "📡",
-        "text": "Connexion Bluetooth vers un micro:bit"
+        "text": "Connexion Bluetooth vers un micro-bit"
       },
       {
         "emoji": "🎯",
@@ -1344,7 +1344,7 @@
     ],
     "hashtags": [
       "#Blelogger",
-      "#micro:bit",
+      "#micro-bit",
       "#WorkshopDIY",
       "#Chelles"
     ],
@@ -2707,7 +2707,7 @@
     "hero_emoji": "👁️",
     "title": "Face-Tracking 🤖",
     "title_fontsize": 95,
-    "description": "Suivi de visage en temps reel — les donnees de position sont envoyees vers un micro:bit via BLE pour controler des servos ou LEDs.",
+    "description": "Suivi de visage en temps reel — les donnees de position sont envoyees vers un micro-bit via BLE pour controler des servos ou LEDs.",
     "features": [
       {
         "emoji": "📡",
@@ -4280,11 +4280,11 @@
   {
     "folder": "058-makecode-adventures",
     "slug": "makecode-adventures",
-    "html_file": "atelier-makecode-adventures-micro:bit.html",
+    "html_file": "atelier-makecode-adventures-micro-bit.html",
     "hero_emoji": "🧩",
     "title": "Makecode-Adventures",
     "title_fontsize": 72,
-    "description": "Apprenez la programmation avec Microsoft MakeCode pour micro:bit — missions interactives et defis progressifs pour enfants.",
+    "description": "Apprenez la programmation avec Microsoft MakeCode pour micro-bit — missions interactives et defis progressifs pour enfants.",
     "features": [
       {
         "emoji": "💻",
@@ -4292,7 +4292,7 @@
       },
       {
         "emoji": "📡",
-        "text": "Connexion Bluetooth vers un micro:bit"
+        "text": "Connexion Bluetooth vers un micro-bit"
       },
       {
         "emoji": "🎓",
@@ -4300,7 +4300,7 @@
       },
       {
         "emoji": "🎯",
-        "text": "Programme ton micro:bit"
+        "text": "Programme ton micro-bit"
       }
     ],
     "pills": [
@@ -4346,7 +4346,7 @@
     ],
     "hashtags": [
       "#Makecodeadventures",
-      "#micro:bit",
+      "#micro-bit",
       "#WorkshopDIY",
       "#Chelles"
     ],
@@ -4505,11 +4505,11 @@
   {
     "folder": "061-mission-control",
     "slug": "mission-control",
-    "html_file": "atelier-mission-control-micro:bit.html",
+    "html_file": "atelier-mission-control-micro-bit.html",
     "hero_emoji": "🛸",
     "title": "Mission-Control",
     "title_fontsize": 85,
-    "description": "Tableau de bord avec video et chat WebRTC — envoyez des commandes a distance vers un micro:bit via Bluetooth.",
+    "description": "Tableau de bord avec video et chat WebRTC — envoyez des commandes a distance vers un micro-bit via Bluetooth.",
     "features": [
       {
         "emoji": "📡",
@@ -4525,7 +4525,7 @@
       },
       {
         "emoji": "🎯",
-        "text": "Pilote ton micro:bit a distance"
+        "text": "Pilote ton micro-bit a distance"
       }
     ],
     "pills": [
@@ -4571,7 +4571,7 @@
     ],
     "hashtags": [
       "#Missioncontrol",
-      "#micro:bit",
+      "#micro-bit",
       "#WorkshopDIY",
       "#Chelles"
     ],
@@ -4580,11 +4580,11 @@
   {
     "folder": "062-morse-code",
     "slug": "morse-code",
-    "html_file": "atelier-morse-code-micro:bit.html",
+    "html_file": "atelier-morse-code-micro-bit.html",
     "hero_emoji": "📡",
     "title": "Morse-Code",
     "title_fontsize": 120,
-    "description": "Apprenez le code Morse de maniere ludique avec une vraie connectivite BLE micro:bit — envoyez des messages en Morse !",
+    "description": "Apprenez le code Morse de maniere ludique avec une vraie connectivite BLE micro-bit — envoyez des messages en Morse !",
     "features": [
       {
         "emoji": "📡",
@@ -4596,7 +4596,7 @@
       },
       {
         "emoji": "📡",
-        "text": "Connexion Bluetooth vers un micro:bit"
+        "text": "Connexion Bluetooth vers un micro-bit"
       },
       {
         "emoji": "🎯",
@@ -4646,7 +4646,7 @@
     ],
     "hashtags": [
       "#Morsecode",
-      "#micro:bit",
+      "#micro-bit",
       "#WorkshopDIY",
       "#Chelles"
     ],
@@ -5855,11 +5855,11 @@
   {
     "folder": "079-pixel-gateway",
     "slug": "pixel-gateway",
-    "html_file": "atelier-pixel-gateway-micro:bit.html",
+    "html_file": "atelier-pixel-gateway-micro-bit.html",
     "hero_emoji": "🟥",
     "title": "Pixel-Gateway",
     "title_fontsize": 100,
-    "description": "Envoyez des emojis colores vers une matrice NeoPixel connectee a un micro:bit — via USB Serial ou Bluetooth LE.",
+    "description": "Envoyez des emojis colores vers une matrice NeoPixel connectee a un micro-bit — via USB Serial ou Bluetooth LE.",
     "features": [
       {
         "emoji": "📡",
@@ -5921,7 +5921,7 @@
     ],
     "hashtags": [
       "#Pixelgateway",
-      "#micro:bit",
+      "#micro-bit",
       "#WorkshopDIY",
       "#Chelles"
     ],
@@ -6755,11 +6755,11 @@
   {
     "folder": "091-rxy",
     "slug": "rxy",
-    "html_file": "atelier-rxy-micro:bit.html",
+    "html_file": "atelier-rxy-micro-bit.html",
     "hero_emoji": "🎮",
     "title": "Rxy",
     "title_fontsize": 180,
-    "description": "Creez une telecommande Bluetooth personnalisee pour micro:bit — glissez boutons, curseurs et D-pads. Zero code requis.",
+    "description": "Creez une telecommande Bluetooth personnalisee pour micro-bit — glissez boutons, curseurs et D-pads. Zero code requis.",
     "features": [
       {
         "emoji": "📡",
@@ -6771,7 +6771,7 @@
       },
       {
         "emoji": "📡",
-        "text": "Connexion Bluetooth vers un micro:bit"
+        "text": "Connexion Bluetooth vers un micro-bit"
       },
       {
         "emoji": "🎯",
@@ -6821,7 +6821,7 @@
     ],
     "hashtags": [
       "#Rxy",
-      "#micro:bit",
+      "#micro-bit",
       "#WorkshopDIY",
       "#Chelles"
     ],
@@ -6909,7 +6909,7 @@
     "hero_emoji": "🕌",
     "title": "Salat-Times",
     "title_fontsize": 120,
-    "description": "Horaires de priere precis + lanterne Adhan connectee a un micro:bit V2 — allume une LED a chaque appel a la priere.",
+    "description": "Horaires de priere precis + lanterne Adhan connectee a un micro-bit V2 — allume une LED a chaque appel a la priere.",
     "features": [
       {
         "emoji": "💡",
@@ -6921,7 +6921,7 @@
       },
       {
         "emoji": "📡",
-        "text": "Connexion Bluetooth vers un micro:bit"
+        "text": "Connexion Bluetooth vers un micro-bit"
       },
       {
         "emoji": "🎯",
@@ -7584,7 +7584,7 @@
     "hero_emoji": "🗣️",
     "title": "Talking-Robot 🤖",
     "title_fontsize": 95,
-    "description": "Robot web qui parle, ecoute, montre des emotions et envoie des commandes a un micro:bit via Bluetooth.",
+    "description": "Robot web qui parle, ecoute, montre des emotions et envoie des commandes a un micro-bit via Bluetooth.",
     "features": [
       {
         "emoji": "📡",
@@ -7660,7 +7660,7 @@
     "hero_emoji": "🧠",
     "title": "Teachable-Machine 👋",
     "title_fontsize": 72,
-    "description": "Entraine tes propres modeles IA pour reconnaitre gestes et sons, puis envoie les resultats vers un micro:bit en temps reel.",
+    "description": "Entraine tes propres modeles IA pour reconnaitre gestes et sons, puis envoie les resultats vers un micro-bit en temps reel.",
     "features": [
       {
         "emoji": "🧠",
@@ -7668,7 +7668,7 @@
       },
       {
         "emoji": "📡",
-        "text": "Connexion Bluetooth vers un micro:bit"
+        "text": "Connexion Bluetooth vers un micro-bit"
       },
       {
         "emoji": "📸",
@@ -8332,11 +8332,11 @@
   {
     "folder": "112-usb-logger",
     "slug": "usb-logger",
-    "html_file": "atelier-usb-logger-micro:bit.html",
+    "html_file": "atelier-usb-logger-micro-bit.html",
     "hero_emoji": "🔌",
     "title": "Usb-Logger",
     "title_fontsize": 120,
-    "description": "Communication micro:bit via USB WebSerial — envoyez et recevez des donnees directement depuis le navigateur.",
+    "description": "Communication micro-bit via USB WebSerial — envoyez et recevez des donnees directement depuis le navigateur.",
     "features": [
       {
         "emoji": "🔌",
@@ -8348,7 +8348,7 @@
       },
       {
         "emoji": "📡",
-        "text": "Connexion Bluetooth vers un micro:bit"
+        "text": "Connexion Bluetooth vers un micro-bit"
       },
       {
         "emoji": "🌐",
@@ -8398,7 +8398,7 @@
     ],
     "hashtags": [
       "#Usblogger",
-      "#micro:bit",
+      "#micro-bit",
       "#WorkshopDIY",
       "#Chelles"
     ],

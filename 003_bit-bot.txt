@@ -1,10 +1,10 @@
 🤖 Atelier Bit-Bot — Workshop DIY
 
-Pilote un vrai robot Bit:Bot depuis ton navigateur via Bluetooth ! Joystick virtuel, suivi de ligne automatique et mode détection d'obstacles — le tout connecté à ton BBC micro:bit.
+Pilote un vrai robot Bit:Bot depuis ton navigateur via Bluetooth ! Joystick virtuel, suivi de ligne automatique et mode détection d'obstacles — le tout connecté à ton BBC micro-bit.
 
 Lors de cet atelier tu vas :
 🎮 Piloter le robot avec un joystick virtuel sur ton écran
-📡 Te connecter au micro:bit du robot en Bluetooth
+📡 Te connecter au micro-bit du robot en Bluetooth
 🛤️ Activer le mode suivi de ligne automatique
 🚧 Tester le mode détection et contournement d'obstacles
 

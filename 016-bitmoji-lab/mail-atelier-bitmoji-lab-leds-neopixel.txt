@@ -18,10 +18,10 @@ Tarif :
   - Non-adherents : 7 € / personne
 
 Public concerne : Tout public a partir de 10 ans
-Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro:bit, etc.)
+Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro-bit, etc.)
 
 Description :
-Dessine des emojis et envoie-les vers une matrice LED NeoPixel 8x8 ou 16x16 via micro:bit. Art numerique en couleurs !
+Dessine des emojis et envoie-les vers une matrice LED NeoPixel 8x8 ou 16x16 via micro-bit. Art numerique en couleurs !
 
 Contact :
   Web : workshop-diy.org

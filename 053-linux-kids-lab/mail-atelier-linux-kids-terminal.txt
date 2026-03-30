@@ -18,7 +18,7 @@ Tarif :
   - Non-adherents : 7 € / personne
 
 Public concerne : Tout public a partir de 10 ans
-Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro:bit, etc.)
+Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro-bit, etc.)
 
 Description :
 Decouvre le terminal Linux de maniere ludique — commandes, fichiers, scripts et jeux, le tout dans un environnement securise.

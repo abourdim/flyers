@@ -1,8 +1,8 @@
 👁️ ATELIER FACE TRACKING — Ton visage controle le robot ! !
 
-Suivi de visage en temps reel — les donnees de position sont envoyees vers un micro:bit via BLE pour controler des servos ou LEDs.
+Suivi de visage en temps reel — les donnees de position sont envoyees vers un micro-bit via BLE pour controler des servos ou LEDs.
 
-🎯 IA / Camera / micro:bit
+🎯 IA / Camera / micro-bit
 👥 Tout public a partir de 10 ans
 💻 PC recommande — materiel pedagogique fourni sur place
 💰 Gratuit pour les adherents / 7 EUR non-adherents

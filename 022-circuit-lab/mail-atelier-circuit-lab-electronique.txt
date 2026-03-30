@@ -18,7 +18,7 @@ Tarif :
   - Non-adherents : 7 € / personne
 
 Public concerne : Tout public a partir de 10 ans
-Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro:bit, etc.)
+Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro-bit, etc.)
 
 Description :
 Simulateur de circuits electroniques interactif — construis, teste et comprends les composants depuis le navigateur.

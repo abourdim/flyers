@@ -18,10 +18,10 @@ Tarif :
   - Non-adherents : 7 € / personne
 
 Public concerne : Tout public a partir de 10 ans
-Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro:bit, etc.)
+Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro-bit, etc.)
 
 Description :
-Suivi de visage en temps reel — les donnees de position sont envoyees vers un micro:bit via BLE pour controler des servos ou LEDs.
+Suivi de visage en temps reel — les donnees de position sont envoyees vers un micro-bit via BLE pour controler des servos ou LEDs.
 
 Contact :
   Web : workshop-diy.org

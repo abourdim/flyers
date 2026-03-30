@@ -1,8 +1,8 @@
 🟥 ATELIER PIXEL GATEWAY — Envoie des couleurs aux NeoPixels ! !
 
-Envoyez des emojis colores vers une matrice NeoPixel connectee a un micro:bit — via USB Serial ou Bluetooth LE.
+Envoyez des emojis colores vers une matrice NeoPixel connectee a un micro-bit — via USB Serial ou Bluetooth LE.
 
-🎯 micro:bit / Hardware
+🎯 micro-bit / Hardware
 👥 Tout public a partir de 10 ans
 💻 PC recommande — materiel pedagogique fourni sur place
 💰 Gratuit pour les adherents / 7 EUR non-adherents
@@ -17,4 +17,4 @@ Envoyez des emojis colores vers une matrice NeoPixel connectee a un micro:bit �
 ✉️ contact@workshop-diy.org
 📞 06 19 51 51 73
 
-#PixelGateway #WorkshopDIY #Chelles #STEM #EdTech #micro:bit #Hardware
+#PixelGateway #WorkshopDIY #Chelles #STEM #EdTech #micro-bit #Hardware

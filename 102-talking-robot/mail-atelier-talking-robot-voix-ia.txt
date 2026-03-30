@@ -18,10 +18,10 @@ Tarif :
   - Non-adherents : 7 € / personne
 
 Public concerne : Tout public a partir de 10 ans
-Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro:bit, etc.)
+Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro-bit, etc.)
 
 Description :
-Robot web qui parle, ecoute, montre des emotions et envoie des commandes a un micro:bit via Bluetooth.
+Robot web qui parle, ecoute, montre des emotions et envoie des commandes a un micro-bit via Bluetooth.
 
 Contact :
   Web : workshop-diy.org

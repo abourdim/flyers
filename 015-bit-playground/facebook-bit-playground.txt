@@ -1,8 +1,8 @@
-🕹️ ATELIER BIT PLAYGROUND — Le terrain de jeu micro:bit ! !
+🕹️ ATELIER BIT PLAYGROUND — Le terrain de jeu micro-bit ! !
 
-Le terrain de jeu ultime pour micro:bit BLE — LEDs, capteurs, servos, jeux et graphiques depuis le navigateur.
+Le terrain de jeu ultime pour micro-bit BLE — LEDs, capteurs, servos, jeux et graphiques depuis le navigateur.
 
-🎯 micro:bit / Hardware
+🎯 micro-bit / Hardware
 👥 Tout public a partir de 10 ans
 💻 PC recommande — materiel pedagogique fourni sur place
 💰 Gratuit pour les adherents / 7 EUR non-adherents
@@ -17,4 +17,4 @@ Le terrain de jeu ultime pour micro:bit BLE — LEDs, capteurs, servos, jeux et 
 ✉️ contact@workshop-diy.org
 📞 06 19 51 51 73
 
-#BitPlayground #WorkshopDIY #Chelles #STEM #EdTech #micro:bit #Hardware
+#BitPlayground #WorkshopDIY #Chelles #STEM #EdTech #micro-bit #Hardware

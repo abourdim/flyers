@@ -6,7 +6,7 @@ Bonjour,
 Nous souhaitons inscrire l'evenement suivant sur l'agenda en ligne de la Ville.
 Nous souhaitons egalement inscrire cet evenement dans le bloc-notes du Chelles mag'.
 
-Intitule : Atelier Bit-Playground — micro:bit tout-en-un
+Intitule : Atelier Bit-Playground — micro-bit tout-en-un
 Association : Workshop-DIY
 
 Date : A confirmer
@@ -18,10 +18,10 @@ Tarif :
   - Non-adherents : 7 € / personne
 
 Public concerne : Tout public a partir de 10 ans
-Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro:bit, etc.)
+Prerequis : Aucun — PC recommande, materiel pedagogique fourni sur place (micro-bit, etc.)
 
 Description :
-Le terrain de jeu ultime pour micro:bit BLE — LEDs, capteurs, servos, jeux et graphiques depuis le navigateur.
+Le terrain de jeu ultime pour micro-bit BLE — LEDs, capteurs, servos, jeux et graphiques depuis le navigateur.
 
 Contact :
   Web : workshop-diy.org

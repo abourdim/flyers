@@ -1,12 +1,12 @@
 🕵️ Atelier Face-Quest — Workshop DIY | Dim. 22 fév. – Chelles
 
-Active ta caméra, enregistre ton visage, et laisse le BBC micro:bit reconnaître qui tu es via Bluetooth ! Découvre comment une IA peut détecter, mémoriser et vérifier un visage en temps réel.
+Active ta caméra, enregistre ton visage, et laisse le BBC micro-bit reconnaître qui tu es via Bluetooth ! Découvre comment une IA peut détecter, mémoriser et vérifier un visage en temps réel.
 
 Lors de cet atelier tu vas :
 📷 Activer ta caméra et détecter ton visage à l'écran
 📝 Enregistrer ton visage dans l'application (Enroll)
 ✅ Vérifier si c'est bien toi qui reviens (Verify)
-📡 Envoyer le résultat au micro:bit via Bluetooth
+📡 Envoyer le résultat au micro-bit via Bluetooth
 
 👦 À partir de 10 ans | 💻 PC portable recommandé | 🎓 Aucun prérequis
 
