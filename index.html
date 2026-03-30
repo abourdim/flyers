@@ -360,9 +360,9 @@ body.demo-mode .demo-overlay{display:flex}
   <div class="top-logo">Workshop-DIY</div>
   <div class="top-controls">
     <div class="lang-bar">
-      <button class="lang-btn on" onclick="setLang('fr')">FR</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">عر</button>
+      <button class="lang-btn on" onclick="setLang('fr')">🇫🇷</button>
+      <button class="lang-btn" onclick="setLang('en')">🇬🇧</button>
+      <button class="lang-btn" onclick="setLang('ar')">🇩🇿</button>
     </div>
     <button class="demo-btn" onclick="toggleDemo()" id="demoBtnTop">
       <span class="dot"></span> 🎬 Demo
@@ -386,9 +386,9 @@ body.demo-mode .demo-overlay{display:flex}
   </div>
   <div style="display:flex;justify-content:center;gap:8px;margin-top:16px;flex-wrap:wrap">
     <div class="lang-bar">
-      <button class="lang-btn on" onclick="setLang('fr')">FR</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">عر</button>
+      <button class="lang-btn on" onclick="setLang('fr')">🇫🇷</button>
+      <button class="lang-btn" onclick="setLang('en')">🇬🇧</button>
+      <button class="lang-btn" onclick="setLang('ar')">🇩🇿</button>
     </div>
     <button class="demo-btn" onclick="toggleDemo()" id="demoBtnHero">
       <span class="dot"></span> 🎬 Demo
@@ -837,7 +837,7 @@ function copyCardTxt(btn,folder,type){
 
 function setLang(l){
   LANG=l;
-  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('on',b.textContent.trim()===(l==='fr'?'FR':l==='en'?'EN':'عر')));
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('on',b.textContent.trim()===(l==='fr'?'🇫🇷':l==='en'?'🇬🇧':'🇩🇿')));
   document.getElementById('sub').textContent=I18N[l].sub;
   document.getElementById('search').placeholder=I18N[l].search;
   document.getElementById('cat-label').textContent=I18N[l].catLabel;
