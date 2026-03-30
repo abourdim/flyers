@@ -324,7 +324,7 @@ body{background:hsl(353,80%,92%);color:#4a3060;font-family:'Quicksand',sans-seri
 <a id="vdl-btn" style="padding:6px 12px;border-radius:6px;background:#2196f3;color:#fff;cursor:pointer;font-weight:700;text-decoration:none">⬇ PNG</a>
 <a id="vfit-btn" onclick="toggleFit()" style="padding:6px 12px;border-radius:6px;background:#795548;color:#fff;cursor:pointer;font-weight:700;text-decoration:none">🔍 Fit</a>
 <div style="position:relative;display:inline-block">
-<a id="vmore-btn" onclick="var m=document.getElementById('vmore-menu');m.style.display=m.style.display==='flex'?'none':'flex'" style="padding:6px 12px;border-radius:6px;background:#455a64;color:#fff;cursor:pointer;font-weight:700;text-decoration:none">⋯ More</a>
+<a id="vmore-btn" onclick="toggleMore()" style="padding:6px 12px;border-radius:6px;background:#455a64;color:#fff;cursor:pointer;font-weight:700;text-decoration:none">⋯ More</a>
 <div id="vmore-menu" style="display:none;position:absolute;top:36px;right:0;background:rgba(0,0,0,.92);backdrop-filter:blur(12px);border-radius:10px;padding:8px;flex-direction:column;gap:4px;min-width:160px;box-shadow:0 8px 30px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)">
 <a onclick="toggleCompare()" style="padding:8px 14px;border-radius:6px;color:#fff;cursor:pointer;text-decoration:none;font-size:12px;display:block" onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background='none'">⚖ Compare</a>
 <a onclick="document.getElementById('vdj').style.display='flex';initDJ()" style="padding:8px 14px;border-radius:6px;color:#fff;cursor:pointer;text-decoration:none;font-size:12px;display:block" onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background='none'">🎧 DJ Mixer</a>
@@ -584,4 +584,5 @@ function toggleFit(){
   }
 }
 </script>
+<script>function toggleMore(){var m=document.getElementById("vmore-menu");m.style.display=m.style.display==="flex"?"none":"flex"}</script>
 </body></html>
