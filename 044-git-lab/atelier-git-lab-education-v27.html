@@ -99,7 +99,7 @@ body{background:hsl(328,80%,92%);color:#4a3060;font-family:'Quicksand',sans-seri
 </div>
 
 <!-- ═══ COMPARE PANEL ═══ -->
-<div id="vcmp-panel" style="display:none;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.95);flex-direction:column;align-items:center;padding:20px;overflow-y:auto" onclick="if(event.target===this)this.style.display='none'">
+<div id="vcmp-panel" style="display:none;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.95);flex-direction:column;align-items:center;padding:20px;overflow:hidden" onclick="if(event.target===this)this.style.display='none'">
 <div style="display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1400px;margin-bottom:12px">
 <div style="font-family:system-ui,sans-serif;font-size:18px;font-weight:700;color:#fff">⚖ Comparer deux versions</div>
 <div onclick="document.getElementById('vcmp-panel').style.display='none'" style="cursor:pointer;font-size:28px;color:#fff;padding:4px 12px">✕</div>
@@ -108,9 +108,9 @@ body{background:hsl(328,80%,92%);color:#4a3060;font-family:'Quicksand',sans-seri
 <select id="cmpL" onchange="updateCompare()" style="background:#222;color:#fff;border:1px solid #555;padding:8px 14px;border-radius:8px;font-size:13px"></select>
 <select id="cmpR" onchange="updateCompare()" style="background:#222;color:#fff;border:1px solid #555;padding:8px 14px;border-radius:8px;font-size:13px"></select>
 </div>
-<div style="display:flex;gap:16px;width:100%;max-width:1400px;justify-content:center">
-<img id="cmpImgL" style="max-width:48%;border-radius:10px;border:2px solid #e63946"/>
-<img id="cmpImgR" style="max-width:48%;border-radius:10px;border:2px solid #2196f3"/>
+<div style="display:flex;gap:16px;width:100%;max-width:1400px;justify-content:center;align-items:flex-start;flex:1">
+<img id="cmpImgL" style="width:48%;height:auto;max-height:70vh;object-fit:contain;border-radius:10px;border:2px solid #e63946"/>
+<img id="cmpImgR" style="width:48%;height:auto;max-height:70vh;object-fit:contain;border-radius:10px;border:2px solid #2196f3"/>
 </div>
 </div>
 
