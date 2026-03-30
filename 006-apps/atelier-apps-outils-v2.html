@@ -97,7 +97,6 @@ body{background:#1e1e2e;color:#cdd6f4;font-family:'DM Sans',sans-serif;width:108
   });
 })();
 </script>
-' + VBAR_HTML + '
 
 <div class="browser-bar"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div><div class="url-bar">abourdim.github.io/apps/</div></div>
 <div class="page">
@@ -219,11 +218,11 @@ function copyTxt(type){
     return r.text();
   }).then(function(txt){
     navigator.clipboard.writeText(txt).then(function(){
-      btn.textContent='\u2705 Copie !';
+      btn.textContent='✅ Copie !';
       setTimeout(function(){btn.textContent=orig},1500);
     });
   }).catch(function(){
-    btn.textContent='\u274c Erreur';
+    btn.textContent='❌ Erreur';
     setTimeout(function(){btn.textContent=orig},1500);
   });
 }

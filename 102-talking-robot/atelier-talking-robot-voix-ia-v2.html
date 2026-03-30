@@ -100,7 +100,6 @@ body::before{content:'';position:absolute;inset:0;background:
   });
 })();
 </script>
-' + VBAR_HTML + '
 
 <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
 <div class="wrap">
@@ -222,11 +221,11 @@ function copyTxt(type){
     return r.text();
   }).then(function(txt){
     navigator.clipboard.writeText(txt).then(function(){
-      btn.textContent='\u2705 Copie !';
+      btn.textContent='✅ Copie !';
       setTimeout(function(){btn.textContent=orig},1500);
     });
   }).catch(function(){
-    btn.textContent='\u274c Erreur';
+    btn.textContent='❌ Erreur';
     setTimeout(function(){btn.textContent=orig},1500);
   });
 }

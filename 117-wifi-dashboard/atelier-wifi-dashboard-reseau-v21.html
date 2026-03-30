@@ -173,11 +173,11 @@ function copyTxt(type){
     return r.text();
   }).then(function(txt){
     navigator.clipboard.writeText(txt).then(function(){
-      btn.textContent='\u2705 Copie !';
+      btn.textContent='✅ Copie !';
       setTimeout(function(){btn.textContent=orig},1500);
     });
   }).catch(function(){
-    btn.textContent='\u274c Erreur';
+    btn.textContent='❌ Erreur';
     setTimeout(function(){btn.textContent=orig},1500);
   });
 }

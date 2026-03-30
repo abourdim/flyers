@@ -252,7 +252,7 @@ body{{background:#000;color:#00ff41;font-family:'Noto Sans',sans-serif;width:108
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">ATELIER</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">AU PROGRAMME</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+<div class="sl">AU PROGRAMME</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -305,7 +305,7 @@ body::before{{content:'';position:absolute;inset:0;background:url("data:image/sv
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero"><div class="hero-l">Atelier</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div></div>
-<div class="sl">Au Programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+<div class="sl">Au Programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -355,7 +355,7 @@ body{{background:#fff8f0;color:#3e2723;font-family:'Lora',serif;width:1080px;min
 <div class="recipe-type">Recette d'atelier</div>
 <div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">Ingredients</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+<div class="sl">Ingredients</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -414,7 +414,7 @@ body{{background:#e8e8e8;color:#1a1a1a;font-family:'Inter',sans-serif;width:1080
 <div class="hero-d">{esc(w['description'])}</div>
 <div class="sl">PROGRAMME</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}
 <div class="barcode">||||| |||| ||||| |||| WD-{slug} |||| ||||| |||| |||||</div>
-</div></div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</div></div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -471,7 +471,7 @@ body{{background:#1a1a1a;color:#f0e6d3;font-family:'Work Sans',sans-serif;width:
 <div class="label">ATELIER</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
 <div class="sl">TRACKLIST</div><div class="tracklist">{tracks}</div>
-{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -525,7 +525,7 @@ body{{background:#0f172a;color:#e2e8f0;font-family:'Rubik',sans-serif;width:1080
 <div class="cat-label">ATELIER #{num}</div>
 <div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">Proprietes</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+<div class="sl">Proprietes</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -588,7 +588,7 @@ body::before{{content:'';position:absolute;inset:0;background:repeating-linear-g
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">Atelier</div><div class="hero-t">{title_html}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">Au Programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+<div class="sl">Au Programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -650,7 +650,7 @@ body{{background:#008080;color:#000;font-family:'Pixelify Sans','Segoe UI',Tahom
 {contact(w)}{footer(w)}
 </div>
 <div class="taskbar"><div class="start-btn">🪟 Start</div><div class="clock">17:47</div></div>
-' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -711,7 +711,7 @@ body{{background:#888;font-family:'Space Mono',monospace;width:1080px;min-height
 <div class="sep">================================</div>
 {pills(w)}{qr(w)}{info(w)}{contact(w)}
 <div class="thankyou">MERCI DE VOTRE VISITE !</div>
-{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+{footer(w)}</div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -764,7 +764,7 @@ body::before{{content:'';position:absolute;inset:0;background:
 <div class="hero-l">Atelier</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
 <div class="chalk-line"></div>
-<div class="sl">Au programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+<div class="sl">Au programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════

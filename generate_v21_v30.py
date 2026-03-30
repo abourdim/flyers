@@ -245,7 +245,7 @@ body{{background:#0e1621;color:#fff;font-family:'Inter',sans-serif;width:1080px;
 {feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}
 </div>
 <div class="input-bar"><div class="input-field">Ecrire un message...</div><div class="send-btn">➤</div></div>
-</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -297,7 +297,7 @@ body{{background:#6b8c42;color:#fff;font-family:'VT323',monospace;width:1080px;m
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">[ATELIER]</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">[Crafting Table]</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+<div class="sl">[Crafting Table]</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -346,7 +346,7 @@ body{{background:{bg};color:{fg};font-family:{bodyfont};width:1080px;min-height:
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">ATELIER</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">{section_label}</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>{extra_after}' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+<div class="sl">{section_label}</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>{extra_after}</body></html>'''
 
 def v23(w): # STICKY NOTES on corkboard
     return _theme(w,"Sticky Notes","#c4956a","#333","#e65100","#1565c0",
@@ -428,8 +428,10 @@ def main():
         for w in workshops:
             filename = w['html_file'].replace('.html', f'-{ver}.html')
             out_path = os.path.join(FLYERS_DIR, w['folder'], filename)
+            html_out = func(w)
+            html_out = html_out.replace('</body>', BUTTONS_HTML + '\n</body>', 1)
             with open(out_path, 'w', encoding='utf-8') as f:
-                f.write(func(w))
+                f.write(html_out)
             total += 1
         print(f"  {ver}: {len(workshops)} flyers generated")
     print(f"\nTotal: {total} files generated")

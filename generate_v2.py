@@ -362,7 +362,8 @@ body::before{{content:'';position:absolute;inset:0;background:
 .htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:8px}}
 .ht{{font-size:11px;color:#00c853;border:1px solid rgba(0,200,83,.2);padding:3px 10px;border-radius:4px}}
 '''
-    body = f'''<body>\n' + VBAR_HTML + '\n
+    body = f'''<body>
+
 <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
 <div class="wrap">
 <div class="toprow"><div class="logo"><img src="data:image/png;base64,{w['logo_b64_full']}" alt="Logo"/></div><div class="slogan">Ateliers IA, robotique & code pour enfants</div></div>
@@ -381,7 +382,7 @@ body::before{{content:'';position:absolute;inset:0;background:
 {render_contact(w['contacts'])}
 {render_footer(w)}
 </div>
-' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</body></html>'''
     return common_head(w['title'], fonts, css) + body
 
 
@@ -450,7 +451,8 @@ body{{background:#1a1b26;color:#a9b1d6;font-family:'Inter',sans-serif;width:1080
 .htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#9ece6a;border:1px solid rgba(158,206,106,.2);padding:2px 8px;border-radius:3px}}
 '''
-    body = f'''<body>\n' + VBAR_HTML + '\n
+    body = f'''<body>
+
 <div class="terminal">
 <div class="term-bar"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div><div class="term-title">workshop-diy — {esc(w['slug'])}</div></div>
 <div class="term-body">
@@ -469,7 +471,7 @@ body{{background:#1a1b26;color:#a9b1d6;font-family:'Inter',sans-serif;width:1080
 {render_footer(w)}
 </div>
 </div>
-' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</body></html>'''
     return common_head(w['title'], fonts, css) + body
 
 
@@ -530,7 +532,8 @@ body::after{{content:'';position:absolute;bottom:10%;right:10%;width:300px;heigh
 .htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#8338ec;border:1px solid rgba(131,56,236,.2);padding:2px 8px;border-radius:10px}}
 '''
-    body = f'''<body>\n' + VBAR_HTML + '\n
+    body = f'''<body>
+
 <div class="wrap">
 <div class="toprow"><div class="logo"><img src="data:image/png;base64,{w['logo_b64_full']}" alt="Logo"/></div><div class="slogan">Workshop DIY — IA & Code</div></div>
 <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
@@ -548,7 +551,7 @@ body::after{{content:'';position:absolute;bottom:10%;right:10%;width:300px;heigh
 {render_contact(w['contacts'])}
 {render_footer(w)}
 </div>
-' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</body></html>'''
     return common_head(w['title'], fonts, css) + body
 
 
@@ -616,7 +619,8 @@ body::before{{content:'';position:absolute;inset:0;background:
 .htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#c8960c;border:1px solid rgba(200,150,12,.2);padding:2px 8px;border-radius:10px}}
 '''
-    body = f'''<body>\n' + VBAR_HTML + '\n
+    body = f'''<body>
+
 <div class="ornament-tl"></div><div class="ornament-tr"></div><div class="ornament-bl"></div><div class="ornament-br"></div>
 <div class="wrap">
 <div class="toprow"><div class="logo"><img src="data:image/png;base64,{w['logo_b64_full']}" alt="Logo"/></div><div class="slogan">Ateliers IA, robotique & code pour enfants</div></div>
@@ -636,7 +640,7 @@ body::before{{content:'';position:absolute;inset:0;background:
 {render_contact(w['contacts'])}
 {render_footer(w)}
 </div>
-' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</body></html>'''
     return common_head(w['title'], fonts, css) + body
 
 
@@ -706,7 +710,8 @@ body::after{{content:'';position:absolute;top:0;left:0;right:0;bottom:0;backgrou
 .htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#00ff41;border:1px solid rgba(0,255,65,.15);padding:2px 8px;border-radius:2px}}
 '''
-    body = f'''<body>\n' + VBAR_HTML + '\n
+    body = f'''<body>
+
 <div class="wrap">
 <div class="toprow"><div class="logo"><img src="data:image/png;base64,{w['logo_b64_full']}" alt="Logo"/></div><div class="slogan">Workshop DIY // Cyber Lab</div></div>
 <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
@@ -724,7 +729,7 @@ body::after{{content:'';position:absolute;top:0;left:0;right:0;bottom:0;backgrou
 {render_contact(w['contacts'])}
 {render_footer(w)}
 </div>
-' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</body></html>'''
     return common_head(w['title'], fonts, css) + body
 
 
@@ -792,7 +797,8 @@ body{{background:#1e1e2e;color:#cdd6f4;font-family:'DM Sans',sans-serif;width:10
 .htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:{colors[0]};border:1px solid rgba(243,139,168,.15);padding:2px 8px;border-radius:8px}}
 '''
-    body = f'''<body>\n' + VBAR_HTML + '\n
+    body = f'''<body>
+
 <div class="browser-bar"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div><div class="url-bar">abourdim.github.io/{esc(w['slug'])}/</div></div>
 <div class="page">
 <div class="toprow"><div class="logo"><img src="data:image/png;base64,{w['logo_b64_full']}" alt="Logo"/></div><div class="slogan">Workshop DIY — Web & Apps</div></div>
@@ -811,7 +817,7 @@ body{{background:#1e1e2e;color:#cdd6f4;font-family:'DM Sans',sans-serif;width:10
 {render_contact(w['contacts'])}
 {render_footer(w)}
 </div>
-' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</body></html>'''
     return common_head(w['title'], fonts, css) + body
 
 
@@ -881,7 +887,8 @@ body::before{{content:'';position:absolute;top:50%;right:-100px;transform:transl
 .htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#00d4ff;border:1px solid rgba(0,212,255,.15);padding:2px 8px;border-radius:4px}}
 '''
-    body = f'''<body>\n' + VBAR_HTML + '\n
+    body = f'''<body>
+
 <div class="wrap">
 <div class="toprow"><div class="logo"><img src="data:image/png;base64,{w['logo_b64_full']}" alt="Logo"/></div><div class="slogan">Workshop DIY — IoT & Network</div></div>
 <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
@@ -900,7 +907,7 @@ body::before{{content:'';position:absolute;top:50%;right:-100px;transform:transl
 {render_contact(w['contacts'])}
 {render_footer(w)}
 </div>
-' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</body></html>'''
     return common_head(w['title'], fonts, css) + body
 
 
@@ -972,7 +979,8 @@ body::before{{content:'';position:absolute;inset:0;background:
 .htags{{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:6px}}
 .ht{{font-size:10px;color:#ee4266;border:2px solid rgba(238,66,102,.2);padding:2px 8px;border-radius:10px}}
 '''
-    body = f'''<body>\n' + VBAR_HTML + '\n
+    body = f'''<body>
+
 <div class="confetti c1"></div><div class="confetti c2"></div><div class="confetti c3"></div><div class="confetti c4"></div>
 <div class="confetti c5"></div><div class="confetti c6"></div><div class="confetti c7"></div><div class="confetti c8"></div>
 <div class="wrap">
@@ -992,7 +1000,7 @@ body::before{{content:'';position:absolute;inset:0;background:
 {render_contact(w['contacts'])}
 {render_footer(w)}
 </div>
-' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
+</body></html>'''
     return common_head(w['title'], fonts, css) + body
 
 
@@ -1032,8 +1040,9 @@ def main():
         # Write as -v2.html alongside the original
         v2_filename = w['html_file'].replace('.html', '-v2.html')
         out_path = os.path.join(FLYERS_DIR, w['folder'], v2_filename)
-        # Inject version bar
+        # Inject version bar and buttons
         html_content = html_content.replace('<body>', '<body>\n' + VBAR_HTML, 1)
+        html_content = html_content.replace('</body>', BUTTONS_HTML + '\n</body>', 1)
         with open(out_path, 'w', encoding='utf-8') as f:
             f.write(html_content)
 
