@@ -121,7 +121,7 @@ body{background:#fafafa;color:#1a1a1a;font-family:'Inter',sans-serif;width:1080p
     label.style.cssText='font-family:system-ui,sans-serif;font-size:12px;color:'+(active?'#e63946':'rgba(255,255,255,.6)')+';font-weight:'+(active?'700':'400');
     var dl=document.createElement('a');
     dl.href=pngFile;
-    dl.download=pngFile;
+    dl.download=base.replace('atelier-','').replace('.html','')+(vi.v===1?'':'-v'+vi.v)+'.png';
     dl.textContent='⬇';
     dl.title='Telecharger PNG';
     dl.style.cssText='font-size:16px;text-decoration:none;color:rgba(255,255,255,.4);padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.08)';
