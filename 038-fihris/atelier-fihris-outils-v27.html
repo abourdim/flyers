@@ -271,16 +271,7 @@ body{background:hsl(350,80%,92%);color:#4a3060;font-family:'Quicksand',sans-seri
   };
 
   // ─── Confetti on Fit ───
-  var origFit=window.toggleFit;
-  window.toggleFit=function(){
-    origFit();
-    if(fitted){
-      for(var i=0;i<40;i++){
-        var c=document.createElement('div');
-        var colors=['#e63946','#2196f3','#4caf50','#ffc107','#9c27b0','#ff9800'];
-        c.style.cssText='position:fixed;z-index:99999;width:8px;height:8px;border-radius:'+(Math.random()>.5?'50%':'0')+';background:'+colors[Math.floor(Math.random()*colors.length)]+';top:'+(Math.random()*100)+'vh;left:'+(Math.random()*100)+'vw;pointer-events:none;animation:confetti-fall 1.5s ease-out forwards';
-        document.body.appendChild(c);
-        setTimeout(function(){c.remove()},1500);
+  
       }
       var s=document.createElement('style');
       s.textContent='@keyframes confetti-fall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(100px) rotate(720deg)}}';
@@ -456,8 +447,7 @@ body{background:hsl(350,80%,92%);color:#4a3060;font-family:'Quicksand',sans-seri
   window.showAchievements=function(){var all=[{id:'first',i:'\uD83D\uDC40',t:'Premier regard',d:'Voir 1 version'},{id:'ten',i:'\uD83D\uDD1F',t:'10 versions',d:'Voir 10 versions'},{id:'thirty',i:'\uD83C\uDFAF',t:'30 versions',d:'Toutes les versions'},{id:'fav',i:'\u2B50',t:'Favori',d:'Ajouter un favori'},{id:'dj',i:'\uD83C\uDFA7',t:'DJ',d:'DJ Mixer'},{id:'flip',i:'\uD83D\uDD04',t:'Flip',d:'Retourner'},{id:'email',i:'\u2709',t:'Email',d:'Envoyer'},{id:'embed',i:'</>',t:'Embed',d:'Copier iframe'},{id:'konami',i:'\uD83C\uDFB0',t:'Konami',d:'Code secret'}];var list=document.getElementById('achieveList');list.innerHTML='';all.forEach(function(a){var u=achStore.indexOf(a.id)!==-1;var d=document.createElement('div');d.style.cssText='display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:8px;background:rgba(255,255,255,'+(u?'.06':'.02')+')';d.innerHTML='<span style="font-size:24px;'+(u?'':'filter:grayscale(1);opacity:.3')+'">'+a.i+'</span><div><div style="font-size:13px;font-weight:700;color:'+(u?'#ffd700':'#555')+'">'+a.t+'</div><div style="font-size:11px;color:#666">'+a.d+'</div></div>';list.appendChild(d)});document.getElementById('vachieve').style.display='flex'};
 
   // Confetti on Fit
-  var origFit=window.toggleFit;
-  if(origFit)window.toggleFit=function(){origFit();if(fitted){for(var i=0;i<30;i++){var c=document.createElement('div');c.style.cssText='position:fixed;z-index:99999;width:8px;height:8px;border-radius:'+(Math.random()>.5?'50%':'0')+';background:'+['#e63946','#2196f3','#4caf50','#ffc107','#9c27b0'][Math.floor(Math.random()*5)]+';top:'+(Math.random()*100)+'vh;left:'+(Math.random()*100)+'vw;pointer-events:none;animation:cfall 1.5s ease-out forwards';document.body.appendChild(c);setTimeout(function(){c.remove()},1500)}if(!document.getElementById('cfall-s')){var s=document.createElement('style');s.id='cfall-s';s.textContent='@keyframes cfall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(100px) rotate(720deg)}}';document.head.appendChild(s)}}};
+  
 
   // Time travel
   var ttActive=false;
@@ -563,5 +553,35 @@ body{background:hsl(350,80%,92%);color:#4a3060;font-family:'Quicksand',sans-seri
     grid.appendChild(card);
   });
 })();
+</script>
+<script>
+var fitted=false;
+function toggleFit(){
+  var btn=document.getElementById('vfit-btn');
+  var tb=document.getElementById('vtoolbar');
+  if(!fitted){
+    var vw=window.innerWidth,vh=window.innerHeight;
+    var scale=Math.min(vw/1080,vh/1527);
+    document.body.style.transformOrigin='top center';
+    document.body.style.transform='scale('+scale+')';
+    document.body.style.width='1080px';
+    document.body.style.margin='0 auto';
+    document.documentElement.style.overflow='hidden';
+    if(tb){tb.style.transform='translateX(-50%) scale('+(1/scale)+')';tb.style.transformOrigin='top center'}
+    if(btn)btn.textContent='\uD83D\uDD0D 100%';
+    fitted=true;
+    // Confetti
+    for(var i=0;i<30;i++){var c=document.createElement('div');c.style.cssText='position:fixed;z-index:99999;width:8px;height:8px;border-radius:'+(Math.random()>.5?'50%':'0')+';background:'+['#e63946','#2196f3','#4caf50','#ffc107','#9c27b0'][Math.floor(Math.random()*5)]+';top:'+(Math.random()*100)+'vh;left:'+(Math.random()*100)+'vw;pointer-events:none;animation:cfall 1.5s ease-out forwards';document.body.appendChild(c);setTimeout(function(){c.remove()},1500)}
+    if(!document.getElementById('cfall-s')){var s=document.createElement('style');s.id='cfall-s';s.textContent='@keyframes cfall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(100px) rotate(720deg)}}';document.head.appendChild(s)}
+  }else{
+    document.body.style.transform='none';
+    document.body.style.width='';
+    document.body.style.margin='';
+    document.documentElement.style.overflow='';
+    if(tb)tb.style.transform='translateX(-50%)';
+    if(btn)btn.textContent='\uD83D\uDD0D Fit';
+    fitted=false;
+  }
+}
 </script>
 </body></html>
