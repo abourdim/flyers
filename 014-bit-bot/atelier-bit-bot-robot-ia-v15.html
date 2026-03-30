@@ -150,4 +150,34 @@ body{background:#1a1a1a;color:#f0e6d3;font-family:'Work Sans',sans-serif;width:1
   btn.download=pngFile;
 })();
 </script>
+<a id="vfb-btn" style="position:fixed;top:34px;right:220px;z-index:10000;background:#1877f2;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3);text-decoration:none;user-select:none" onclick="copyTxt('facebook')">📋 Facebook</a>
+<a id="vml-btn" style="position:fixed;top:34px;right:340px;z-index:10000;background:#4caf50;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3);text-decoration:none;user-select:none" onclick="copyTxt('mail')">📋 Mail</a>
+<script>
+function copyTxt(type){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var slug=base.replace('atelier-','').replace(/.html$/,'');
+  var parts=slug.split('-');
+  // facebook: facebook-{name}.txt  mail: mail-atelier-{name}.txt
+  // name = first part(s) before the topic suffix
+  // We'll fetch both patterns and use whichever works
+  var fbFile='facebook-'+slug.replace(/-[^-]+$/,'')+'.txt';
+  var mlFile='mail-'+base.replace('.html','.txt');
+  var url=(type==='facebook')?fbFile:mlFile;
+  var btn=document.getElementById(type==='facebook'?'vfb-btn':'vml-btn');
+  var orig=btn.textContent;
+  fetch(url).then(function(r){
+    if(!r.ok)throw new Error(r.status);
+    return r.text();
+  }).then(function(txt){
+    navigator.clipboard.writeText(txt).then(function(){
+      btn.textContent='\u2705 Copie !';
+      setTimeout(function(){btn.textContent=orig},1500);
+    });
+  }).catch(function(){
+    btn.textContent='\u274c Erreur';
+    setTimeout(function(){btn.textContent=orig},1500);
+  });
+}
+</script>
 </body></html>
