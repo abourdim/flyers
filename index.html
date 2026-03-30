@@ -434,6 +434,16 @@ body.demo-mode .demo-overlay{display:flex}
     <option value="v28">v28 — Polaroid</option>
     <option value="v29">v29 — NASA</option>
     <option value="v30">v30 — Graffiti</option>
+        <option value="v31">v31 — Hacker</option>
+    <option value="v32">v32 — PCB</option>
+    <option value="v33">v33 — Arduino</option>
+    <option value="v34">v34 — Oscilloscope</option>
+    <option value="v35">v35 — Solder</option>
+    <option value="v36">v36 — 3D Print</option>
+    <option value="v37">v37 — Breadboard</option>
+    <option value="v38">v38 — Multimeter</option>
+    <option value="v39">v39 — Laser Cut</option>
+    <option value="v40">v40 — Glitch Art</option>
     <option value="random">🎲 Random</option>
   </select>
 </div>
@@ -798,7 +808,7 @@ let activeVersion='v1';
 
 function setVersion(v){
   if(v==='random'){
-    const vs=['v1','v2','v3','v4','v5','v6','v7','v8','v9','v10','v11','v12','v13','v14','v15','v16','v17','v18','v19','v20','v21','v22','v23','v24','v25','v26','v27','v28','v29','v30'];
+    const vs=['v1','v2','v3','v4','v5','v6','v7','v8','v9','v10','v11','v12','v13','v14','v15','v16','v17','v18','v19','v20','v21','v22','v23','v24','v25','v26','v27','v28','v29','v30','v31','v32','v33','v34','v35','v36','v37','v38','v39','v40'];
     activeVersion=vs[Math.floor(Math.random()*vs.length)];
     document.getElementById('ver-select').value='random';
   } else {
