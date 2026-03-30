@@ -36,6 +36,107 @@ VBAR_HTML = """<div id="vbar" style="position:fixed;top:0;left:0;right:0;z-index
 })();
 </script>"""
 
+BUTTONS_HTML = """<div id="vgal-btn" onclick="document.getElementById('vgal').style.display='flex'" style="position:fixed;top:34px;right:20px;z-index:10000;background:#e63946;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3)">👁 Gallery</div>
+<div id="vgal" style="display:none;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.92);backdrop-filter:blur(12px);flex-direction:column;align-items:center;overflow-y:auto;padding:20px" onclick="if(event.target===this)this.style.display='none'">
+<div style="display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1200px;margin-bottom:16px">
+<div style="font-family:system-ui,sans-serif;font-size:20px;font-weight:700;color:#fff">Toutes les versions</div>
+<div onclick="document.getElementById('vgal').style.display='none'" style="cursor:pointer;font-size:28px;color:#fff;padding:4px 12px">✕</div>
+</div>
+<div id="vgal-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;width:100%;max-width:1200px"></div>
+</div>
+<script>
+(function(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var cur=f.match(/-v(\d+)\.html$/);
+  var curV=cur?parseInt(cur[1]):1;
+  var vers=[
+    {v:1,n:'Original'},{v:2,n:'Themed'},{v:3,n:'Synthwave'},{v:4,n:'Comic'},{v:5,n:'Blueprint'},
+    {v:6,n:'Galaxy'},{v:7,n:'Craft'},{v:8,n:'Cyberpunk'},{v:9,n:'Swiss'},{v:10,n:'8-Bit'},
+    {v:11,n:'Matrix'},{v:12,n:'Newspaper'},{v:13,n:'Recipe'},{v:14,n:'Boarding Pass'},{v:15,n:'Vinyl'},
+    {v:16,n:'Periodic'},{v:17,n:'Ransom'},{v:18,n:'Win95'},{v:19,n:'Receipt'},{v:20,n:'Chalkboard'},
+    {v:21,n:'Telegram'},{v:22,n:'Minecraft'},{v:23,n:'Sticky Notes'},{v:24,n:'Film Noir'},{v:25,n:'Lego'},
+    {v:26,n:'CRT'},{v:27,n:'Kawaii'},{v:28,n:'Polaroid'},{v:29,n:'NASA'},{v:30,n:'Graffiti'}
+  ];
+  var grid=document.getElementById('vgal-grid');
+  vers.forEach(function(vi){
+    var htmlFile=vi.v===1?base:base.replace('.html','-v'+vi.v+'.html');
+    var pngFile=vi.v===1?base.replace('.html','.png'):base.replace('.html','-v'+vi.v+'.png');
+    var active=vi.v===curV;
+    var card=document.createElement('a');
+    card.href=htmlFile;
+    card.style.cssText='text-decoration:none;border-radius:10px;overflow:hidden;border:3px solid '+(active?'#e63946':'rgba(255,255,255,.1)')+';transition:all .2s;display:flex;flex-direction:column;background:rgba(255,255,255,.05)';
+    card.onmouseover=function(){if(!active)this.style.borderColor='rgba(255,255,255,.3);this.style.transform="scale(1.03)"'};
+    card.onmouseout=function(){if(!active){this.style.borderColor='rgba(255,255,255,.1)';this.style.transform='scale(1)'}};
+    var img=document.createElement('img');
+    img.src=pngFile;
+    img.style.cssText='width:100%;aspect-ratio:1080/1527;object-fit:cover;display:block;background:#111';
+    img.loading='lazy';
+    var label=document.createElement('div');
+    label.style.cssText='padding:8px 10px;font-family:system-ui,sans-serif;font-size:12px;text-align:center;color:'+(active?'#e63946':'rgba(255,255,255,.6)')+';font-weight:'+(active?'700':'400');
+    label.textContent='v'+vi.v+' — '+vi.n;
+    card.appendChild(img);
+    var row=document.createElement('div');
+    row.style.cssText='display:flex;align-items:center;justify-content:space-between;padding:6px 10px';
+    label.style.cssText='font-family:system-ui,sans-serif;font-size:12px;color:'+(active?'#e63946':'rgba(255,255,255,.6)')+';font-weight:'+(active?'700':'400');
+    var dl=document.createElement('a');
+    dl.href=pngFile;
+    dl.download=base.replace('atelier-','').replace('.html','')+(vi.v===1?'':'-v'+vi.v)+'.png';
+    dl.textContent='⬇';
+    dl.title='Telecharger PNG';
+    dl.style.cssText='font-size:16px;text-decoration:none;color:rgba(255,255,255,.4);padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.08)';
+    dl.onmouseover=function(){this.style.color='#fff';this.style.background='#e63946'};
+    dl.onmouseout=function(){this.style.color='rgba(255,255,255,.4)';this.style.background='rgba(255,255,255,.08)'};
+    dl.onclick=function(e){e.stopPropagation()};
+    row.appendChild(label);
+    row.appendChild(dl);
+    card.appendChild(row);
+    grid.appendChild(card);
+  });
+})();
+</script>
+<a id="vdl-btn" style="position:fixed;top:34px;right:120px;z-index:10000;background:#2196f3;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3);text-decoration:none">⬇ PNG</a>
+<script>
+(function(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var cur=f.match(/-v(\d+)\.html$/);
+  var curV=cur?parseInt(cur[1]):1;
+  var pngFile=curV===1?base.replace('.html','.png'):base.replace('.html','-v'+curV+'.png');
+  var btn=document.getElementById('vdl-btn');
+  btn.href=pngFile;
+  btn.download=pngFile;
+})();
+</script>
+<a id="vfb-btn" style="position:fixed;top:34px;right:220px;z-index:10000;background:#1877f2;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3);text-decoration:none;user-select:none" onclick="copyTxt('facebook')">📋 Facebook</a>
+<a id="vml-btn" style="position:fixed;top:34px;right:340px;z-index:10000;background:#4caf50;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3);text-decoration:none;user-select:none" onclick="copyTxt('mail')">📋 Mail</a>
+<script>
+function copyTxt(type){
+  var p=location.pathname.split('/');
+  var f=p.pop();
+  var folder=p.pop();
+  var name=folder.replace(/^\d+-/,'');
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var fbFile='facebook-'+name+'.txt';
+  var mlFile='mail-'+base.replace('.html','.txt');
+  var url=(type==='facebook')?fbFile:mlFile;
+  var btn=document.getElementById(type==='facebook'?'vfb-btn':'vml-btn');
+  var orig=btn.textContent;
+  fetch(url).then(function(r){
+    if(!r.ok)throw new Error(r.status);
+    return r.text();
+  }).then(function(txt){
+    navigator.clipboard.writeText(txt).then(function(){
+      btn.textContent='\u2705 Copie !';
+      setTimeout(function(){btn.textContent=orig},1500);
+    });
+  }).catch(function(){
+    btn.textContent='\u274c Erreur';
+    setTimeout(function(){btn.textContent=orig},1500);
+  });
+}
+</script>"""
+
 def esc(t): return html_mod.escape(str(t))
 def hue(slug): return (int(hashlib.md5(slug.encode()).hexdigest()[:8],16)%31)-15
 
@@ -151,7 +252,7 @@ body{{background:#000;color:#00ff41;font-family:'Noto Sans',sans-serif;width:108
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">ATELIER</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">AU PROGRAMME</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
+<div class="sl">AU PROGRAMME</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -204,7 +305,7 @@ body::before{{content:'';position:absolute;inset:0;background:url("data:image/sv
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero"><div class="hero-l">Atelier</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div></div>
-<div class="sl">Au Programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
+<div class="sl">Au Programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -254,7 +355,7 @@ body{{background:#fff8f0;color:#3e2723;font-family:'Lora',serif;width:1080px;min
 <div class="recipe-type">Recette d'atelier</div>
 <div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">Ingredients</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
+<div class="sl">Ingredients</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -313,7 +414,7 @@ body{{background:#e8e8e8;color:#1a1a1a;font-family:'Inter',sans-serif;width:1080
 <div class="hero-d">{esc(w['description'])}</div>
 <div class="sl">PROGRAMME</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}
 <div class="barcode">||||| |||| ||||| |||| WD-{slug} |||| ||||| |||| |||||</div>
-</div></div></body></html>'''
+</div></div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -370,7 +471,7 @@ body{{background:#1a1a1a;color:#f0e6d3;font-family:'Work Sans',sans-serif;width:
 <div class="label">ATELIER</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
 <div class="sl">TRACKLIST</div><div class="tracklist">{tracks}</div>
-{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></div></body></html>'''
+{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -424,7 +525,7 @@ body{{background:#0f172a;color:#e2e8f0;font-family:'Rubik',sans-serif;width:1080
 <div class="cat-label">ATELIER #{num}</div>
 <div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">Proprietes</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></div></body></html>'''
+<div class="sl">Proprietes</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -487,7 +588,7 @@ body::before{{content:'';position:absolute;inset:0;background:repeating-linear-g
 <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
 <div class="hero-l">Atelier</div><div class="hero-t">{title_html}</div>
 <div class="hero-d">{esc(w['description'])}</div>
-<div class="sl">Au Programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
+<div class="sl">Au Programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -549,7 +650,7 @@ body{{background:#008080;color:#000;font-family:'Pixelify Sans','Segoe UI',Tahom
 {contact(w)}{footer(w)}
 </div>
 <div class="taskbar"><div class="start-btn">🪟 Start</div><div class="clock">17:47</div></div>
-</body></html>'''
+' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -610,7 +711,7 @@ body{{background:#888;font-family:'Space Mono',monospace;width:1080px;min-height
 <div class="sep">================================</div>
 {pills(w)}{qr(w)}{info(w)}{contact(w)}
 <div class="thankyou">MERCI DE VOTRE VISITE !</div>
-{footer(w)}</div></body></html>'''
+{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════
@@ -663,7 +764,7 @@ body::before{{content:'';position:absolute;inset:0;background:
 <div class="hero-l">Atelier</div><div class="hero-t"><span class="hero-e">{w['hero_emoji']}</span>{esc(w['title'])}</div>
 <div class="hero-d">{esc(w['description'])}</div>
 <div class="chalk-line"></div>
-<div class="sl">Au programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div></body></html>'''
+<div class="sl">Au programme</div>{feats(w)}{pills(w)}{prices(w)}{qr(w)}{info(w)}{contact(w)}{footer(w)}</div>' + BUTTONS_HTML + '\n''' + BUTTONS_HTML + '''\n</body></html>'''
 
 
 # ═══════════════════════════════════════════════════════════

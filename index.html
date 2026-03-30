@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Workshop-DIY — Flyers</title>
@@ -402,6 +403,39 @@ body.demo-mode .demo-overlay{display:flex}
     <input type="text" id="search" placeholder="Rechercher..."/>
   </div>
   <div class="filters" id="filters"></div>
+  <select id="ver-select" onchange="setVersion(this.value)" style="background:var(--card);border:2px solid var(--border);color:var(--text);font-size:12px;font-weight:600;padding:8px 14px;border-radius:24px;cursor:pointer">
+    <option value="v1">v1 — Original</option>
+    <option value="v2">v2 — Themed</option>
+    <option value="v3">v3 — Synthwave</option>
+    <option value="v4">v4 — Comic</option>
+    <option value="v5">v5 — Blueprint</option>
+    <option value="v6">v6 — Galaxy</option>
+    <option value="v7">v7 — Craft</option>
+    <option value="v8">v8 — Cyberpunk</option>
+    <option value="v9">v9 — Swiss</option>
+    <option value="v10">v10 — 8-Bit</option>
+    <option value="v11">v11 — Matrix</option>
+    <option value="v12">v12 — Newspaper</option>
+    <option value="v13">v13 — Recipe</option>
+    <option value="v14">v14 — Boarding Pass</option>
+    <option value="v15">v15 — Vinyl</option>
+    <option value="v16">v16 — Periodic</option>
+    <option value="v17">v17 — Ransom</option>
+    <option value="v18">v18 — Win95</option>
+    <option value="v19">v19 — Receipt</option>
+    <option value="v20">v20 — Chalkboard</option>
+    <option value="v21">v21 — Telegram</option>
+    <option value="v22">v22 — Minecraft</option>
+    <option value="v23">v23 — Sticky Notes</option>
+    <option value="v24">v24 — Film Noir</option>
+    <option value="v25">v25 — Lego</option>
+    <option value="v26">v26 — CRT</option>
+    <option value="v27">v27 — Kawaii</option>
+    <option value="v28">v28 — Polaroid</option>
+    <option value="v29">v29 — NASA</option>
+    <option value="v30">v30 — Graffiti</option>
+    <option value="random">🎲 Random</option>
+  </select>
 </div>
 
 <div class="grid" id="grid"></div>
@@ -760,6 +794,27 @@ const AR_PURPOSE={
 
 let LANG='fr',activeFilter='all',demoActive=false,demoIdx=0,demoTimer=null,demoPaused=false;
 let demoSpeed=7000,helpVisible=false;
+let activeVersion='v1';
+
+function setVersion(v){
+  if(v==='random'){
+    const vs=['v1','v2','v3','v4','v5','v6','v7','v8','v9','v10','v11','v12','v13','v14','v15','v16','v17','v18','v19','v20','v21','v22','v23','v24','v25','v26','v27','v28','v29','v30'];
+    activeVersion=vs[Math.floor(Math.random()*vs.length)];
+    document.getElementById('ver-select').value='random';
+  } else {
+    activeVersion=v;
+  }
+  buildGrid();
+}
+
+function versionPath(origPath,ver){
+  if(ver==='v1') return origPath;
+  return origPath.replace('.html','-'+ver+'.html');
+}
+function versionPng(origPng,ver){
+  if(ver==='v1') return origPng;
+  return origPng.replace('.png','-'+ver+'.png');
+}
 const SPEEDS=[5000,7000,10000,15000];
 let speedIdx=1;
 
@@ -781,11 +836,13 @@ function buildGrid(){
     const isFeatured=FEATURED.includes(a.name);
     const card=document.createElement('div');
     card.className='card';
-    card.onclick=()=>window.open(a.html,'_blank');
+    const vHtml=versionPath(a.html,activeVersion);
+    const vPng=versionPng(a.png,activeVersion);
+    card.onclick=()=>window.open(vHtml,'_blank');
     const purposeText=LANG==='ar'?(AR_PURPOSE[a.name]||a.purpose.fr):a.purpose[LANG]||a.purpose.fr;
     const descText=LANG==='ar'?(AR_DESC[a.name]||a.desc.fr):a.desc[LANG]||a.desc.fr;
     card.innerHTML=`
-      <div class="card-thumb"><img loading="lazy" src="${a.png}" alt="${a.name}"/></div>
+      <div class="card-thumb"><img loading="lazy" src="${vPng}" alt="${a.name}"/></div>
       ${isFeatured?'<div class="card-badge">⭐ '+(I18N[LANG].coupDeCoeur)+'</div>':''}
       <div class="card-body">
         <div class="card-name"><span class="emoji-sm">${a.emoji}</span> ${a.name}</div>
@@ -794,7 +851,7 @@ function buildGrid(){
         <div class="card-tags">${a.cats.map(c=>`<span class="tag tag-${c}">${CAT_META[c]?CAT_META[c].emoji+' '+(CAT_META[c][LANG]||CAT_META[c].fr):c}</span>`).join('')}</div>
       </div>
       <div class="card-actions">
-        <a class="card-act card-act-png" href="${a.png}" download="${a.name}.png" onclick="event.stopPropagation()">⬇ PNG</a>
+        <a class="card-act card-act-png" href="${vPng}" download="${a.name}-${activeVersion}.png" onclick="event.stopPropagation()">⬇ PNG</a>
         <button class="card-act card-act-fb" onclick="event.stopPropagation();copyCardTxt(this,'${a.html.split('/')[0]}','fb')">📋 FB</button>
         <button class="card-act card-act-mail" onclick="event.stopPropagation();copyCardTxt(this,'${a.html.split('/')[0]}','mail')">📋 Mail</button>
       </div>
@@ -963,17 +1020,19 @@ function showSlide(){
     stage.setAttribute('data-cat',a.cats[0]);
     const featsHTML = a.feats ? a.feats.map(f=>`<div class="demo-feat-card"><span class="demo-feat-icon">${f.i}</span><span class="demo-feat-text">${f.t}</span></div>`).join('') : '';
     const hasFeats = a.feats && a.feats.length > 0;
+    const dHtml=versionPath(a.html,activeVersion);
+    const dPng=versionPng(a.png,activeVersion);
     stage.innerHTML=`<div class="demo-slide">
       ${hasFeats ? `<div class="demo-split">
-        <div class="demo-split-left" onclick="window.open('${a.html}','_blank')">
-          <img src="${a.png}" alt="${a.name}"/>
+        <div class="demo-split-left" onclick="window.open('${dHtml}','_blank')">
+          <img src="${dPng}" alt="${a.name}"/>
         </div>
         <div class="demo-split-right">
           <div class="demo-feat-title">Au programme</div>
           ${featsHTML}
         </div>
-      </div>` : `<div class="demo-visual" onclick="window.open('${a.html}','_blank')">
-        <img src="${a.png}" alt="${a.name}"/>
+      </div>` : `<div class="demo-visual" onclick="window.open('${dHtml}','_blank')">
+        <img src="${dPng}" alt="${a.name}"/>
       </div>`}
       <div class="demo-glass">
         <div class="demo-glass-content">
