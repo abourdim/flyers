@@ -142,4 +142,17 @@ body{background:#e8e8e8;color:#1a1a1a;font-family:'Inter',sans-serif;width:1080p
   });
 })();
 </script>
+<a id="vdl-btn" style="position:fixed;top:34px;right:120px;z-index:10000;background:#2196f3;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3);text-decoration:none">⬇ PNG</a>
+<script>
+(function(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var cur=f.match(/-v(\d+)\.html$/);
+  var curV=cur?parseInt(cur[1]):1;
+  var pngFile=curV===1?base.replace('.html','.png'):base.replace('.html','-v'+curV+'.png');
+  var btn=document.getElementById('vdl-btn');
+  btn.href=pngFile;
+  btn.download=pngFile;
+})();
+</script>
 </body></html>
