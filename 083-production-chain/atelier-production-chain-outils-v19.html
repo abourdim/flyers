@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Production-Chain</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+<title>Production-Chain</title>
+<meta property="og:title" content="Production-Chain — Workshop DIY (v19)"/>
+<meta property="og:description" content="Infrastructure CI/CD conteneurisee pour equipes firmware et Linux embarque."/>
+<meta property="og:image" content="https://abourdim.github.io/flyers/083-production-chain/atelier-production-chain-outils-v19.png"/>
+<meta property="og:type" content="website"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
 <style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1080px;min-height:1527px}
 body{background:#888;font-family:'Space Mono',monospace;width:1080px;min-height:1527px;display:flex;justify-content:center}
 .receipt{background:#fff;width:700px;min-height:calc(1527px - 60px);margin:30px 0;padding:40px 50px;box-shadow:0 2px 20px rgba(0,0,0,.3);display:flex;flex-direction:column;justify-content:space-between;position:relative}
@@ -82,4 +86,174 @@ body{background:#888;font-family:'Space Mono',monospace;width:1080px;min-height:
 <div class="qr-c">↑ Scanne le QR code ou tape l'URL ▶</div></div>
 <div class="qr-r"><a href="https://abourdim.github.io/production-chain/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmwAAAJsAQAAAABo7sKIAAAEcUlEQVR4nO2dbXKbMABE0U7+kxv0/sfqDcwJ1AELI8ymne6SqV32/XBs4X0TUCYaoQ9KHU5kwpm2YYhOB0aWEJ0OjCwhOh0Y2avrhlpvvKzO8I8LNxZ77ZNFdDLQo4zodGBkCdHp4Hq62rG2AWVm+VjK51wwlTIM49xgLO8GFnuHkz0NnKeaiU4HRpYQnQ6MLCG6l7l2H+3ntDQHw9BuSY3zz+lzuLcJj7IyTGU9ymKpWQM44SPR6cDIEqLTgZElRPdt167e7zyNtbbOxTgX/Gz9in/92/0t+OtEdCu5djowsoTodGBkr6774MVrf6EM422oc29i6Tm0d1u/4r1OFtHJQI8yotOBkSVEp4MrthXj4d//UlBI+9Ez1nc6WUQnAz3KiE4HRpYQnQ6u11YUemz67LoUC/XeYCwHBhZ77ZNFdDLQo4zodGBkCdHp4Eq6D9al2Hga2z68vNfJIjoZ6FFGdDowsoTodHDR9RV1v6CCzYplSytqH3vtk0V0MtCjjOh0YGQJ0engomPbZX754t5SK1uGund9jdu3/naITgZ6lBGdDowsITodGNmr64ZtVmxfukyNXQ+wNdqH/sfS60i/4r/9Q0F0MtCjjOh0YGQJV9XV/f2mZUHFsTXoX0r58Whn7o3N25zsGeAUy4PodGBkCdHpwMgSonvZ9RWFfFwWVJTHiHZ7N7QbVu39fW5UalYHRpYQnQ6MLCE6HRhZQnQG9d5z2O5Brb2Efhz76egutrCWpSp0YGQJ0enAyBKi04GRJURnUEmT0DcEt9+MYdSOjFe4wDbsiE4HRpYQnQ6MLCE6nfI08YnNg2ply5yndRne08ypRp5fYQAnfCQ6HRhZQnQ6MLKE6NxrVx9sW4/3ZQvrTuTt3fTYorw7mqrQgZElRKcDI0uITgdGlhCdv8fH2DoNbfR6YdeHWL/3OEo3ikpV6MDIEqLTgZElRKcDI0uIzqD+YfHEblh7G68Y9i8Zr/DBCY6O6HRgZAnR6cDIEqIzqN2tJtYGdAPX+4Zl7G9Trd9LVejAyBKi04GRJUSnAyNLiM6g7ie/Pj1bu31lm/20O9DoOhepCh0YWUJ0OjCyhOh0YGQJ0RlUylNHYjeZlu0iWDNn1ga+oic6HRhZQnQ6MLKE6HQ+2DOM2pPvusdqt/Hsp0cf1fuXO1IVOjCyhOh0YGQJ0enAyBKiO2/ObL13Fdb5sdumUFtvYnvy9tCR/aBcYBt2RKcDI0uITgdGlhCdQd2PWffjFbvl2e3oF+MVjYxXGMAJH4lOB0aWEJ0OjCwhuu+4drX+bKvtWkdiYSrlsAPI9Fial6owgBM+Ep0OjCwhOh0YWUJ05+0z29hW5Y23dURie67RbkFenV/Wj6kKHRhZQnQ6MLKE6HRgZAnRGVS+CeBXD1ddv9J4XoeRqtCBkSVEpwMjS4hOB0aWEJ177UrHdr9pd5dpayH6hyBN+z2iUhUGcMJHotOBkSVEpwMjS4jO3Wf2LKZUhQ6MLCE6HRhZQnQ6MLKE6AaZX0Urqq9hLzfxAAAAAElFTkSuQmCC" alt="QR" class="qr-img"/></a><div class="qr-lb">SCANNER</div></div></div><div class="info-row"><div class="ic"><div class="ic-i">📅</div><div><div class="ic-l">DATE</div><div class="ic-v">Date a confirmer</div></div></div><div class="ic"><div class="ic-i">🕘</div><div><div class="ic-l">DUREE</div><div class="ic-v">1h30</div></div></div><div class="ic"><div class="ic-i">📍</div><div><div class="ic-l">LIEU</div><div class="ic-v">Salle du Parc du Souvenir, Stade Pierre Duport — Chelles</div></div></div></div><div class="contact">🌐 workshop-diy.org · ✉️ contact@workshop-diy.org · 📞 06 19 51 51 73</div>
 <div class="thankyou">MERCI DE VOTRE VISITE !</div>
-<div class="footer"><div class="fn">✨ Curiosite et sourire bienvenus !</div><div class="htags"><span class="ht">#ProductionChain</span><span class="ht">#Outils</span><span class="ht">#WorkshopDIY</span><span class="ht">#Chelles</span></div></div></div></body></html>
+<div class="footer"><div class="fn">✨ Curiosite et sourire bienvenus !</div><div class="htags"><span class="ht">#ProductionChain</span><span class="ht">#Outils</span><span class="ht">#WorkshopDIY</span><span class="ht">#Chelles</span></div></div></div><!-- ═══ FLOATING BUTTONS ═══ -->
+<div id="vgal-btn" onclick="document.getElementById('vgal').style.display='flex'" style="position:fixed;top:34px;right:20px;z-index:10000;background:#e63946;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3)">👁 Gallery</div>
+<a id="vdl-btn" style="position:fixed;top:34px;right:120px;z-index:10000;background:#2196f3;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3);text-decoration:none">⬇ PNG</a>
+<a id="vfb-btn" style="position:fixed;top:34px;right:220px;z-index:10000;background:#1877f2;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3);text-decoration:none;user-select:none" onclick="copyTxt('facebook')">📋 Facebook</a>
+<a id="vml-btn" style="position:fixed;top:34px;right:340px;z-index:10000;background:#4caf50;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3);text-decoration:none;user-select:none" onclick="copyTxt('mail')">📋 Mail</a>
+<div id="vshare-btn" onclick="shareURL()" style="position:fixed;top:34px;right:440px;z-index:10000;background:#ff9800;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3)">🔗 Share</div>
+<div id="vpdf-btn" onclick="window.print()" style="position:fixed;top:34px;right:530px;z-index:10000;background:#9c27b0;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3)">🖨 PDF</div>
+<div id="vcmp-btn" onclick="toggleCompare()" style="position:fixed;top:34px;right:610px;z-index:10000;background:#607d8b;color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3)">⚖ Compare</div>
+
+<!-- ═══ PRINT CSS ═══ -->
+<style>
+@media print{#vbar,#vgal-btn,#vdl-btn,#vfb-btn,#vml-btn,#vshare-btn,#vpdf-btn,#vcmp-btn,#vgal,#vcmp-panel{display:none!important}body{width:auto!important;min-height:auto!important}}
+</style>
+
+<!-- ═══ GALLERY OVERLAY ═══ -->
+<div id="vgal" style="display:none;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.92);backdrop-filter:blur(12px);flex-direction:column;align-items:center;overflow-y:auto;padding:20px" onclick="if(event.target===this)this.style.display='none'">
+<div style="display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1200px;margin-bottom:16px">
+<div style="font-family:system-ui,sans-serif;font-size:20px;font-weight:700;color:#fff">Toutes les versions</div>
+<div onclick="document.getElementById('vgal').style.display='none'" style="cursor:pointer;font-size:28px;color:#fff;padding:4px 12px">✕</div>
+</div>
+<div id="vgal-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;width:100%;max-width:1200px"></div>
+</div>
+
+<!-- ═══ COMPARE PANEL ═══ -->
+<div id="vcmp-panel" style="display:none;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.95);flex-direction:column;align-items:center;padding:20px;overflow-y:auto" onclick="if(event.target===this)this.style.display='none'">
+<div style="display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1400px;margin-bottom:12px">
+<div style="font-family:system-ui,sans-serif;font-size:18px;font-weight:700;color:#fff">⚖ Comparer deux versions</div>
+<div onclick="document.getElementById('vcmp-panel').style.display='none'" style="cursor:pointer;font-size:28px;color:#fff;padding:4px 12px">✕</div>
+</div>
+<div style="display:flex;gap:12px;margin-bottom:16px">
+<select id="cmpL" onchange="updateCompare()" style="background:#222;color:#fff;border:1px solid #555;padding:8px 14px;border-radius:8px;font-size:13px"></select>
+<select id="cmpR" onchange="updateCompare()" style="background:#222;color:#fff;border:1px solid #555;padding:8px 14px;border-radius:8px;font-size:13px"></select>
+</div>
+<div style="display:flex;gap:16px;width:100%;max-width:1400px;justify-content:center">
+<img id="cmpImgL" style="max-width:48%;border-radius:10px;border:2px solid #e63946"/>
+<img id="cmpImgR" style="max-width:48%;border-radius:10px;border:2px solid #2196f3"/>
+</div>
+</div>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+(function(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var cur=f.match(/-v(\d+)\.html$/);
+  var curV=cur?parseInt(cur[1]):1;
+  var vers=[
+    {v:1,n:'Original'},{v:2,n:'Themed'},{v:3,n:'Synthwave'},{v:4,n:'Comic'},{v:5,n:'Blueprint'},
+    {v:6,n:'Galaxy'},{v:7,n:'Craft'},{v:8,n:'Cyberpunk'},{v:9,n:'Swiss'},{v:10,n:'8-Bit'},
+    {v:11,n:'Matrix'},{v:12,n:'Newspaper'},{v:13,n:'Recipe'},{v:14,n:'Boarding Pass'},{v:15,n:'Vinyl'},
+    {v:16,n:'Periodic'},{v:17,n:'Ransom'},{v:18,n:'Win95'},{v:19,n:'Receipt'},{v:20,n:'Chalkboard'},
+    {v:21,n:'Telegram'},{v:22,n:'Minecraft'},{v:23,n:'Sticky Notes'},{v:24,n:'Film Noir'},{v:25,n:'Lego'},
+    {v:26,n:'CRT'},{v:27,n:'Kawaii'},{v:28,n:'Polaroid'},{v:29,n:'NASA'},{v:30,n:'Graffiti'}
+  ];
+
+  // ─── Gallery grid ───
+  var grid=document.getElementById('vgal-grid');
+  vers.forEach(function(vi){
+    var htmlFile=vi.v===1?base:base.replace('.html','-v'+vi.v+'.html');
+    var pngFile=vi.v===1?base.replace('.html','.png'):base.replace('.html','-v'+vi.v+'.png');
+    var active=vi.v===curV;
+    var card=document.createElement('a');
+    card.href=htmlFile;
+    card.style.cssText='text-decoration:none;border-radius:10px;overflow:hidden;border:3px solid '+(active?'#e63946':'rgba(255,255,255,.1)')+';transition:all .2s;display:flex;flex-direction:column;background:rgba(255,255,255,.05)';
+    card.onmouseover=function(){if(!active){this.style.borderColor='rgba(255,255,255,.3)';this.style.transform='scale(1.03)'}};
+    card.onmouseout=function(){if(!active){this.style.borderColor='rgba(255,255,255,.1)';this.style.transform='scale(1)'}};
+    var img=document.createElement('img');
+    img.src=pngFile;img.loading='lazy';
+    img.style.cssText='width:100%;aspect-ratio:1080/1527;object-fit:cover;display:block;background:#111';
+    var row=document.createElement('div');
+    row.style.cssText='display:flex;align-items:center;justify-content:space-between;padding:6px 10px';
+    var label=document.createElement('div');
+    label.style.cssText='font-family:system-ui,sans-serif;font-size:12px;color:'+(active?'#e63946':'rgba(255,255,255,.6)')+';font-weight:'+(active?'700':'400');
+    label.textContent='v'+vi.v+' — '+vi.n;
+    var dl=document.createElement('a');
+    dl.href=pngFile;
+    dl.download=base.replace('atelier-','').replace('.html','')+(vi.v===1?'':'-v'+vi.v)+'.png';
+    dl.textContent='\u2B07';dl.title='Telecharger PNG';
+    dl.style.cssText='font-size:16px;text-decoration:none;color:rgba(255,255,255,.4);padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.08)';
+    dl.onmouseover=function(){this.style.color='#fff';this.style.background='#e63946'};
+    dl.onmouseout=function(){this.style.color='rgba(255,255,255,.4)';this.style.background='rgba(255,255,255,.08)'};
+    dl.onclick=function(e){e.stopPropagation()};
+    row.appendChild(label);row.appendChild(dl);
+    card.appendChild(img);card.appendChild(row);
+    grid.appendChild(card);
+  });
+
+  // ─── PNG download ───
+  var pngFile=curV===1?base.replace('.html','.png'):base.replace('.html','-v'+curV+'.png');
+  var btn=document.getElementById('vdl-btn');
+  btn.href=pngFile;btn.download=pngFile;
+
+  // ─── Compare selects ───
+  var cmpL=document.getElementById('cmpL');
+  var cmpR=document.getElementById('cmpR');
+  vers.forEach(function(vi){
+    var o1=document.createElement('option');o1.value=vi.v;o1.textContent='v'+vi.v+' — '+vi.n;
+    var o2=o1.cloneNode(true);
+    cmpL.appendChild(o1);cmpR.appendChild(o2);
+  });
+  cmpL.value=curV;cmpR.value=curV<30?curV+1:1;
+})();
+
+// ─── Copy FB/Mail ───
+function copyTxt(type){
+  var p=location.pathname.split('/');var f=p.pop();var folder=p.pop();
+  var name=folder.replace(/^\d+-/,'');var base=f.replace(/-v\d+\.html$/,'.html');
+  var url=type==='facebook'?folder+'/facebook-'+name+'.txt':folder+'/mail-'+base.replace('.html','.txt');
+  // On GitHub Pages, path is /flyers/FOLDER/file so we need relative from current
+  var fetchUrl=type==='facebook'?'facebook-'+name+'.txt':'mail-'+base.replace('.html','.txt');
+  var btn=document.getElementById(type==='facebook'?'vfb-btn':'vml-btn');
+  var orig=btn.textContent;
+  fetch(fetchUrl).then(function(r){if(!r.ok)throw new Error(r.status);return r.text()}).then(function(txt){
+    navigator.clipboard.writeText(txt).then(function(){btn.textContent='\u2705 Copie !';setTimeout(function(){btn.textContent=orig},1500)});
+  }).catch(function(){btn.textContent='\u274c Erreur';setTimeout(function(){btn.textContent=orig},1500)});
+}
+
+// ─── Share URL ───
+function shareURL(){
+  var btn=document.getElementById('vshare-btn');
+  var url=location.href;
+  navigator.clipboard.writeText(url).then(function(){
+    btn.textContent='\u2705 Copie !';setTimeout(function(){btn.textContent='\uD83D\uDD17 Share'},1500);
+  });
+}
+
+// ─── Compare ───
+function toggleCompare(){document.getElementById('vcmp-panel').style.display='flex';updateCompare()}
+function updateCompare(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var vL=document.getElementById('cmpL').value;
+  var vR=document.getElementById('cmpR').value;
+  var pL=vL==='1'?base.replace('.html','.png'):base.replace('.html','-v'+vL+'.png');
+  var pR=vR==='1'?base.replace('.html','.png'):base.replace('.html','-v'+vR+'.png');
+  document.getElementById('cmpImgL').src=pL;
+  document.getElementById('cmpImgR').src=pR;
+}
+
+// ─── Konami Code Easter Egg ───
+(function(){
+  var seq=[38,38,40,40,37,39,37,39,66,65],pos=0;
+  document.addEventListener('keydown',function(e){
+    if(e.keyCode===seq[pos]){pos++;if(pos===seq.length){pos=0;konamiRoulette()}}else{pos=0}
+  });
+})();
+function konamiRoulette(){
+  var f=location.pathname.split('/').pop();
+  var base=f.replace(/-v\d+\.html$/,'.html');
+  var overlay=document.createElement('div');
+  overlay.style.cssText='position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.9);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:system-ui,sans-serif';
+  overlay.innerHTML='<div style="font-size:80px;animation:spin 0.1s linear infinite" id="kr-emoji">🎰</div><div style="color:#fff;font-size:24px;margin-top:20px" id="kr-text">Spinning...</div><style>@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}</style>';
+  document.body.appendChild(overlay);
+  var count=0;var timer=setInterval(function(){
+    count++;
+    var rv=Math.floor(Math.random()*30)+1;
+    document.getElementById('kr-text').textContent='v'+rv;
+    if(count>20){
+      clearInterval(timer);
+      document.getElementById('kr-emoji').style.animation='none';
+      document.getElementById('kr-text').textContent='🎉 v'+rv+'!';
+      document.getElementById('kr-text').style.fontSize='48px';
+      setTimeout(function(){
+        var href=rv===1?base:base.replace('.html','-v'+rv+'.html');
+        location.href=href;
+      },1500);
+    }
+  },100);
+}
+</script>
+</body></html>
