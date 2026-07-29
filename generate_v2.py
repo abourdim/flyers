@@ -96,7 +96,7 @@ CATEGORY_MAP = {
     "mqtt-lab": "signal", "wifi-dashboard": "signal", "avahi": "signal",
     "bonjour": "signal", "mdns": "signal", "dhcp-lab": "signal",
     "flight-tracker": "signal", "satellites": "signal",
-    "rocket-shield-vpn": "signal", "rxy": "signal",
+    "rocket-shield-vpn": "signal", "bit-rxy": "signal",
 
     # ARCADE (Creative/Fun)
     "emojis": "arcade", "morse-code": "arcade", "save-our-planet": "arcade",
